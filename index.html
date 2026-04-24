@@ -5,22 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>bohe visual scrap</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin: 0; padding: 40px 20px; background: #0b1020; color: #f5f7fb; }
-    .wrap { max-width: 760px; margin: 0 auto; }
+    :root {
+      --bg: #0b1020;
+      --panel: #151c33;
+      --panel2: #1b2440;
+      --line: #2a355e;
+      --text: #f5f7fb;
+      --muted: #93a0bd;
+      --link: #8cc8ff;
+    }
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 40px 20px; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 920px; margin: 0 auto; }
     h1 { font-size: 2rem; margin-bottom: 8px; }
     p { color: #c6cfdd; line-height: 1.6; }
-    .card { margin-top: 24px; padding: 20px; border-radius: 16px; background: #151c33; border: 1px solid #2a355e; }
-    a { color: #8cc8ff; }
-    .muted { font-size: 0.95rem; color: #93a0bd; }
+    .hero { margin-bottom: 24px; }
+    .cards { display: grid; gap: 16px; }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 20px;
+      border-radius: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .card:hover { background: var(--panel2); }
+    .card-date { font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; }
+    .card h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    .card p { margin: 0; color: #c6cfdd; }
+    .status {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    a.inline { color: var(--link); }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>bohe visual scrap</h1>
-    <p>보헤 형님의 1회성 시각 자료, 데모 페이지, 임시 HTML 결과물을 올리는 공간입니다.</p>
-    <div class="card">
+    <div class="hero">
+      <h1>bohe visual scrap</h1>
+      <p>보헤 형님의 1회성 시각 자료, 데모 페이지, 임시 HTML 결과물을 올리는 공간입니다.</p>
+    </div>
+
+    <div class="cards">
+      <a class="card" href="items/2026-04-24-yangjae-restaurants/">
+        <div class="card-date">2026-04-24</div>
+        <h2>양재역 맛집 10선</h2>
+        <p>양재역 근처에서 자주 언급되는 식당 10곳을 카드형으로 정리한 공개용 시각화 페이지.</p>
+      </a>
+    </div>
+
+    <div class="status">
       <strong>status</strong>
-      <p class="muted">Pages is live. Visual scraps will appear here as needed.</p>
+      <p>Pages is live. Visual scraps will appear here as needed.</p>
     </div>
   </div>
 </body>
