@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>양재역 맛집 10선</title>
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --paper: #fffdf9;
+      --ink: #1e1b18;
+      --sub: #6f665d;
+      --line: #e6ddd2;
+      --accent: #8f3d2e;
+      --accent-soft: #f4e5de;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #fdf8f3, #f3ebe0);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      margin-bottom: 26px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      margin: 14px 0 10px;
+      font-size: 42px;
+      line-height: 1.18;
+    }
+    .desc {
+      max-width: 780px;
+      color: var(--sub);
+      font-size: 17px;
+    }
+    .meta {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--sub);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 230px;
+      box-shadow: 0 10px 30px rgba(28, 21, 16, 0.04);
+    }
+    .rank {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #1e1b18;
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .name {
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f3eee7;
+      color: #544b43;
+    }
+    .note {
+      color: var(--sub);
+      font-size: 14px;
+    }
+    .section-title {
+      margin: 38px 0 14px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .legend {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px 20px;
+      color: var(--sub);
+      font-size: 14px;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">YANGJAE STATION FOOD MAP</div>
+      <h1>양재역 맛집 10선</h1>
+      <p class="desc">
+        양재역 근처에서 자주 언급되는 식당들을 한눈에 보기 좋게 정리한 카드형 페이지입니다.
+        점심, 회식, 국물, 고기, 칼국수, 데이트용 분위기 식당까지 섞어서 보기 쉽게 배치했습니다.
+      </p>
+      <div class="meta">기준일: 2026-04-24 · 공개용 임시 스크랩 · 실제 방문 전 최신 영업정보 재확인 권장</div>
+    </section>
+
+    <div class="grid">
+      <article class="card"><div class="rank">01</div><div class="name">영동족발</div><div class="tags"><span class="tag">족발</span><span class="tag">회식</span><span class="tag">양재 대표급</span></div><div class="note">양재권에서 가장 먼저 떠올리는 이름 중 하나. 진한 족발 스타일, 여럿이 가기 좋음.</div></article>
+      <article class="card"><div class="rank">02</div><div class="name">임병주산동칼국수</div><div class="tags"><span class="tag">칼국수</span><span class="tag">한식</span><span class="tag">점심</span></div><div class="note">양재 근방 직장인 점심 리스트에 자주 등장하는 안정적인 선택지.</div></article>
+      <article class="card"><div class="rank">03</div><div class="name">오향절면 양재본점</div><div class="tags"><span class="tag">보쌈</span><span class="tag">절면</span><span class="tag">식사+술</span></div><div class="note">보쌈과 면 조합으로 유명. 직장인 저녁 모임용으로도 많이 언급됨.</div></article>
+      <article class="card"><div class="rank">04</div><div class="name">양재닭집</div><div class="tags"><span class="tag">치킨</span><span class="tag">맥주</span><span class="tag">가볍게</span></div><div class="note">양재역 인근 치킨 맛집으로 반복 언급되는 곳. 편하게 가기 좋은 타입.</div></article>
+      <article class="card"><div class="rank">05</div><div class="name">보글이 생태탕 왕코다리</div><div class="tags"><span class="tag">생태탕</span><span class="tag">코다리</span><span class="tag">국물</span></div><div class="note">해장 느낌 나는 국물이나 생선 쪽 메뉴 찾을 때 후보로 올리기 좋음.</div></article>
+      <article class="card"><div class="rank">06</div><div class="name">국고집</div><div class="tags"><span class="tag">갈비</span><span class="tag">국밥</span><span class="tag">전통파</span></div><div class="note">고기와 국밥을 함께 볼 수 있는 타입. 든든한 한식 선택지.</div></article>
+      <article class="card"><div class="rank">07</div><div class="name">마포네숯불돼지갈비</div><div class="tags"><span class="tag">돼지갈비</span><span class="tag">회식</span><span class="tag">고기</span></div><div class="note">회식/저녁 식사형 고깃집 카테고리로 자주 추천되는 편.</div></article>
+      <article class="card"><div class="rank">08</div><div class="name">로마옥</div><div class="tags"><span class="tag">분위기</span><span class="tag">데이트</span><span class="tag">양식</span></div><div class="note">양재역 근처에서 조금 분위기 있게 먹고 싶을 때 넣기 좋은 카드.</div></article>
+      <article class="card"><div class="rank">09</div><div class="name">시래정 양재점</div><div class="tags"><span class="tag">한식</span><span class="tag">시래기</span><span class="tag">건강식</span></div><div class="note">자극적이지 않은 한식 쪽으로 기울 때 무난하게 추천 가능한 식당.</div></article>
+      <article class="card"><div class="rank">10</div><div class="name">메기대감</div><div class="tags"><span class="tag">매운탕</span><span class="tag">국물</span><span class="tag">개성 있음</span></div><div class="note">국물 쪽 취향 강한 사람들한테는 기억에 남는 타입의 카드.</div></article>
+    </div>
+
+    <h2 class="section-title">보는 법</h2>
+    <div class="legend">
+      이 페이지는 포털/블로그/맛집 목록에서 반복적으로 언급되는 곳 위주로 빠르게 시각화한 공개용 정리입니다.
+      정확한 순위라기보다, <strong>양재역에서 어디 갈지 감 잡기 좋은 카드형 참고판</strong>으로 보면 됩니다.
+      더 정밀하게 하려면 다음 버전에서 지도 좌표, 가격대, 점심/저녁 구분, 회식/데이트 필터를 붙이면 좋습니다.
+    </div>
+  </div>
+</body>
+</html>
