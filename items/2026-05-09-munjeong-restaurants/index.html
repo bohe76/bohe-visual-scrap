@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>문정역 맛집 5선</title>
+  <style>
+    :root {
+      --bg: #0b1020; --panel: #151c33; --panel2: #1b2440; --line: #2a355e;
+      --text: #f5f7fb; --muted: #93a0bd; --accent: #8cc8ff; --chip: #243154;
+    }
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 40px 20px; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 920px; margin: 0 auto; }
+    a { color: var(--accent); }
+    h1 { font-size: 2rem; margin: 0 0 8px; }
+    .sub { color: #c6cfdd; line-height: 1.7; margin-bottom: 24px; }
+    .note { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; color: #c6cfdd; margin-bottom: 20px; }
+    .grid { display: grid; gap: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+    .name { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .chip { display: inline-block; background: var(--chip); color: #d7e6ff; border-radius: 999px; padding: 6px 10px; font-size: 0.86rem; margin-right: 8px; }
+    .desc { color: #c6cfdd; line-height: 1.65; margin-top: 10px; }
+    .why { margin-top: 10px; color: #f5f7fb; }
+    .meta { margin-top: 10px; color: var(--muted); font-size: 0.95rem; }
+    .footer { margin-top: 28px; color: var(--muted); font-size: 0.92rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p><a href="../../index.html">← 목록으로</a></p>
+    <h1>문정역 맛집 5선</h1>
+    <p class="sub">문정역 근처에서 무난하게 실패 확률 낮은 곳 위주로 짧게 추렸습니다. 점심, 저녁, 모임까지 바로 고르기 쉽게 정리했습니다.</p>
+
+    <div class="note">
+      이번 테스트에서는 Gemini 검색 한 번은 성공했고, 추가 검증 호출은 429 quota에 걸려 중단됐습니다. 그래서 이번 결과는 공개 웹 추천 신호 중 교차 언급이 있는 후보를 중심으로 보수적으로 큐레이션했습니다.
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="name">오복식당 진주향토음식점</div>
+        <span class="chip">한식</span><span class="chip">점심/저녁</span>
+        <div class="desc">향토음식 계열로 많이 언급되는 편이고, 문정역 근처에서 한식으로 무난하게 고르기 좋은 축에 들어갑니다.</div>
+        <div class="why">추천 이유: 깔끔한 한식 한 끼 찾을 때 실패 확률이 낮아 보입니다.</div>
+        <div class="meta">메모: 부모님 모시고 가거나 너무 자극적이지 않은 식사를 원할 때 잘 맞는 타입.</div>
+      </div>
+
+      <div class="card">
+        <div class="name">문갓포</div>
+        <span class="chip">일식</span><span class="chip">데이트/저녁</span>
+        <div class="desc">문정역권에서 일식, 갓포, 오마카세 느낌으로 상대적으로 결이 분명한 곳입니다.</div>
+        <div class="why">추천 이유: 문정역에서 조금 더 분위기 있는 저녁 식사를 찾는 경우 선택지가 됩니다.</div>
+        <div class="meta">메모: 가벼운 점심보다는 저녁 약속 쪽에 더 어울립니다.</div>
+      </div>
+
+      <div class="card">
+        <div class="name">은행골 문정점</div>
+        <span class="chip">일식</span><span class="chip">무난한 선택</span>
+        <div class="desc">초밥 계열로 비교적 대중성이 높고 설명하기 쉬운 카드입니다.</div>
+        <div class="why">추천 이유: 누구랑 가도 설명이 쉬운 무난픽 역할.</div>
+        <div class="meta">메모: 회/초밥 쪽 선호가 분명할 때 안정적인 선택.</div>
+      </div>
+
+      <div class="card">
+        <div class="name">툇마루밥상</div>
+        <span class="chip">한식</span><span class="chip">집밥 느낌</span>
+        <div class="desc">문정/가락권 추천 리스트에서 꾸준히 보이는 한정식·집밥 계열 후보입니다.</div>
+        <div class="why">추천 이유: 자극적인 메뉴보다 정갈한 밥상을 선호할 때 좋습니다.</div>
+        <div class="meta">메모: 화려함보다는 편안한 식사 쪽.</div>
+      </div>
+
+      <div class="card">
+        <div class="name">오향가</div>
+        <span class="chip">족발/중식풍 사이드</span><span class="chip">모임</span>
+        <div class="desc">족발과 탕수육 같이 가볍게 안주형으로 풀기 좋은 쪽으로 자주 언급됩니다.</div>
+        <div class="why">추천 이유: 여럿이 메뉴 나눠 먹는 자리에서 카드가 살아납니다.</div>
+        <div class="meta">메모: 조용한 식사보다는 모임, 회식, 저녁 쪽에 더 적합.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      한줄 요약: 깔끔한 한식은 오복식당/툇마루밥상, 분위기 있는 일식 저녁은 문갓포, 가장 무난한 선택은 은행골, 모임은 오향가 쪽이 좋아 보입니다.
+    </div>
+  </div>
+</body>
+</html>
