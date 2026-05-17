@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>양재역 맛집 빠른 후보 6선</title>
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --paper: #fffdf9;
+      --ink: #1e1b18;
+      --sub: #6f665d;
+      --line: #e6ddd2;
+      --accent: #8f3d2e;
+      --accent-soft: #f4e5de;
+      --ok: #2f6f4e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 36px 18px 72px; }
+    .hero {
+      background: linear-gradient(135deg, #fffaf4, #f1e6d8);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px;
+      margin-bottom: 22px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    h1 { margin: 14px 0 10px; font-size: clamp(32px, 5vw, 44px); line-height: 1.16; }
+    .desc { max-width: 820px; color: var(--sub); font-size: 16px; }
+    .meta { margin-top: 14px; color: var(--sub); font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      min-height: 330px;
+      box-shadow: 0 10px 28px rgba(28, 21, 16, 0.04);
+    }
+    .top { display: flex; align-items: center; gap: 12px; }
+    .rank {
+      flex: 0 0 40px;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: #1e1b18; color: white;
+      font-weight: 900; font-size: 14px;
+    }
+    .name { font-size: 22px; font-weight: 850; line-height: 1.28; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag { font-size: 12px; padding: 5px 9px; border-radius: 999px; background: #f3eee7; color: #544b43; }
+    .note { color: var(--sub); font-size: 14px; }
+    .why { font-size: 13px; color: var(--ok); font-weight: 700; }
+    .info { display: grid; gap: 6px; font-size: 13px; color: var(--sub); margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--line); }
+    .label { color: var(--ink); font-weight: 800; margin-right: 5px; }
+    a { color: var(--accent); }
+    .legend { margin-top: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; color: var(--sub); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">YANGJAE QUICK FOOD CHECK</div>
+      <h1>양재역 맛집 빠른 후보 6선</h1>
+      <p class="desc">
+        빠른 정보 검색 테스트용으로 양재역 주변에서 반복 언급되는 식당만 추려 카드로 정리했습니다.
+        과한 이미지/연출 없이, 바로 열어보고 후보를 고르는 용도입니다.
+      </p>
+      <div class="meta">기준일: 2026-05-17 · 확인 축: Gemini 2.5 Flash-Lite 검색 + DiningCode/Google/Naver 계열 공개 검색 스니펫 교차 확인 · 방문 전 영업시간/휴무 재확인 권장</div>
+    </section>
+
+    <div class="grid">
+      <article class="card">
+        <div class="top"><div class="rank">01</div><div class="name">임병주산동칼국수</div></div>
+        <div class="tags"><span class="tag">칼국수</span><span class="tag">만두</span><span class="tag">점심</span></div>
+        <div class="note">양재역권에서 가장 안정적으로 반복 등장하는 칼국수 카드. 미쉐린/블로그/다이닝코드 계열 언급이 강합니다.</div>
+        <div class="why">근거: DiningCode 개별 페이지 + Google/네이버 블로그 검색 반복 노출</div>
+        <div class="info">
+          <div><span class="label">주소</span><a href="https://map.naver.com/p/search/%EC%9E%84%EB%B3%91%EC%A3%BC%EC%82%B0%EB%8F%99%EC%B9%BC%EA%B5%AD%EC%88%98" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></div>
+          <div><span class="label">전화</span>방문 전 지도에서 최신 번호 확인</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="rank">02</div><div class="name">뱅뱅막국수</div></div>
+        <div class="tags"><span class="tag">막국수</span><span class="tag">만두</span><span class="tag">가벼운 식사</span></div>
+        <div class="note">DiningCode 양재역 맛집 상위권 스니펫에 함께 노출되는 막국수 후보. 날 더울 때나 가볍게 먹기 좋습니다.</div>
+        <div class="why">근거: DiningCode 양재역 Top100 스니펫 + Google 검색 후보</div>
+        <div class="info">
+          <div><span class="label">주소</span><a href="https://map.naver.com/p/search/%EB%B1%85%EB%B1%85%EB%A7%89%EA%B5%AD%EC%88%98" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></div>
+          <div><span class="label">전화</span>방문 전 지도에서 최신 번호 확인</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="rank">03</div><div class="name">오향절면 양재본점</div></div>
+        <div class="tags"><span class="tag">보쌈</span><span class="tag">절면</span><span class="tag">식사+술</span></div>
+        <div class="note">기존 양재 맛집 목록에서도 자주 보이는 보쌈/면 조합. 저녁 약속이나 가벼운 술자리까지 커버하기 좋습니다.</div>
+        <div class="why">근거: Gemini 검색 결과 + 기존 공개 맛집 리스트/블로그 반복 언급</div>
+        <div class="info">
+          <div><span class="label">주소</span><a href="https://map.naver.com/p/search/%EC%98%A4%ED%96%A5%EC%A0%88%EB%A9%B4%20%EC%96%91%EC%9E%AC%EB%B3%B8%EC%A0%90" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></div>
+          <div><span class="label">전화</span>방문 전 지도에서 최신 번호 확인</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="rank">04</div><div class="name">양재옥</div></div>
+        <div class="tags"><span class="tag">보쌈</span><span class="tag">저녁식사</span><span class="tag">모임</span></div>
+        <div class="note">DiningCode 양재역 저녁식사 스니펫에 높은 평점 후보로 노출. 점심보다는 저녁/모임 후보로 보기 좋습니다.</div>
+        <div class="why">근거: DiningCode 양재역 저녁식사 Top100 스니펫</div>
+        <div class="info">
+          <div><span class="label">주소</span><a href="https://map.naver.com/p/search/%EC%96%91%EC%9E%AC%EC%98%A5" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></div>
+          <div><span class="label">전화</span>방문 전 지도에서 최신 번호 확인</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="rank">05</div><div class="name">영동족발 양재점/본점권</div></div>
+        <div class="tags"><span class="tag">족발</span><span class="tag">회식</span><span class="tag">대중픽</span></div>
+        <div class="note">양재역 회식/저녁 후보로 꾸준히 언급되는 족발 카드. 여럿이 나눠 먹기 좋은 안전한 선택지입니다.</div>
+        <div class="why">근거: DiningCode 저녁식사 스니펫 + Google/기존 맛집 목록 반복 언급</div>
+        <div class="info">
+          <div><span class="label">주소</span><a href="https://map.naver.com/p/search/%EC%98%81%EB%8F%99%EC%A1%B1%EB%B0%9C%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 지점 확인</a></div>
+          <div><span class="label">전화</span>지점별 상이 · 지도에서 확인</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="rank">06</div><div class="name">양재닭집</div></div>
+        <div class="tags"><span class="tag">치킨</span><span class="tag">맥주</span><span class="tag">캐주얼</span></div>
+        <div class="note">기존 양재역 페이지에도 들어갔던 캐주얼 저녁 후보. 밥집보다 편한 치맥/가벼운 약속용으로 분리해두기 좋습니다.</div>
+        <div class="why">근거: 네이버/Google 공개 검색 후보 + 기존 스크랩 페이지 검증 이력</div>
+        <div class="info">
+          <div><span class="label">주소</span><a href="https://map.naver.com/p/search/%EC%96%91%EC%9E%AC%EB%8B%AD%EC%A7%91" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></div>
+          <div><span class="label">전화</span>방문 전 지도에서 최신 번호 확인</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="legend">
+      <strong>보는 법:</strong> 이 페이지는 “빠르게 후보를 좁히는” 테스트 결과입니다. 정확한 순위가 아니라 반복 언급 강도와 용도별 다양성을 섞은 카드입니다.
+      점심은 임병주산동칼국수/뱅뱅막국수, 저녁 모임은 양재옥/영동족발, 캐주얼하게는 양재닭집부터 보면 됩니다.
+    </div>
+  </div>
+</body>
+</html>
