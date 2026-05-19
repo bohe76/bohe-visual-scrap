@@ -103,11 +103,13 @@ Use rounded cards and pills. Rank markers are always black circular badges with 
 ## Components
 
 - **Hero:** use a dark warm-black editorial hero with orange/red orbit circles and a large ghost count number so the design change is visually unmistakable.
-- **Restaurant card:** paper background, warm border, compact metrics, no hover lift; add a bold top accent strip so cards do not read as plain cream boxes.
-- **Rank badge:** black circle, white number.
-- **Tags / legend pills:** warm cream fill, brown/ink text.
+- **Restaurant card:** paper background with a dark category-colored top header, compact metrics, no hover lift. The category color must influence the header, strip, tags, and metric surfaces so the DESIGN.md is applied to the whole card, not only a thin decoration.
+- **Category stripe colors:** navy = Japanese/ramen, deep brown = meat/gopchang, olive = Korean/soup, clay orange = Chinese/mala/noodles, amber = snack/fried/jeon/cutlet, teal = seafood, rose = cafe/dessert.
+- **Rank badge:** white circle on dark card header with ink number.
+- **Tags / card chips:** category-soft surface derived from the card category color.
+- **Bottom legend:** use the same dark warm-black editorial treatment as the hero, with orbit motif and visible color swatches for the category map.
 - **Links:** muted blue, underline on hover only.
-- **Metrics:** soft cream boxes with high-contrast labels.
+- **Metrics:** soft cream/category-tinted boxes with high-contrast labels.
 
 ## Do's and Don'ts
 
