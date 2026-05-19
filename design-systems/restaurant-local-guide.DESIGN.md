@@ -102,7 +102,8 @@ Use rounded cards and pills. Rank markers are always black circular badges with 
 
 ## Components
 
-- **Restaurant card:** paper background, warm border, compact metrics, no hover lift.
+- **Hero:** use a dark warm-black editorial hero with orange/red orbit circles and a large ghost count number so the design change is visually unmistakable.
+- **Restaurant card:** paper background, warm border, compact metrics, no hover lift; add a bold top accent strip so cards do not read as plain cream boxes.
 - **Rank badge:** black circle, white number.
 - **Tags / legend pills:** warm cream fill, brown/ink text.
 - **Links:** muted blue, underline on hover only.
