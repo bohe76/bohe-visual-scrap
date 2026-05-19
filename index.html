@@ -4,89 +4,496 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>bohe visual scrap</title>
+  <meta name="description" content="보헤 형님의 공개 시각 자료, 맛집 가이드, 임시 HTML 결과물 아카이브" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b1020;
-      --panel: #151c33;
-      --panel2: #1b2440;
-      --line: #2a355e;
-      --text: #f5f7fb;
-      --muted: #93a0bd;
-      --link: #8cc8ff;
+      --bg: #ffffff;
+      --ink: #171717;
+      --muted: #4d4d4d;
+      --soft: #666666;
+      --line: #ebebeb;
+      --surface: #ffffff;
+      --surface-muted: #fafafa;
+      --blue: #0072f5;
+      --blue-soft: #ebf5ff;
+      --blue-text: #0068d6;
+      --develop: #0a72ef;
+      --preview: #de1d8d;
+      --ship: #ff5b4f;
+      --ring: rgba(0, 0, 0, 0.08) 0 0 0 1px;
+      --card-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px, rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 8px -8px, #fafafa 0 0 0 1px inset;
     }
-    body { font-family: system-ui, sans-serif; margin: 0; padding: 40px 20px; background: var(--bg); color: var(--text); }
-    .wrap { max-width: 920px; margin: 0 auto; }
-    h1 { font-size: 2rem; margin-bottom: 8px; }
-    p { color: #c6cfdd; line-height: 1.6; }
-    .hero { margin-bottom: 24px; }
-    .cards { display: grid; gap: 16px; }
-    .card {
-      display: block;
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--bg); }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(0, 114, 245, 0.08), transparent 34rem),
+        linear-gradient(180deg, #ffffff 0%, #ffffff 58%, #fafafa 100%);
+      color: var(--ink);
+      font-family: 'Geist', Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 56px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       text-decoration: none;
-      color: inherit;
-      padding: 20px;
-      border-radius: 16px;
-      background: var(--panel);
-      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
     }
-    .card:hover { background: var(--panel2); }
-    .card-date { font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; }
-    .card h2 { margin: 0 0 8px; font-size: 1.2rem; }
-    .card p { margin: 0; color: #c6cfdd; }
-    .status {
-      margin-top: 24px;
+
+    .brand-mark {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 500;
+      box-shadow: var(--ring);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      border-radius: 9999px;
+      padding: 0 12px;
+      background: var(--surface);
+      box-shadow: var(--ring);
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .pill.primary {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .hero {
+      max-width: 780px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 28px;
+      border-radius: 9999px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      background: var(--blue-soft);
+      color: var(--blue-text);
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0, 114, 245, 0.12);
+      flex: 0 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(44px, 8vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+      font-weight: 600;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2.2vw, 20px);
+      line-height: 1.75;
+      letter-spacing: -0.01em;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin: 42px 0 28px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      background: var(--line);
+    }
+
+    .metric {
+      background: rgba(255,255,255,0.92);
       padding: 18px 20px;
-      border-radius: 16px;
-      background: var(--panel);
-      border: 1px solid var(--line);
     }
-    a.inline { color: var(--link); }
+
+    .metric-label {
+      margin-bottom: 8px;
+      color: var(--soft);
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 52px 0 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--soft);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 208px;
+      padding: 22px;
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--card-shadow);
+      text-decoration: none;
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--develop), var(--preview), var(--ship));
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: rgba(0, 0, 0, 0.14) 0 0 0 1px, rgba(0, 0, 0, 0.06) 0 8px 16px -8px, #fafafa 0 0 0 1px inset;
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .card-date {
+      color: var(--soft);
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 24px;
+      border-radius: 9999px;
+      padding: 0 9px;
+      background: var(--surface-muted);
+      box-shadow: var(--ring);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .card h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(21px, 2.8vw, 28px);
+      line-height: 1.12;
+      letter-spacing: -0.052em;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+    }
+
+    .card-arrow {
+      margin-top: auto;
+      padding-top: 22px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .status {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--card-shadow);
+    }
+
+    .status strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .status p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .status-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 32px;
+      padding: 0 12px;
+      border-radius: 9999px;
+      background: #f0fff6;
+      color: #008a3b;
+      font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .status-indicator::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00a34a;
+      box-shadow: 0 0 0 3px rgba(0, 163, 74, 0.12);
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 24px, 1120px); padding: 28px 0 36px; }
+      .topbar { align-items: flex-start; margin-bottom: 52px; }
+      .top-actions { display: none; }
+      .metrics, .cards { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-note { margin-top: 8px; }
+      .status { grid-template-columns: 1fr; }
+      .card { min-height: 196px; padding: 20px; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="hero">
-      <h1>bohe visual scrap</h1>
-      <p>보헤 형님의 1회성 시각 자료, 데모 페이지, 임시 HTML 결과물을 올리는 공간입니다.</p>
-    </div>
+  <main class="shell">
+    <nav class="topbar" aria-label="site">
+      <a class="brand" href="./" aria-label="bohe visual scrap home">
+        <span class="brand-mark">B</span>
+        <span>bohe visual scrap</span>
+      </a>
+      <div class="top-actions" aria-label="archive summary">
+        <span class="pill">GitHub Pages</span>
+        <span class="pill primary">Latest first</span>
+      </div>
+    </nav>
 
-    <div class="cards">
-      <a class="card" href="items/2026-05-19-wangsimni-cgv-40-restaurants/">
-        <div class="card-date">2026-05-19</div>
-        <h2>왕십리 CGV 맛집 40선</h2>
-        <p>기존 20선 페이지를 삭제하고, 프랜차이즈/가맹 브랜드를 제외한 왕십리 CGV·행당동·한양대·마장 인접권 로컬 맛집 40곳을 정리한 페이지.</p>
-      </a>
-      <a class="card" href="items/2026-05-17-yangjae-local-sandwiches/">
-        <div class="card-date">2026-05-17</div>
-        <h2>양재역 2km 로컬 샌드위치 맛집 10선</h2>
-        <p>대형 프랜차이즈를 제외하고 양재역 반경 약 2km 안의 샌드위치 전문점, 베이커리, 브런치 카페 10곳을 정리한 페이지.</p>
-      </a>
-      <a class="card" href="items/2026-05-17-yangjae-meat-restaurants/">
-        <div class="card-date">2026-05-17</div>
-        <h2>양재역 근처 고기 맛집 20선</h2>
-        <p>소고기·돼지고기 중심으로 양재역, 뱅뱅사거리, 양재시민의숲, 도곡 인접권 고기집 20곳을 카드형으로 정리한 페이지.</p>
-      </a>
-      <a class="card" href="items/2026-05-17-yangjae-quick-restaurants/">
-        <div class="card-date">2026-05-17</div>
-        <h2>양재역 맛집 빠른 후보 6선</h2>
-        <p>빠른 정보 검색 테스트용으로 양재역 주변에서 반복 언급되는 식당 6곳을 카드형으로 정리한 페이지.</p>
-      </a>
-      <a class="card" href="items/2026-05-09-munjeong-restaurants/">
-        <div class="card-date">2026-05-09</div>
-        <h2>문정역 맛집 5선</h2>
-        <p>문정역 근처에서 점심, 저녁, 모임용으로 무난하게 고르기 좋은 식당 5곳을 짧게 정리한 페이지.</p>
-      </a>
-      <a class="card" href="items/2026-04-24-yangjae-restaurants/">
-        <div class="card-date">2026-04-24</div>
-        <h2>양재역 맛집 10선</h2>
-        <p>양재역 근처에서 자주 언급되는 식당 10곳을 카드형으로 정리한 공개용 시각화 페이지.</p>
-      </a>
-    </div>
+    <header class="hero">
+      <div class="eyebrow"><span class="dot"></span> PUBLIC HTML ARTIFACT ARCHIVE</div>
+      <h1>Visual scraps, shipped clean.</h1>
+      <p class="lead">보헤 형님의 1회성 시각 자료, 맛집 가이드, 데모 페이지, 임시 HTML 결과물을 모아두는 공개 아카이브입니다.</p>
+    </header>
 
-    <div class="status">
-      <strong>status</strong>
-      <p>Pages is live. Visual scraps will appear here as needed.</p>
-    </div>
-  </div>
+    <section class="metrics" aria-label="archive metrics">
+      <div class="metric">
+        <div class="metric-label">Items</div>
+        <div class="metric-value">6 pages</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Primary type</div>
+        <div class="metric-value">Food guides</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Sort</div>
+        <div class="metric-value">Newest first</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="latest-pages">
+      <div class="section-head">
+        <h2 id="latest-pages">Latest pages</h2>
+        <p class="section-note">카드를 누르면 각 공개 페이지로 이동합니다.</p>
+      </div>
+
+      <div class="cards">
+        <a class="card" href="items/2026-05-19-wangsimni-cgv-40-restaurants/">
+          <div class="card-kicker">
+            <div class="card-date">2026-05-19</div>
+            <span class="tag">맛집</span>
+          </div>
+          <h3>왕십리 CGV 맛집 40선</h3>
+          <p>기존 20선 페이지를 삭제하고, 프랜차이즈/가맹 브랜드를 제외한 왕십리 CGV·행당동·한양대·마장 인접권 로컬 맛집 40곳을 정리한 페이지.</p>
+          <div class="card-arrow">Open page →</div>
+        </a>
+
+        <a class="card" href="items/2026-05-17-yangjae-local-sandwiches/">
+          <div class="card-kicker">
+            <div class="card-date">2026-05-17</div>
+            <span class="tag">맛집</span>
+          </div>
+          <h3>양재역 2km 로컬 샌드위치 맛집 10선</h3>
+          <p>대형 프랜차이즈를 제외하고 양재역 반경 약 2km 안의 샌드위치 전문점, 베이커리, 브런치 카페 10곳을 정리한 페이지.</p>
+          <div class="card-arrow">Open page →</div>
+        </a>
+
+        <a class="card" href="items/2026-05-17-yangjae-meat-restaurants/">
+          <div class="card-kicker">
+            <div class="card-date">2026-05-17</div>
+            <span class="tag">맛집</span>
+          </div>
+          <h3>양재역 근처 고기 맛집 20선</h3>
+          <p>소고기·돼지고기 중심으로 양재역, 뱅뱅사거리, 양재시민의숲, 도곡 인접권 고기집 20곳을 카드형으로 정리한 페이지.</p>
+          <div class="card-arrow">Open page →</div>
+        </a>
+
+        <a class="card" href="items/2026-05-17-yangjae-quick-restaurants/">
+          <div class="card-kicker">
+            <div class="card-date">2026-05-17</div>
+            <span class="tag">맛집</span>
+          </div>
+          <h3>양재역 맛집 빠른 후보 6선</h3>
+          <p>빠른 정보 검색 테스트용으로 양재역 주변에서 반복 언급되는 식당 6곳을 카드형으로 정리한 페이지.</p>
+          <div class="card-arrow">Open page →</div>
+        </a>
+
+        <a class="card" href="items/2026-05-09-munjeong-restaurants/">
+          <div class="card-kicker">
+            <div class="card-date">2026-05-09</div>
+            <span class="tag">맛집</span>
+          </div>
+          <h3>문정역 맛집 5선</h3>
+          <p>문정역 근처에서 점심, 저녁, 모임용으로 무난하게 고르기 좋은 식당 5곳을 짧게 정리한 페이지.</p>
+          <div class="card-arrow">Open page →</div>
+        </a>
+
+        <a class="card" href="items/2026-04-24-yangjae-restaurants/">
+          <div class="card-kicker">
+            <div class="card-date">2026-04-24</div>
+            <span class="tag">맛집</span>
+          </div>
+          <h3>양재역 맛집 10선</h3>
+          <p>양재역 근처에서 자주 언급되는 식당 10곳을 카드형으로 정리한 공개용 시각화 페이지.</p>
+          <div class="card-arrow">Open page →</div>
+        </a>
+      </div>
+    </section>
+
+    <aside class="status" aria-label="deployment status">
+      <div>
+        <strong>Status</strong>
+        <p>Pages is live. Visual scraps will appear here as needed.</p>
+      </div>
+      <div class="status-indicator">Live</div>
+    </aside>
+  </main>
 </body>
 </html>
