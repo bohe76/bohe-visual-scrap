@@ -1,124 +1,138 @@
 ---
-version: alpha
-name: Restaurant Local Guide Warm Editorial
-description: "Mastercard-inspired warm editorial system adapted for Korean restaurant guide pages: putty cream canvas, black circular rank markers, soft paper cards, restrained orange accents, and muted blue map links."
+version: beta
+name: Restaurant Local Guide Cal Minimal
+description: "Cal.com-inspired monochrome restaurant guide system: white canvas, charcoal typography, shadow-border cards, no category stripes, category color only on rank badges and top filter chips."
 colors:
-  primary: "#141413"
-  canvas: "#F3F0EE"
-  paper: "#FCFBFA"
-  paper-soft: "#F7F3EE"
-  ink: "#141413"
-  charcoal: "#262627"
-  body: "#555555"
-  muted: "#6F6A64"
-  line: "#D8D2CA"
-  line-soft: "#E8E1D9"
-  accent-orange: "#D96B2B"
-  accent-red: "#EB001B"
-  link-blue: "#2F6F9F"
-  on-dark: "#FFFFFF"
+  canvas: "#FFFFFF"
+  paper: "#FFFFFF"
+  paper-soft: "#F7F7F7"
+  ink: "#242424"
+  body: "#4D4D4D"
+  muted: "#898989"
+  line: "#E6E6E6"
+  link-blue: "#0067B1"
+  category-japanese: "#1F3A5F"
+  category-meat: "#6E2F18"
+  category-korean: "#4F6F3A"
+  category-noodle: "#B75A22"
+  category-spicy: "#C2410C"
+  category-snack: "#D97706"
+  category-seafood: "#0F766E"
+  category-cafe: "#B76E79"
 typography:
   display:
-    fontFamily: Noto Sans KR
-    fontSize: 3.25rem
-    fontWeight: 850
-    lineHeight: 1.05
-    letterSpacing: "-0.045em"
+    fontFamily: Inter, Noto Sans KR
+    fontSize: 3.6rem
+    fontWeight: 800
+    lineHeight: 1.08
+    letterSpacing: "-0.055em"
   title:
-    fontFamily: Noto Sans KR
-    fontSize: 1.125rem
-    fontWeight: 850
+    fontFamily: Inter, Noto Sans KR
+    fontSize: 1.0625rem
+    fontWeight: 800
     lineHeight: 1.25
     letterSpacing: "-0.035em"
   body:
-    fontFamily: Noto Sans KR
+    fontFamily: Inter, Noto Sans KR
     fontSize: 1rem
     fontWeight: 400
-    lineHeight: 1.62
+    lineHeight: 1.58
   label:
-    fontFamily: Noto Sans KR
+    fontFamily: Inter, Noto Sans KR
     fontSize: 0.75rem
-    fontWeight: 850
+    fontWeight: 800
     lineHeight: 1.2
-    letterSpacing: "0.04em"
 rounded:
-  card: 28px
-  hero: 36px
-  pill: 1000px
-  metric: 18px
+  hero: 28px
+  card: 22px
+  pill: 9999px
+  metric: 14px
 spacing:
   xs: 6px
   sm: 10px
   md: 16px
   lg: 24px
-  xl: 36px
+  xl: 56px
 components:
   card:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
     rounded: "{rounded.card}"
-    padding: 18px
+    shadow: "ring shadow + soft diffused shadow"
+    categoryStripe: false
   rank-badge:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.on-dark}"
+    backgroundColor: "category color"
+    textColor: "#FFFFFF"
     rounded: "{rounded.pill}"
     size: 40px
-  info-pill:
-    backgroundColor: "{colors.paper-soft}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.pill}"
-    padding: 9px
+  category-filter:
+    position: top sticky
+    markerColor: "category color"
+    behavior: "click to show matching category cards"
   link:
     textColor: "{colors.link-blue}"
 ---
 
 ## Overview
 
-Restaurant guide pages should feel like a warm editorial city guide rather than a generic data dashboard. The system is adapted from Mastercard's warm cream editorial language, but tuned for Korean local restaurant lists: practical facts stay dense and readable, while the page atmosphere remains calm, premium, and food-friendly.
+Restaurant guide pages should feel like a clean, practical local guide rather than a decorative food magazine. The system follows Cal.com's monochrome restraint: white canvas, charcoal text, generous whitespace, and subtle shadow-border surfaces. Category colors are functional only, used for filtering and recognition rather than decoration.
 
 ## Colors
 
-- **Canvas (#F3F0EE):** Putty cream page background. Avoid sterile white full-page backgrounds.
-- **Paper (#FCFBFA):** Raised cards and hero surfaces.
-- **Ink (#141413):** Headlines, circular rank badges, primary labels.
-- **Accent orange (#D96B2B):** Small editorial dots, eyebrows, and emphasis only. Do not flood cards with orange.
-- **Link blue (#2F6F9F):** Naver map and source links. Muted blue keeps link affordance without clashing with the warm palette.
+- **Canvas / Paper (#FFFFFF):** The page and cards use a clean white surface.
+- **Ink (#242424):** Headlines, card names, labels, and main UI text.
+- **Muted (#898989):** metadata and secondary guidance.
+- **Link blue (#0067B1):** Naver map/source links only.
+- **Category colors:** Reserved for rank badge backgrounds, filter dots, and tiny swatches. Do not use category colors as card header fills or top stripes.
 
 ## Typography
 
-Use Korean-first Noto Sans KR with tight editorial headings. Headlines should be confident and compact; body text should stay highly legible on mobile.
+Use Inter with Korean fallback (`Noto Sans KR`, Apple SD Gothic Neo, Malgun Gothic). Keep headings compact and confident with tight negative letter-spacing; keep body text highly readable on mobile.
 
 ## Layout
 
-Mobile-first single-column cards, then 2-up tablet, 3-4-up desktop depending on content density. Large restaurant lists must keep quick-pick sections and verification notes readable without horizontal overflow.
+Mobile-first single-column cards, then 2-up tablet, 3-up desktop, and 4-up wide desktop. Put the category filter directly above the grid. The filter should be horizontally scrollable on mobile and sticky enough to remain easy to reach while browsing.
 
 ## Elevation & Depth
 
-Use paper-on-paper depth: soft shadows, hairline borders, warm cream surfaces. Avoid glossy gradients and decorative hero images unless specifically requested.
+Use Cal-style shadow-border cards: a subtle 1px ring shadow plus very soft diffused elevation. Avoid heavy shadows, gradients, image decorations, and saturated backgrounds.
 
 ## Shapes
 
-Use rounded cards and pills. Rank markers are always black circular badges with white numbers. Criteria/legend chips use warm cream/brown tones, never purple or saturated default blue.
+Use clean rounded cards and pill filters. Rank markers are circular badges whose background is the category color. Do not use category-colored top stripes or dark colored card headers.
 
 ## Components
 
-- **Hero:** use a dark warm-black editorial hero with orange/red orbit circles and a large ghost count number so the design change is visually unmistakable.
-- **Restaurant card:** paper background with a dark category-colored top header, compact metrics, no hover lift. The category color must influence the header, strip, tags, and metric surfaces so the DESIGN.md is applied to the whole card, not only a thin decoration.
-- **Category stripe colors:** navy = Japanese/ramen, deep brown = meat/gopchang, olive = Korean/soup, clay orange = Chinese/mala/noodles, amber = snack/fried/jeon/cutlet, teal = seafood, rose = cafe/dessert.
-- **Rank badge:** white circle on dark card header with ink number.
-- **Tags / card chips:** category-soft surface derived from the card category color.
-- **Bottom legend:** use the same dark warm-black editorial treatment as the hero, with orbit motif and visible color swatches for the category map.
+- **Hero:** white card, charcoal typography, minimal pill eyebrow, faint oversized count number only.
+- **Restaurant card:** white surface, no stripe, no dark category header, compact metrics, no distracting hover effect.
+- **Rank badge:** category-colored circle with white rank number.
+- **Top category filter:** pill buttons with category color dots; clicking a filter hides non-matching cards. `전체` resets the view.
+- **Tags / chips:** neutral light gray. Do not tint every tag with the category color.
+- **Metrics:** neutral light gray boxes with high-contrast labels.
+- **Bottom legend:** white card; if category colors are shown, present them as small swatches only.
 - **Links:** muted blue, underline on hover only.
-- **Metrics:** soft cream/category-tinted boxes with high-contrast labels.
+
+## Category Color Map
+
+- Japanese / ramen: navy `#1F3A5F`
+- Meat / gopchang: deep brown `#6E2F18`
+- Korean / soup: olive `#4F6F3A`
+- Noodles / Chinese: clay orange `#B75A22`
+- Mala / spicy: red-orange `#C2410C`
+- Snack / fried / jeon / cutlet: amber `#D97706`
+- Seafood: teal `#0F766E`
+- Cafe / dessert: rose `#B76E79`
 
 ## Do's and Don'ts
 
 Do:
 - Keep Naver review counts and verification details visible.
-- Use restrained editorial accents and practical information hierarchy.
+- Make filters obvious and usable on mobile.
+- Keep category color limited to filter markers, rank backgrounds, and tiny legend swatches.
 - Check mobile, tablet, and desktop rendering before publishing.
 
 Don't:
-- Use purple pills, bright default blue links, or unrelated saturated chips.
-- Add decorative images to fast restaurant search artifacts by default.
+- Add category top stripes.
+- Fill card headers with category colors.
+- Use decorative gradients, orbit motifs, or heavy editorial styling.
 - Add distracting hover/transition effects to dense restaurant cards.
