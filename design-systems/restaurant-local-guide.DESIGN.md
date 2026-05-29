@@ -1,5 +1,5 @@
 ---
-version: beta
+version: alpha
 name: Restaurant Local Guide Cal Minimal
 description: "Cal.com-inspired monochrome restaurant guide system: white canvas, charcoal typography, shadow-border cards, no category stripes, category color only on rank badges and top filter chips."
 colors:
@@ -58,19 +58,22 @@ components:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
     rounded: "{rounded.card}"
-    shadow: "ring shadow + soft diffused shadow"
-    categoryStripe: false
+    padding: 24px
   rank-badge:
-    backgroundColor: "category color"
+    backgroundColor: "{colors.category-meat}"
     textColor: "#FFFFFF"
     rounded: "{rounded.pill}"
     size: 40px
   category-filter:
-    position: top sticky
-    markerColor: "category color"
-    behavior: "click to show matching category cards"
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    padding: 10px
   link:
+    backgroundColor: "{colors.paper-soft}"
     textColor: "{colors.link-blue}"
+    rounded: "{rounded.pill}"
+    padding: 10px
 ---
 
 ## Overview
