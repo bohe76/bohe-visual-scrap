@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>양재 집 근처 점심 맛집 30선</title>
+  <meta name="description" content="보헤 형님 기준지 인근 1km 내외 점심 식당 30곳 카드형 가이드" />
+  <style>
+    :root { --bg:#fff; --ink:#242424; --muted:#737373; --line:#eaeaea; --soft:#fafafa; --shadow:rgba(0,0,0,.08) 0 0 0 1px, rgba(0,0,0,.04) 0 10px 30px -10px; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif; letter-spacing:-.02em; }
+    a { color:#111; text-underline-offset:3px; }
+    .wrap { width:min(1180px, calc(100% - 28px)); margin:0 auto; padding:28px 0 64px; }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:28px; }
+    .brand { display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; }
+    .mark { width:26px; height:26px; border-radius:999px; background:#111; color:#fff; display:grid; place-items:center; font-size:12px; }
+    .hero { padding:30px; border-radius:22px; box-shadow:var(--shadow); background:#fff; margin-bottom:18px; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; font-size:12px; font-weight:800; color:#555; text-transform:uppercase; letter-spacing:.08em; }
+    .dot { width:8px; height:8px; border-radius:50%; background:#111; }
+    h1 { margin:14px 0 10px; font-size:clamp(34px,6vw,68px); line-height:.98; letter-spacing:-.065em; }
+    .lead { max-width:820px; margin:0; color:var(--muted); line-height:1.75; font-size:16px; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .pill { border-radius:999px; padding:8px 11px; background:var(--soft); box-shadow:rgba(0,0,0,.08) 0 0 0 1px; color:#555; font-size:13px; }
+    .quick { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:18px 0; }
+    .quick div { padding:16px; border-radius:18px; background:#fff; box-shadow:var(--shadow); color:var(--muted); line-height:1.55; }
+    .quick b { display:block; color:#111; margin-bottom:4px; }
+    .filters { display:flex; gap:8px; overflow-x:auto; padding:4px 0 14px; scrollbar-width:none; }
+    .filter { flex:0 0 auto; border:0; border-radius:999px; padding:10px 13px; background:#fff; box-shadow:var(--shadow); font-weight:700; color:#444; cursor:pointer; }
+    .filter.active { background:#111; color:#fff; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .card { min-width:0; display:flex; flex-direction:column; gap:12px; padding:18px; border-radius:20px; background:#fff; box-shadow:var(--shadow); }
+    .top { display:flex; gap:12px; align-items:flex-start; }
+    .rank { flex:0 0 42px; width:42px; height:42px; border-radius:50%; background:var(--rank,#111); color:#fff; display:grid; place-items:center; font-weight:900; font-size:13px; }
+    h2 { margin:0; font-size:20px; line-height:1.22; letter-spacing:-.045em; }
+    .sub { margin:5px 0 0; color:var(--muted); font-size:13px; line-height:1.35; }
+    .tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .tag { padding:5px 8px; border-radius:999px; background:#f5f5f5; color:#555; font-size:12px; font-weight:700; }
+    .note { margin:0; color:#333; line-height:1.65; font-size:14px; }
+    .details { display:grid; gap:1px; margin-top:auto; overflow:hidden; border-radius:14px; background:var(--line); }
+    .details div { display:grid; grid-template-columns:82px minmax(0,1fr); gap:10px; padding:10px 12px; background:#fbfbfb; font-size:13px; line-height:1.45; }
+    .details b { color:#111; }
+    .details span { color:#666; min-width:0; }
+    .notice { margin-top:18px; padding:16px; border-radius:18px; background:#fff; box-shadow:var(--shadow); color:#666; line-height:1.65; font-size:14px; }
+    .is-hidden { display:none; }
+    @media (max-width: 900px) { .quick { grid-template-columns:repeat(2,minmax(0,1fr)); } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width: 560px) { .wrap { width:min(100% - 20px,1180px); padding-top:18px; } .hero { padding:22px; } .quick,.grid { grid-template-columns:1fr; } .details div { grid-template-columns:74px minmax(0,1fr); } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav"><a class="brand" href="../../"><span class="mark">B</span><span>bohe visual scrap</span></a><span class="pill">맛집 · 점심 30선</span></nav>
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span> YANGJAE LUNCH GUIDE</div>
+      <h1>집 근처 1km 내외<br>점심 식당 30선</h1>
+      <p class="lead">보헤 형님 기준지 주변에서 점심으로 쓰기 좋은 후보를 한식·면·일식·아시안·중식·고기·양식·분식으로 나눠 정리했습니다. 공개 페이지라 정확한 집 주소는 표시하지 않고 <b>양재1동/바우뫼로39길 권역 기준</b>으로만 표기했습니다.</p>
+      <div class="meta"><span class="pill">기준일 2026-06-05</span><span class="pill">반경: 약 1km 내외</span><span class="pill">30 cards</span><span class="pill">Naver / Google / OSM / Gemini 검색 보조</span></div>
+    </section>
+    <section class="quick" aria-label="quick picks">
+      <div><b>바로 든든한 한식</b>옥된장, 한국순대, 국고집, 보들설곰탕</div>
+      <div><b>면/가벼운 점심</b>임병주산동칼국수, 뱅뱅막국수, 미면정, 유성칼국수</div>
+      <div><b>사람 만나는 점심</b>산들해, 금강수림, 안남, 로드빌</div>
+      <div><b>캐주얼/특색픽</b>팀호완, 백소정, 작은공간, 린카</div>
+    </section>
+    <div class="filters" aria-label="category filters">
+      <button class="filter active" data-filter="all">전체</button>
+      <button class="filter" data-filter="한식">한식</button>
+      <button class="filter" data-filter="면">면</button>
+      <button class="filter" data-filter="일식">일식</button>
+      <button class="filter" data-filter="아시안">아시안</button>
+      <button class="filter" data-filter="중식">중식</button>
+      <button class="filter" data-filter="고기">고기</button>
+      <button class="filter" data-filter="양식">양식</button>
+      <button class="filter" data-filter="분식">분식</button>
+    </div>
+    <section class="grid" id="cards" aria-label="restaurant cards">
+      <article class="card" data-cat="한식·된장전골" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">01</div><div><h2>옥된장 양재점</h2><p class="sub">한식·된장전골 · 체인/실용픽 · 약 300m</p></div></div>
+        <div class="tags"><span class="tag">한식·된장전골</span><span class="tag">체인/실용픽</span><span class="tag">약 300m</span></div>
+        <p class="note">된장전골·수육무침처럼 점심에 부담 없는 메뉴가 뚜렷한 든든픽.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>혼밥·2인 점심·빠른 한식</span></div>
+          <div><b>주의</b><span>점심 피크에는 대기 가능.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + Naver/Google 공개 검색 교차 대상</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%98%A5%EB%90%9C%EC%9E%A5%20%EC%96%91%EC%9E%AC%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="한식·김치찌개" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">02</div><div><h2>삼산회관 양재본점</h2><p class="sub">한식·김치찌개 · 체인/본점 · 약 350m</p></div></div>
+        <div class="tags"><span class="tag">한식·김치찌개</span><span class="tag">체인/본점</span><span class="tag">약 350m</span></div>
+        <p class="note">김치찌개·돼지김치구이 계열이라 점심 밥집으로 실패 확률 낮음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>직장인 점심·뜨끈한 찌개</span></div>
+          <div><b>주의</b><span>매콤/자극적인 메뉴 위주.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 로컬 검색 반복 노출</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%82%BC%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%96%91%EC%9E%AC%EB%B3%B8%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="한정식·쌀밥정식" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">03</div><div><h2>산들해 양재점</h2><p class="sub">한정식·쌀밥정식 · 체인/모임픽 · 약 400m</p></div></div>
+        <div class="tags"><span class="tag">한정식·쌀밥정식</span><span class="tag">체인/모임픽</span><span class="tag">약 400m</span></div>
+        <p class="note">반찬 많은 정식형이라 부모님·동료 점심 모임에 안정적.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>부모님·손님 점심·반찬 많은 식사</span></div>
+          <div><b>주의</b><span>가벼운 한 끼보다는 가격대가 있는 편.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + Naver/Google 공개 검색 교차 대상</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%82%B0%EB%93%A4%ED%95%B4%20%EC%96%91%EC%9E%AC%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="순대국·국밥" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">04</div><div><h2>한국순대 본점</h2><p class="sub">순대국·국밥 · 로컬 · 약 500m</p></div></div>
+        <div class="tags"><span class="tag">순대국·국밥</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
+        <p class="note">국밥류라 회전 빠르고 든든한 점심으로 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>빠른 혼밥·든든한 국밥</span></div>
+          <div><b>주의</b><span>순대/내장 향 호불호.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 양재 순대국 반복 언급</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%ED%95%9C%EA%B5%AD%EC%88%9C%EB%8C%80%20%EB%B3%B8%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="청국장·보리밥" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">05</div><div><h2>마음은 콩밭에</h2><p class="sub">청국장·보리밥 · 로컬 · 약 600m</p></div></div>
+        <div class="tags"><span class="tag">청국장·보리밥</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
+        <p class="note">청국장·보리밥 계열로 건강한 점심 선택지.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>건강식·한식 점심</span></div>
+          <div><b>주의</b><span>청국장 향 호불호와 피크 혼잡 가능.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A7%88%EC%9D%8C%EC%9D%80%20%EC%BD%A9%EB%B0%AD%EC%97%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="시래기국·한식" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">06</div><div><h2>순남시래기 양재역점</h2><p class="sub">시래기국·한식 · 체인/실용픽 · 약 300m</p></div></div>
+        <div class="tags"><span class="tag">시래기국·한식</span><span class="tag">체인/실용픽</span><span class="tag">약 300m</span></div>
+        <p class="note">시래기국 중심이라 속 편한 점심에 무난.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>속 편한 한식·혼밥</span></div>
+          <div><b>주의</b><span>개성 강한 맛집보다는 안정형.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 지도/검색 후보</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%88%9C%EB%82%A8%EC%8B%9C%EB%9E%98%EA%B8%B0%20%EC%96%91%EC%9E%AC%EC%97%AD%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="국밥·한식" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">07</div><div><h2>국고집</h2><p class="sub">국밥·한식 · 로컬 · 약 450m</p></div></div>
+        <div class="tags"><span class="tag">국밥·한식</span><span class="tag">로컬</span><span class="tag">약 450m</span></div>
+        <p class="note">안동국밥·양지국밥 계열로 따뜻하고 빠른 점심 가능.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>국밥·뜨끈한 한 끼</span></div>
+          <div><b>주의</b><span>점심 인기 메뉴 소진 가능성 체크.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EA%B5%AD%EA%B3%A0%EC%A7%91%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="추어탕·보양식" data-group="한식" style="--rank:#2563eb">
+        <div class="top"><div class="rank">08</div><div><h2>남원골추어탕</h2><p class="sub">추어탕·보양식 · 로컬 · 약 700m</p></div></div>
+        <div class="tags"><span class="tag">추어탕·보양식</span><span class="tag">로컬</span><span class="tag">약 700m</span></div>
+        <p class="note">보양식이 필요한 날 점심 후보로 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>보양식·어른과 식사</span></div>
+          <div><b>주의</b><span>추어탕 비선호자에게는 선택지가 좁음.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%82%A8%EC%9B%90%EA%B3%A8%EC%B6%94%EC%96%B4%ED%83%95%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="설렁탕·곰탕" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">09</div><div><h2>보들설곰탕</h2><p class="sub">설렁탕·곰탕 · 로컬 · 약 550m</p></div></div>
+        <div class="tags"><span class="tag">설렁탕·곰탕</span><span class="tag">로컬</span><span class="tag">약 550m</span></div>
+        <p class="note">맑고 든든한 탕반류로 점심 호불호가 적음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>속 편한 탕·혼밥</span></div>
+          <div><b>주의</b><span>강한 개성보다는 무난한 탕집 성격.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%B3%B4%EB%93%A4%EC%84%A4%EA%B3%B0%ED%83%95%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="육회비빔밥·한우국밥" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">10</div><div><h2>마당재</h2><p class="sub">육회비빔밥·한우국밥 · 로컬 · 약 600m</p></div></div>
+        <div class="tags"><span class="tag">육회비빔밥·한우국밥</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
+        <p class="note">육회비빔밥/한우국밥 계열이라 점심 식사감이 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>든든한 한식·고기 점심</span></div>
+          <div><b>주의</b><span>일반 백반보다 가격대 확인 필요.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A7%88%EB%8B%B9%EC%9E%AC%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="한식·점심특선" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">11</div><div><h2>금강수림</h2><p class="sub">한식·점심특선 · 로컬/접대픽 · 약 800m</p></div></div>
+        <div class="tags"><span class="tag">한식·점심특선</span><span class="tag">로컬/접대픽</span><span class="tag">약 800m</span></div>
+        <p class="note">조금 더 격식 있는 점심/접대 후보로 분류.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>접대·손님 점심</span></div>
+          <div><b>주의</b><span>혼밥/초간단 점심에는 부담스러울 수 있음.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EA%B8%88%EA%B0%95%EC%88%98%EB%A6%BC%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="칼국수·만두" data-group="면" style="--rank:#c2410c">
+        <div class="top"><div class="rank">12</div><div><h2>임병주산동칼국수</h2><p class="sub">칼국수·만두 · 유명 로컬 · 약 900m</p></div></div>
+        <div class="tags"><span class="tag">칼국수·만두</span><span class="tag">유명 로컬</span><span class="tag">약 900m</span></div>
+        <p class="note">칼국수와 만두로 유명도가 높아 점심 목적지가 될 만함.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>유명 칼국수·만두</span></div>
+          <div><b>주의</b><span>대기 길 수 있어 시간 여유 필요.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 반복 언급</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%9E%84%EB%B3%91%EC%A3%BC%EC%82%B0%EB%8F%99%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="막국수·육전" data-group="면" style="--rank:#111827">
+        <div class="top"><div class="rank">13</div><div><h2>뱅뱅막국수</h2><p class="sub">막국수·육전 · 로컬 · 약 500m</p></div></div>
+        <div class="tags"><span class="tag">막국수·육전</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
+        <p class="note">들기름 막국수/육전 조합으로 가벼우면서 만족도 높은 점심.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>면 점심·가벼운 식사</span></div>
+          <div><b>주의</b><span>식사 시간 대기 가능.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%B1%85%EB%B1%85%EB%A7%89%EA%B5%AD%EC%88%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="샤브·칼국수" data-group="면" style="--rank:#c2410c">
+        <div class="top"><div class="rank">14</div><div><h2>미면정 양재본점</h2><p class="sub">샤브·칼국수 · 로컬/본점 · 약 650m</p></div></div>
+        <div class="tags"><span class="tag">샤브·칼국수</span><span class="tag">로컬/본점</span><span class="tag">약 650m</span></div>
+        <p class="note">샤브+칼국수 코스로 점심 모임에 잘 맞음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>2~4인 점심·면/샤브</span></div>
+          <div><b>주의</b><span>빠른 혼밥보다는 시간 여유 있는 점심에 적합.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%AF%B8%EB%A9%B4%EC%A0%95%20%EC%96%91%EC%9E%AC%EB%B3%B8%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="보쌈·칼국수" data-group="면" style="--rank:#c2410c">
+        <div class="top"><div class="rank">15</div><div><h2>오향절면</h2><p class="sub">보쌈·칼국수 · 로컬 · 약 400m</p></div></div>
+        <div class="tags"><span class="tag">보쌈·칼국수</span><span class="tag">로컬</span><span class="tag">약 400m</span></div>
+        <p class="note">보쌈과 면 조합이 있어 든든한 점심 세트감.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>보쌈+면·동료 점심</span></div>
+          <div><b>주의</b><span>조리/대기 시간이 있을 수 있음.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%98%A4%ED%96%A5%EC%A0%88%EB%A9%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="바지락칼국수" data-group="면" style="--rank:#c2410c">
+        <div class="top"><div class="rank">16</div><div><h2>채석강</h2><p class="sub">바지락칼국수 · 로컬 · 약 750m</p></div></div>
+        <div class="tags"><span class="tag">바지락칼국수</span><span class="tag">로컬</span><span class="tag">약 750m</span></div>
+        <p class="note">시원한 바지락칼국수 계열로 비 오는 날/국물 점심에 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>칼국수·국물 점심</span></div>
+          <div><b>주의</b><span>매장 규모와 대기 확인 권장.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%B1%84%EC%84%9D%EA%B0%95%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="칼국수" data-group="면" style="--rank:#c2410c">
+        <div class="top"><div class="rank">17</div><div><h2>유성칼국수</h2><p class="sub">칼국수 · 로컬 · 약 500m</p></div></div>
+        <div class="tags"><span class="tag">칼국수</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
+        <p class="note">담백한 칼국수 노포형 점심 후보.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>간단한 면 점심</span></div>
+          <div><b>주의</b><span>메뉴 폭이 넓지 않을 수 있음.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%9C%A0%EC%84%B1%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="돈카츠·마제소바" data-group="일식" style="--rank:#111827">
+        <div class="top"><div class="rank">18</div><div><h2>백소정 양재역점</h2><p class="sub">돈카츠·마제소바 · 체인/실용픽 · 약 300m</p></div></div>
+        <div class="tags"><span class="tag">돈카츠·마제소바</span><span class="tag">체인/실용픽</span><span class="tag">약 300m</span></div>
+        <p class="note">돈카츠·마제소바 조합이라 젊은 층 점심 선택지로 무난.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>일식 캐주얼·혼밥</span></div>
+          <div><b>주의</b><span>피크 타임 회전/대기 체크.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 지도/검색 후보</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%B0%B1%EC%86%8C%EC%A0%95%20%EC%96%91%EC%9E%AC%EC%97%AD%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="일본식 카레" data-group="일식" style="--rank:#111827">
+        <div class="top"><div class="rank">19</div><div><h2>린카</h2><p class="sub">일본식 카레 · 로컬 · 약 450m</p></div></div>
+        <div class="tags"><span class="tag">일본식 카레</span><span class="tag">로컬</span><span class="tag">약 450m</span></div>
+        <p class="note">카레 단일 목적 점심으로 깔끔하게 고르기 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>카레·혼밥/2인</span></div>
+          <div><b>주의</b><span>카레 취향이 아니면 선택 폭 제한.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A6%B0%EC%B9%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="회덮밥·참치" data-group="일식" style="--rank:#111827">
+        <div class="top"><div class="rank">20</div><div><h2>어부참치</h2><p class="sub">회덮밥·참치 · 로컬 · 약 550m</p></div></div>
+        <div class="tags"><span class="tag">회덮밥·참치</span><span class="tag">로컬</span><span class="tag">약 550m</span></div>
+        <p class="note">회덮밥/점심특선이 맞으면 가볍고 신선한 점심 후보.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>회덮밥·가벼운 일식</span></div>
+          <div><b>주의</b><span>점심 특선 운영 시간 확인 권장.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + OSM 인근 식당 좌표 후보</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%96%B4%EB%B6%80%EC%B0%B8%EC%B9%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="딤섬·중식" data-group="중식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">21</div><div><h2>팀호완 양재점</h2><p class="sub">딤섬·중식 · 체인/특색픽 · 약 350m</p></div></div>
+        <div class="tags"><span class="tag">딤섬·중식</span><span class="tag">체인/특색픽</span><span class="tag">약 350m</span></div>
+        <p class="note">딤섬으로 평소 한식과 다른 점심을 먹고 싶을 때 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>딤섬·가벼운 모임</span></div>
+          <div><b>주의</b><span>양 대비 가격이 높게 느껴질 수 있음.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + Naver 검색에서 방문자 리뷰 노출 확인</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%ED%8C%80%ED%98%B8%EC%99%84%20%EC%96%91%EC%9E%AC%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="베트남·아시안" data-group="아시안" style="--rank:#047857">
+        <div class="top"><div class="rank">22</div><div><h2>안남</h2><p class="sub">베트남·아시안 · 로컬/분위기픽 · 약 700m</p></div></div>
+        <div class="tags"><span class="tag">베트남·아시안</span><span class="tag">로컬/분위기픽</span><span class="tag">약 700m</span></div>
+        <p class="note">깔끔한 베트남 요리로 일반 쌀국수보다 분위기 있는 점심 가능.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>분위기 있는 아시안 점심</span></div>
+          <div><b>주의</b><span>직장인 데일리 점심으로는 가격대 확인.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%95%88%EB%82%A8%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="중식" data-group="중식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">23</div><div><h2>리첸</h2><p class="sub">중식 · 로컬 · 약 600m</p></div></div>
+        <div class="tags"><span class="tag">중식</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
+        <p class="note">짬뽕·탕수육 등 무난한 중식 점심 후보.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>중식 점심·여럿이 식사</span></div>
+          <div><b>주의</b><span>강한 맛집 목적지보다는 안정형.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A6%AC%EC%B2%B8%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="초밥·일식" data-group="일식" style="--rank:#be123c">
+        <div class="top"><div class="rank">24</div><div><h2>진스시</h2><p class="sub">초밥·일식 · 로컬 · 약 500m</p></div></div>
+        <div class="tags"><span class="tag">초밥·일식</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
+        <p class="note">초밥 세트형 점심으로 깔끔한 선택지.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>초밥 점심·조용한 식사</span></div>
+          <div><b>주의</b><span>매장 협소/대기 가능성 확인.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%A7%84%EC%8A%A4%EC%8B%9C%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="고기·한식" data-group="고기" style="--rank:#111827">
+        <div class="top"><div class="rank">25</div><div><h2>풍년집 큰아들네</h2><p class="sub">고기·한식 · 로컬 · 약 300m</p></div></div>
+        <div class="tags"><span class="tag">고기·한식</span><span class="tag">로컬</span><span class="tag">약 300m</span></div>
+        <p class="note">고기집 점심 메뉴가 필요할 때 가까운 후보.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>고기 점심·동료 식사</span></div>
+          <div><b>주의</b><span>고기 냄새/회식 분위기 가능.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%ED%92%8D%EB%85%84%EC%A7%91%20%ED%81%B0%EC%95%84%EB%93%A4%EB%84%A4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="오징어·제육볶음" data-group="한식" style="--rank:#111827">
+        <div class="top"><div class="rank">26</div><div><h2>양재오제섞어</h2><p class="sub">오징어·제육볶음 · 로컬 · 약 400m</p></div></div>
+        <div class="tags"><span class="tag">오징어·제육볶음</span><span class="tag">로컬</span><span class="tag">약 400m</span></div>
+        <p class="note">오징어+제육 계열 매콤한 밥 메뉴로 점심 만족감이 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>매콤한 한식·밥집</span></div>
+          <div><b>주의</b><span>매운맛 주의.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%96%91%EC%9E%AC%EC%98%A4%EC%A0%9C%EC%84%9E%EC%96%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="소갈비살·고기" data-group="고기" style="--rank:#b45309">
+        <div class="top"><div class="rank">27</div><div><h2>산내골소갈비살</h2><p class="sub">소갈비살·고기 · 로컬 · 약 450m</p></div></div>
+        <div class="tags"><span class="tag">소갈비살·고기</span><span class="tag">로컬</span><span class="tag">약 450m</span></div>
+        <p class="note">고기류 점심/저녁 모두 가능한 로컬 고깃집 후보.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>고기 점심·저녁까지 연결</span></div>
+          <div><b>주의</b><span>피크에는 혼잡 가능.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%82%B0%EB%82%B4%EA%B3%A8%EC%86%8C%EA%B0%88%EB%B9%84%EC%82%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="고기·김치찌개" data-group="고기" style="--rank:#b45309">
+        <div class="top"><div class="rank">28</div><div><h2>다돈식당</h2><p class="sub">고기·김치찌개 · 로컬 · 약 600m</p></div></div>
+        <div class="tags"><span class="tag">고기·김치찌개</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
+        <p class="note">고기집 기반이라 김치찌개/식사류가 점심에 잘 맞음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>든든한 밥·고기집 점심</span></div>
+          <div><b>주의</b><span>회식 느낌이 강할 수 있음.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8F%88%EC%8B%9D%EB%8B%B9%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="파스타·피자" data-group="양식" style="--rank:#2563eb">
+        <div class="top"><div class="rank">29</div><div><h2>로드빌</h2><p class="sub">파스타·피자 · 로컬/양식 · 약 400m</p></div></div>
+        <div class="tags"><span class="tag">파스타·피자</span><span class="tag">로컬/양식</span><span class="tag">약 400m</span></div>
+        <p class="note">파스타·화덕피자 계열이라 점심 약속/가벼운 데이트에 좋음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>양식 점심·데이트</span></div>
+          <div><b>주의</b><span>빠른 식사보다는 여유 있는 점심에 적합.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A1%9C%EB%93%9C%EB%B9%8C%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-cat="즉석떡볶이" data-group="분식" style="--rank:#db2777">
+        <div class="top"><div class="rank">30</div><div><h2>작은공간</h2><p class="sub">즉석떡볶이 · 유명 로컬 · 약 350m</p></div></div>
+        <div class="tags"><span class="tag">즉석떡볶이</span><span class="tag">유명 로컬</span><span class="tag">약 350m</span></div>
+        <p class="note">즉석떡볶이 유명 후보로 캐주얼 점심에 재미 있음.</p>
+        <div class="details">
+          <div><b>추천 상황</b><span>캐주얼·분식·친구 점심</span></div>
+          <div><b>주의</b><span>웨이팅이 길면 점심시간 초과 가능.</span></div>
+          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 반복 언급</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%9E%91%EC%9D%80%EA%B3%B5%EA%B0%84%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+        </div>
+      </article>
+    </section>
+    <section class="notice"><b>검증 메모</b> · Naver Map place API는 자동 조회 시 429/captcha가 발생해 전체 방문자·블로그 리뷰 수를 일괄 추출하지 못했습니다. 그래서 카드에는 숫자 리뷰를 임의로 넣지 않고, Gemini 검색 결과와 공개 검색/지도/OSM 후보를 교차해 점심 후보를 구성했습니다. 실제 방문 직전에는 각 카드의 네이버 지도 링크에서 영업시간·휴무·전화번호·최신 리뷰를 확인하세요.</section>
+  </main>
+  <script>
+    const buttons=[...document.querySelectorAll('.filter')];
+    const cards=[...document.querySelectorAll('.card')];
+    buttons.forEach(btn=>btn.addEventListener('click',()=>{
+      buttons.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      cards.forEach(card=>{ card.classList.toggle('is-hidden', f !== 'all' && !(card.dataset.group.includes(f) || card.dataset.cat.includes(f))); });
+    }));
+  </script>
+</body>
+</html>
