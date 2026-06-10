@@ -3,29 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>양재 집 근처 점심 맛집 30선</title>
-  <meta name="description" content="보헤 형님 기준지 인근 1km 내외 점심 식당 30곳 카드형 가이드" />
+  <title>양재 집 근처 500m 네이버 검증 맛집 50곳</title>
+  <meta name="description" content="양재1동/바우뫼로39길 권역 기준 500m 내 Naver Place 검증 식당 50곳" />
   <style>
-    :root { --bg:#fff; --ink:#242424; --muted:#737373; --line:#eaeaea; --soft:#fafafa; --shadow:rgba(0,0,0,.08) 0 0 0 1px, rgba(0,0,0,.04) 0 10px 30px -10px; }
+    :root { --bg:#fff; --ink:#171717; --muted:#666; --line:#eaeaea; --soft:#fafafa; --shadow:rgba(0,0,0,.08) 0 0 0 1px, rgba(0,0,0,.04) 0 10px 30px -10px; }
     * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
     body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif; letter-spacing:-.02em; }
     a { color:#111; text-underline-offset:3px; }
     .wrap { width:min(1180px, calc(100% - 28px)); margin:0 auto; padding:28px 0 64px; }
     .nav { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:28px; }
-    .brand { display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; }
+    .brand { display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; }
     .mark { width:26px; height:26px; border-radius:999px; background:#111; color:#fff; display:grid; place-items:center; font-size:12px; }
     .hero { padding:30px; border-radius:22px; box-shadow:var(--shadow); background:#fff; margin-bottom:18px; }
-    .eyebrow { display:inline-flex; gap:8px; align-items:center; font-size:12px; font-weight:800; color:#555; text-transform:uppercase; letter-spacing:.08em; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; font-size:12px; font-weight:900; color:#555; text-transform:uppercase; letter-spacing:.08em; }
     .dot { width:8px; height:8px; border-radius:50%; background:#111; }
     h1 { margin:14px 0 10px; font-size:clamp(34px,6vw,68px); line-height:.98; letter-spacing:-.065em; }
-    .lead { max-width:820px; margin:0; color:var(--muted); line-height:1.75; font-size:16px; }
+    .lead { max-width:860px; margin:0; color:var(--muted); line-height:1.75; font-size:16px; }
     .meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
     .pill { border-radius:999px; padding:8px 11px; background:var(--soft); box-shadow:rgba(0,0,0,.08) 0 0 0 1px; color:#555; font-size:13px; }
-    .quick { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:18px 0; }
+    .quick { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
     .quick div { padding:16px; border-radius:18px; background:#fff; box-shadow:var(--shadow); color:var(--muted); line-height:1.55; }
     .quick b { display:block; color:#111; margin-bottom:4px; }
-    .filters { display:flex; gap:8px; overflow-x:auto; padding:4px 0 14px; scrollbar-width:none; }
-    .filter { flex:0 0 auto; border:0; border-radius:999px; padding:10px 13px; background:#fff; box-shadow:var(--shadow); font-weight:700; color:#444; cursor:pointer; }
+    .filters { display:flex; gap:8px; overflow-x:auto; padding:4px 0 14px; scrollbar-width:none; position:sticky; top:0; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); z-index:2; }
+    .filter { flex:0 0 auto; border:0; border-radius:999px; padding:10px 13px; background:#fff; box-shadow:var(--shadow); font-weight:800; color:#444; cursor:pointer; display:inline-flex; align-items:center; gap:7px; }
+    .filter span { width:8px; height:8px; border-radius:99px; display:inline-block; }
     .filter.active { background:#111; color:#fff; }
     .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
     .card { min-width:0; display:flex; flex-direction:column; gap:12px; padding:18px; border-radius:20px; background:#fff; box-shadow:var(--shadow); }
@@ -34,12 +36,12 @@
     h2 { margin:0; font-size:20px; line-height:1.22; letter-spacing:-.045em; }
     .sub { margin:5px 0 0; color:var(--muted); font-size:13px; line-height:1.35; }
     .tags { display:flex; flex-wrap:wrap; gap:6px; }
-    .tag { padding:5px 8px; border-radius:999px; background:#f5f5f5; color:#555; font-size:12px; font-weight:700; }
+    .tag { padding:5px 8px; border-radius:999px; background:#f5f5f5; color:#555; font-size:12px; font-weight:800; }
     .note { margin:0; color:#333; line-height:1.65; font-size:14px; }
     .details { display:grid; gap:1px; margin-top:auto; overflow:hidden; border-radius:14px; background:var(--line); }
     .details div { display:grid; grid-template-columns:82px minmax(0,1fr); gap:10px; padding:10px 12px; background:#fbfbfb; font-size:13px; line-height:1.45; }
     .details b { color:#111; }
-    .details span { color:#666; min-width:0; }
+    .details span { color:#666; min-width:0; overflow-wrap:anywhere; }
     .notice { margin-top:18px; padding:16px; border-radius:18px; background:#fff; box-shadow:var(--shadow); color:#666; line-height:1.65; font-size:14px; }
     .is-hidden { display:none; }
     @media (max-width: 900px) { .quick { grid-template-columns:repeat(2,minmax(0,1fr)); } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
@@ -48,372 +50,691 @@
 </head>
 <body>
   <main class="wrap">
-    <nav class="nav"><a class="brand" href="../../"><span class="mark">B</span><span>bohe visual scrap</span></a><span class="pill">맛집 · 점심 30선</span></nav>
+    <nav class="nav"><a class="brand" href="../../"><span class="mark">B</span><span>bohe visual scrap</span></a><span class="pill">맛집 · 네이버 검증 50곳</span></nav>
     <section class="hero">
-      <div class="eyebrow"><span class="dot"></span> YANGJAE LUNCH GUIDE</div>
-      <h1>집 근처 1km 내외<br>점심 식당 30선</h1>
-      <p class="lead">보헤 형님 기준지 주변에서 점심으로 쓰기 좋은 후보를 한식·면·일식·아시안·중식·고기·양식·분식으로 나눠 정리했습니다. 공개 페이지라 정확한 집 주소는 표시하지 않고 <b>양재1동/바우뫼로39길 권역 기준</b>으로만 표기했습니다.</p>
-      <div class="meta"><span class="pill">기준일 2026-06-05</span><span class="pill">반경: 약 1km 내외</span><span class="pill">30 cards</span><span class="pill">Naver / Google / OSM / Gemini 검색 보조</span></div>
+      <div class="eyebrow"><span class="dot"></span> YANGJAE 500M VERIFIED GUIDE</div>
+      <h1>집 근처 500m<br>네이버 검증 맛집 50곳</h1>
+      <p class="lead">기존 1km/30선 페이지를 다시 만들었습니다. 공개 페이지라 정확한 집 주소는 표시하지 않고 <b>양재1동/바우뫼로39길 권역 기준</b>으로만 표기합니다. 아래 50곳은 모두 Naver Place에서 이름·카테고리·좌표·방문자/블로그 리뷰 수를 확인했고, 기준지에서 직선거리 500m 안쪽인 곳만 남겼습니다.</p>
+      <div class="meta"><span class="pill">재검증 2026-06-11</span><span class="pill">반경: 500m 이내</span><span class="pill">50 cards</span><span class="pill">Naver Place 좌표 + 리뷰 수 확인</span><span class="pill">방문자 리뷰 합계 47,584</span></div>
     </section>
     <section class="quick" aria-label="quick picks">
-      <div><b>바로 든든한 한식</b>옥된장, 한국순대, 국고집, 보들설곰탕</div>
-      <div><b>면/가벼운 점심</b>임병주산동칼국수, 뱅뱅막국수, 미면정, 유성칼국수</div>
-      <div><b>사람 만나는 점심</b>산들해, 금강수림, 안남, 로드빌</div>
-      <div><b>캐주얼/특색픽</b>팀호완, 백소정, 작은공간, 린카</div>
+      <div><b>한식·분식</b>아후닭발 양재동점 · 백채김치찌개 양재역점 · 미각담다 다이닝 · 마리아치양재곱창</div>
+      <div><b>고기·치킨</b>산내골소갈비살 · 쌈겹 · 영동회관 · 설마중</div>
+      <div><b>면·샤브</b>도라지국수집 · 인덕원비빔국수 양재직영점 · 쿠니라멘 · 미면정 양재본점</div>
+      <div><b>중식</b>화차이 · 샹차이 · 미몽 양재본점</div>
+      <div><b>해산물</b>강촌원조쭈꾸미본점 · 메기대감 · 문어세상해천탕 양재점 · 통영항 수산민족 양재점</div>
+      <div><b>세계·양식</b>몬안베띠 양재역점 · 라그릴리아 양재점 · 아야로시 · 디오디아2.0</div>
     </section>
     <div class="filters" aria-label="category filters">
-      <button class="filter active" data-filter="all">전체</button>
-      <button class="filter" data-filter="한식">한식</button>
-      <button class="filter" data-filter="면">면</button>
-      <button class="filter" data-filter="일식">일식</button>
-      <button class="filter" data-filter="아시안">아시안</button>
-      <button class="filter" data-filter="중식">중식</button>
-      <button class="filter" data-filter="고기">고기</button>
-      <button class="filter" data-filter="양식">양식</button>
-      <button class="filter" data-filter="분식">분식</button>
+      <button class="filter active" data-filter="all"><span style="background:#111"></span>전체</button>
+      <button class="filter" data-filter="한식·분식"><span style="background:#111827"></span>한식·분식</button>
+      <button class="filter" data-filter="고기·치킨"><span style="background:#dc2626"></span>고기·치킨</button>
+      <button class="filter" data-filter="면·샤브"><span style="background:#2563eb"></span>면·샤브</button>
+      <button class="filter" data-filter="중식"><span style="background:#b45309"></span>중식</button>
+      <button class="filter" data-filter="해산물"><span style="background:#0891b2"></span>해산물</button>
+      <button class="filter" data-filter="세계·양식"><span style="background:#7c3aed"></span>세계·양식</button>
     </div>
     <section class="grid" id="cards" aria-label="restaurant cards">
-      <article class="card" data-cat="한식·된장전골" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">01</div><div><h2>옥된장 양재점</h2><p class="sub">한식·된장전골 · 체인/실용픽 · 약 300m</p></div></div>
-        <div class="tags"><span class="tag">한식·된장전골</span><span class="tag">체인/실용픽</span><span class="tag">약 300m</span></div>
-        <p class="note">된장전골·수육무침처럼 점심에 부담 없는 메뉴가 뚜렷한 든든픽.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">01</div><div><h2>아후닭발 양재동점</h2><p class="sub">닭발 · 약 69m · 방문자 403 / 블로그 205</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">닭발</span><span class="tag">약 69m</span><span class="tag">Naver Place ID 37653934</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>혼밥·2인 점심·빠른 한식</span></div>
-          <div><b>주의</b><span>점심 피크에는 대기 가능.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + Naver/Google 공개 검색 교차 대상</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%98%A5%EB%90%9C%EC%9E%A5%20%EC%96%91%EC%9E%AC%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 33 광성빌딩</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 403 · 블로그 리뷰 205</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>매운맛·향이 있는 메뉴라 호불호 확인.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 69m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/37653934?lng=127.0382334&lat=37.4834855&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="한식·김치찌개" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">02</div><div><h2>삼산회관 양재본점</h2><p class="sub">한식·김치찌개 · 체인/본점 · 약 350m</p></div></div>
-        <div class="tags"><span class="tag">한식·김치찌개</span><span class="tag">체인/본점</span><span class="tag">약 350m</span></div>
-        <p class="note">김치찌개·돼지김치구이 계열이라 점심 밥집으로 실패 확률 낮음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">02</div><div><h2>백채김치찌개 양재역점</h2><p class="sub">찌개,전골 · 약 69m · 방문자 206 / 블로그 36</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">찌개,전골</span><span class="tag">약 69m</span><span class="tag">Naver Place ID 1791486700</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>직장인 점심·뜨끈한 찌개</span></div>
-          <div><b>주의</b><span>매콤/자극적인 메뉴 위주.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 로컬 검색 반복 노출</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%82%BC%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%96%91%EC%9E%AC%EB%B3%B8%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 37</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 206 · 블로그 리뷰 36</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 69m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1791486700?lng=127.0382768&lat=37.4833693&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="한정식·쌀밥정식" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">03</div><div><h2>산들해 양재점</h2><p class="sub">한정식·쌀밥정식 · 체인/모임픽 · 약 400m</p></div></div>
-        <div class="tags"><span class="tag">한정식·쌀밥정식</span><span class="tag">체인/모임픽</span><span class="tag">약 400m</span></div>
-        <p class="note">반찬 많은 정식형이라 부모님·동료 점심 모임에 안정적.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">03</div><div><h2>미각담다 다이닝</h2><p class="sub">한식 · 약 95m · 방문자 34 / 블로그 107</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 95m</span><span class="tag">Naver Place ID 1644794960</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>부모님·손님 점심·반찬 많은 식사</span></div>
-          <div><b>주의</b><span>가벼운 한 끼보다는 가격대가 있는 편.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + Naver/Google 공개 검색 교차 대상</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%82%B0%EB%93%A4%ED%95%B4%20%EC%96%91%EC%9E%AC%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로 2634-8 1층 101호</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 34 · 블로그 리뷰 107</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>리뷰 수가 상대적으로 적어 방문 전 최신 영업/메뉴 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 95m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1644794960?lng=127.0387931&lat=37.4844001&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="순대국·국밥" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">04</div><div><h2>한국순대 본점</h2><p class="sub">순대국·국밥 · 로컬 · 약 500m</p></div></div>
-        <div class="tags"><span class="tag">순대국·국밥</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
-        <p class="note">국밥류라 회전 빠르고 든든한 점심으로 좋음.</p>
+      <article class="card" data-group="중식" style="--rank:#b45309">
+        <div class="top"><div class="rank">04</div><div><h2>화차이</h2><p class="sub">중식당 · 약 97m · 방문자 618 / 블로그 88</p></div></div>
+        <div class="tags"><span class="tag">중식</span><span class="tag">중식당</span><span class="tag">약 97m</span><span class="tag">Naver Place ID 193891932</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 중식 점심·여럿이 나눠 먹기에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>빠른 혼밥·든든한 국밥</span></div>
-          <div><b>주의</b><span>순대/내장 향 호불호.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 양재 순대국 반복 언급</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%ED%95%9C%EA%B5%AD%EC%88%9C%EB%8C%80%20%EB%B3%B8%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 26</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 618 · 블로그 리뷰 88</span></div>
+          <div><b>추천 상황</b><span>중식 점심·여럿이 나눠 먹기</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 97m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/193891932?lng=127.0379338&lat=37.483736&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="청국장·보리밥" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">05</div><div><h2>마음은 콩밭에</h2><p class="sub">청국장·보리밥 · 로컬 · 약 600m</p></div></div>
-        <div class="tags"><span class="tag">청국장·보리밥</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
-        <p class="note">청국장·보리밥 계열로 건강한 점심 선택지.</p>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">05</div><div><h2>산내골소갈비살</h2><p class="sub">육류,고기요리 · 약 100m · 방문자 359 / 블로그 95</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">육류,고기요리</span><span class="tag">약 100m</span><span class="tag">Naver Place ID 765084210</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>건강식·한식 점심</span></div>
-          <div><b>주의</b><span>청국장 향 호불호와 피크 혼잡 가능.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A7%88%EC%9D%8C%EC%9D%80%20%EC%BD%A9%EB%B0%AD%EC%97%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 강남대로34길 76 1층 산내골소갈비살</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 359 · 블로그 리뷰 95</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 100m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/765084210?lng=127.0400652&lat=37.4838971&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="시래기국·한식" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">06</div><div><h2>순남시래기 양재역점</h2><p class="sub">시래기국·한식 · 체인/실용픽 · 약 300m</p></div></div>
-        <div class="tags"><span class="tag">시래기국·한식</span><span class="tag">체인/실용픽</span><span class="tag">약 300m</span></div>
-        <p class="note">시래기국 중심이라 속 편한 점심에 무난.</p>
+      <article class="card" data-group="중식" style="--rank:#b45309">
+        <div class="top"><div class="rank">06</div><div><h2>샹차이</h2><p class="sub">중식당 · 약 101m · 방문자 207 / 블로그 14</p></div></div>
+        <div class="tags"><span class="tag">중식</span><span class="tag">중식당</span><span class="tag">약 101m</span><span class="tag">Naver Place ID 716433493</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 중식 점심·여럿이 나눠 먹기에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>속 편한 한식·혼밥</span></div>
-          <div><b>주의</b><span>개성 강한 맛집보다는 안정형.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 지도/검색 후보</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%88%9C%EB%82%A8%EC%8B%9C%EB%9E%98%EA%B8%B0%20%EC%96%91%EC%9E%AC%EC%97%AD%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 강남대로34길 76 대양빌딩</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 207 · 블로그 리뷰 14</span></div>
+          <div><b>추천 상황</b><span>중식 점심·여럿이 나눠 먹기</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 101m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/716433493?lng=127.0400473&lat=37.4839542&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="국밥·한식" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">07</div><div><h2>국고집</h2><p class="sub">국밥·한식 · 로컬 · 약 450m</p></div></div>
-        <div class="tags"><span class="tag">국밥·한식</span><span class="tag">로컬</span><span class="tag">약 450m</span></div>
-        <p class="note">안동국밥·양지국밥 계열로 따뜻하고 빠른 점심 가능.</p>
+      <article class="card" data-group="세계·양식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">07</div><div><h2>몬안베띠 양재역점</h2><p class="sub">베트남음식 · 약 106m · 방문자 1,155 / 블로그 671</p></div></div>
+        <div class="tags"><span class="tag">세계·양식</span><span class="tag">베트남음식</span><span class="tag">약 106m</span><span class="tag">Naver Place ID 38709080</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 분위기 바꾸는 점심/저녁 후보에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>국밥·뜨끈한 한 끼</span></div>
-          <div><b>주의</b><span>점심 인기 메뉴 소진 가능성 체크.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EA%B5%AD%EA%B3%A0%EC%A7%91%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 바우뫼로41길 84 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,155 · 블로그 리뷰 671</span></div>
+          <div><b>추천 상황</b><span>분위기 바꾸는 점심/저녁 후보</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 106m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/38709080?lng=127.0399678&lat=37.484145&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="추어탕·보양식" data-group="한식" style="--rank:#2563eb">
-        <div class="top"><div class="rank">08</div><div><h2>남원골추어탕</h2><p class="sub">추어탕·보양식 · 로컬 · 약 700m</p></div></div>
-        <div class="tags"><span class="tag">추어탕·보양식</span><span class="tag">로컬</span><span class="tag">약 700m</span></div>
-        <p class="note">보양식이 필요한 날 점심 후보로 좋음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">08</div><div><h2>마리아치양재곱창</h2><p class="sub">한식 · 약 106m · 방문자 47 / 블로그 18</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 106m</span><span class="tag">Naver Place ID 1721560951</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>보양식·어른과 식사</span></div>
-          <div><b>주의</b><span>추어탕 비선호자에게는 선택지가 좁음.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%82%A8%EC%9B%90%EA%B3%A8%EC%B6%94%EC%96%B4%ED%83%95%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 51 2층 마리아치양재곱창</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 47 · 블로그 리뷰 18</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>리뷰 수가 상대적으로 적어 방문 전 최신 영업/메뉴 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 106m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1721560951?lng=127.0385955&lat=37.4826722&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="설렁탕·곰탕" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">09</div><div><h2>보들설곰탕</h2><p class="sub">설렁탕·곰탕 · 로컬 · 약 550m</p></div></div>
-        <div class="tags"><span class="tag">설렁탕·곰탕</span><span class="tag">로컬</span><span class="tag">약 550m</span></div>
-        <p class="note">맑고 든든한 탕반류로 점심 호불호가 적음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">09</div><div><h2>영동족발 양재2호점</h2><p class="sub">족발,보쌈 · 약 108m · 방문자 138 / 블로그 26</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">족발,보쌈</span><span class="tag">약 108m</span><span class="tag">Naver Place ID 1539397523</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>속 편한 탕·혼밥</span></div>
-          <div><b>주의</b><span>강한 개성보다는 무난한 탕집 성격.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%B3%B4%EB%93%A4%EC%84%A4%EA%B3%B0%ED%83%95%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로358길 13</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 138 · 블로그 리뷰 26</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심보다는 저녁/포장 수요가 강할 수 있음.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 108m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1539397523?lng=127.0382447&lat=37.4843194&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="육회비빔밥·한우국밥" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">10</div><div><h2>마당재</h2><p class="sub">육회비빔밥·한우국밥 · 로컬 · 약 600m</p></div></div>
-        <div class="tags"><span class="tag">육회비빔밥·한우국밥</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
-        <p class="note">육회비빔밥/한우국밥 계열이라 점심 식사감이 좋음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">10</div><div><h2>순천미식</h2><p class="sub">한식 · 약 108m · 방문자 5 / 블로그 2</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 108m</span><span class="tag">Naver Place ID 1589641361</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>든든한 한식·고기 점심</span></div>
-          <div><b>주의</b><span>일반 백반보다 가격대 확인 필요.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A7%88%EB%8B%B9%EC%9E%AC%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로358길 13 제1층 103호</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 5 · 블로그 리뷰 2</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>리뷰 수가 상대적으로 적어 방문 전 최신 영업/메뉴 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 108m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1589641361?lng=127.038295&lat=37.4843564&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="한식·점심특선" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">11</div><div><h2>금강수림</h2><p class="sub">한식·점심특선 · 로컬/접대픽 · 약 800m</p></div></div>
-        <div class="tags"><span class="tag">한식·점심특선</span><span class="tag">로컬/접대픽</span><span class="tag">약 800m</span></div>
-        <p class="note">조금 더 격식 있는 점심/접대 후보로 분류.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">11</div><div><h2>이모네왕족발</h2><p class="sub">족발,보쌈 · 약 114m · 방문자 177 / 블로그 22</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">족발,보쌈</span><span class="tag">약 114m</span><span class="tag">Naver Place ID 1020118196</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>접대·손님 점심</span></div>
-          <div><b>주의</b><span>혼밥/초간단 점심에는 부담스러울 수 있음.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EA%B8%88%EA%B0%95%EC%88%98%EB%A6%BC%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 15</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 177 · 블로그 리뷰 22</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심보다는 저녁/포장 수요가 강할 수 있음.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 114m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1020118196?lng=127.0379709&lat=37.4841676&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="칼국수·만두" data-group="면" style="--rank:#c2410c">
-        <div class="top"><div class="rank">12</div><div><h2>임병주산동칼국수</h2><p class="sub">칼국수·만두 · 유명 로컬 · 약 900m</p></div></div>
-        <div class="tags"><span class="tag">칼국수·만두</span><span class="tag">유명 로컬</span><span class="tag">약 900m</span></div>
-        <p class="note">칼국수와 만두로 유명도가 높아 점심 목적지가 될 만함.</p>
+      <article class="card" data-group="면·샤브" style="--rank:#2563eb">
+        <div class="top"><div class="rank">12</div><div><h2>도라지국수집</h2><p class="sub">국수 · 약 115m · 방문자 268 / 블로그 75</p></div></div>
+        <div class="tags"><span class="tag">면·샤브</span><span class="tag">국수</span><span class="tag">약 115m</span><span class="tag">Naver Place ID 1430395400</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 면/국물 메뉴가 당길 때에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>유명 칼국수·만두</span></div>
-          <div><b>주의</b><span>대기 길 수 있어 시간 여유 필요.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 반복 언급</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%9E%84%EB%B3%91%EC%A3%BC%EC%82%B0%EB%8F%99%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 15 양재종합시장 지하1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 268 · 블로그 리뷰 75</span></div>
+          <div><b>추천 상황</b><span>면/국물 메뉴가 당길 때</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 115m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1430395400?lng=127.0379658&lat=37.4841882&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="막국수·육전" data-group="면" style="--rank:#111827">
-        <div class="top"><div class="rank">13</div><div><h2>뱅뱅막국수</h2><p class="sub">막국수·육전 · 로컬 · 약 500m</p></div></div>
-        <div class="tags"><span class="tag">막국수·육전</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
-        <p class="note">들기름 막국수/육전 조합으로 가벼우면서 만족도 높은 점심.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">13</div><div><h2>오대산산채전문점</h2><p class="sub">한식 · 약 123m · 방문자 669 / 블로그 228</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 123m</span><span class="tag">Naver Place ID 19699783</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>면 점심·가벼운 식사</span></div>
-          <div><b>주의</b><span>식사 시간 대기 가능.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%B1%85%EB%B1%85%EB%A7%89%EA%B5%AD%EC%88%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로 2640-11 , 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 669 · 블로그 리뷰 228</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 123m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/19699783?lng=127.0396454&lat=37.4845544&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="샤브·칼국수" data-group="면" style="--rank:#c2410c">
-        <div class="top"><div class="rank">14</div><div><h2>미면정 양재본점</h2><p class="sub">샤브·칼국수 · 로컬/본점 · 약 650m</p></div></div>
-        <div class="tags"><span class="tag">샤브·칼국수</span><span class="tag">로컬/본점</span><span class="tag">약 650m</span></div>
-        <p class="note">샤브+칼국수 코스로 점심 모임에 잘 맞음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">14</div><div><h2>오군오리차돌 양재역점</h2><p class="sub">오리요리 · 약 124m · 방문자 6 / 블로그 1</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">오리요리</span><span class="tag">약 124m</span><span class="tag">Naver Place ID 2062426645</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>2~4인 점심·면/샤브</span></div>
-          <div><b>주의</b><span>빠른 혼밥보다는 시간 여유 있는 점심에 적합.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%AF%B8%EB%A9%B4%EC%A0%95%20%EC%96%91%EC%9E%AC%EB%B3%B8%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 52 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 6 · 블로그 리뷰 1</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>리뷰 수가 상대적으로 적어 방문 전 최신 영업/메뉴 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 124m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/2062426645?lng=127.0383361&lat=37.4825865&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="보쌈·칼국수" data-group="면" style="--rank:#c2410c">
-        <div class="top"><div class="rank">15</div><div><h2>오향절면</h2><p class="sub">보쌈·칼국수 · 로컬 · 약 400m</p></div></div>
-        <div class="tags"><span class="tag">보쌈·칼국수</span><span class="tag">로컬</span><span class="tag">약 400m</span></div>
-        <p class="note">보쌈과 면 조합이 있어 든든한 점심 세트감.</p>
+      <article class="card" data-group="중식" style="--rank:#b45309">
+        <div class="top"><div class="rank">15</div><div><h2>미몽 양재본점</h2><p class="sub">중식당 · 약 134m · 방문자 4,588 / 블로그 1,572</p></div></div>
+        <div class="tags"><span class="tag">중식</span><span class="tag">중식당</span><span class="tag">약 134m</span><span class="tag">Naver Place ID 1360440438</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 중식 점심·여럿이 나눠 먹기에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>보쌈+면·동료 점심</span></div>
-          <div><b>주의</b><span>조리/대기 시간이 있을 수 있음.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%98%A4%ED%96%A5%EC%A0%88%EB%A9%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 강남대로34길 27-4 1층 미몽 양재본점</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 4,588 · 블로그 리뷰 1,572</span></div>
+          <div><b>추천 상황</b><span>중식 점심·여럿이 나눠 먹기</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 134m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1360440438?lng=127.0375013&lat=37.4834864&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="바지락칼국수" data-group="면" style="--rank:#c2410c">
-        <div class="top"><div class="rank">16</div><div><h2>채석강</h2><p class="sub">바지락칼국수 · 로컬 · 약 750m</p></div></div>
-        <div class="tags"><span class="tag">바지락칼국수</span><span class="tag">로컬</span><span class="tag">약 750m</span></div>
-        <p class="note">시원한 바지락칼국수 계열로 비 오는 날/국물 점심에 좋음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">16</div><div><h2>철원골</h2><p class="sub">한식 · 약 154m · 방문자 103 / 블로그 29</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 154m</span><span class="tag">Naver Place ID 1719724361</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>칼국수·국물 점심</span></div>
-          <div><b>주의</b><span>매장 규모와 대기 확인 권장.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%B1%84%EC%84%9D%EA%B0%95%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 61 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 103 · 블로그 리뷰 29</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 154m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1719724361?lng=127.0386396&lat=37.4822117&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="칼국수" data-group="면" style="--rank:#c2410c">
-        <div class="top"><div class="rank">17</div><div><h2>유성칼국수</h2><p class="sub">칼국수 · 로컬 · 약 500m</p></div></div>
-        <div class="tags"><span class="tag">칼국수</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
-        <p class="note">담백한 칼국수 노포형 점심 후보.</p>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">17</div><div><h2>쌈겹</h2><p class="sub">육류,고기요리 · 약 168m · 방문자 178 / 블로그 19</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">육류,고기요리</span><span class="tag">약 168m</span><span class="tag">Naver Place ID 32417358</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>간단한 면 점심</span></div>
-          <div><b>주의</b><span>메뉴 폭이 넓지 않을 수 있음.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%9C%A0%EC%84%B1%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 29-19 대감빌딩 2층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 178 · 블로그 리뷰 19</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 168m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/32417358?lng=127.0371885&lat=37.4839852&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="돈카츠·마제소바" data-group="일식" style="--rank:#111827">
-        <div class="top"><div class="rank">18</div><div><h2>백소정 양재역점</h2><p class="sub">돈카츠·마제소바 · 체인/실용픽 · 약 300m</p></div></div>
-        <div class="tags"><span class="tag">돈카츠·마제소바</span><span class="tag">체인/실용픽</span><span class="tag">약 300m</span></div>
-        <p class="note">돈카츠·마제소바 조합이라 젊은 층 점심 선택지로 무난.</p>
+      <article class="card" data-group="세계·양식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">18</div><div><h2>라그릴리아 양재점</h2><p class="sub">이탈리아음식 · 약 176m · 방문자 2,473 / 블로그 747</p></div></div>
+        <div class="tags"><span class="tag">세계·양식</span><span class="tag">이탈리아음식</span><span class="tag">약 176m</span><span class="tag">Naver Place ID 12962167</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 분위기 바꾸는 점심/저녁 후보에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>일식 캐주얼·혼밥</span></div>
-          <div><b>주의</b><span>피크 타임 회전/대기 체크.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 지도/검색 후보</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%B0%B1%EC%86%8C%EC%A0%95%20%EC%96%91%EC%9E%AC%EC%97%AD%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로 2620 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 2,473 · 블로그 리뷰 747</span></div>
+          <div><b>추천 상황</b><span>분위기 바꾸는 점심/저녁 후보</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 176m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/12962167?lng=127.0373535&lat=37.4844508&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="일본식 카레" data-group="일식" style="--rank:#111827">
-        <div class="top"><div class="rank">19</div><div><h2>린카</h2><p class="sub">일본식 카레 · 로컬 · 약 450m</p></div></div>
-        <div class="tags"><span class="tag">일본식 카레</span><span class="tag">로컬</span><span class="tag">약 450m</span></div>
-        <p class="note">카레 단일 목적 점심으로 깔끔하게 고르기 좋음.</p>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">19</div><div><h2>영동회관</h2><p class="sub">육류,고기요리 · 약 179m · 방문자 997 / 블로그 250</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">육류,고기요리</span><span class="tag">약 179m</span><span class="tag">Naver Place ID 1173026949</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>카레·혼밥/2인</span></div>
-          <div><b>주의</b><span>카레 취향이 아니면 선택 폭 제한.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A6%B0%EC%B9%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 강남대로30길 28 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 997 · 블로그 리뷰 250</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 179m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1173026949?lng=127.0386927&lat=37.4819812&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="회덮밥·참치" data-group="일식" style="--rank:#111827">
-        <div class="top"><div class="rank">20</div><div><h2>어부참치</h2><p class="sub">회덮밥·참치 · 로컬 · 약 550m</p></div></div>
-        <div class="tags"><span class="tag">회덮밥·참치</span><span class="tag">로컬</span><span class="tag">약 550m</span></div>
-        <p class="note">회덮밥/점심특선이 맞으면 가볍고 신선한 점심 후보.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">20</div><div><h2>미담재 양재역점</h2><p class="sub">한식 · 약 180m · 방문자 1,328 / 블로그 882</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 180m</span><span class="tag">Naver Place ID 1419339898</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>회덮밥·가벼운 일식</span></div>
-          <div><b>주의</b><span>점심 특선 운영 시간 확인 권장.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + OSM 인근 식당 좌표 후보</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%96%B4%EB%B6%80%EC%B0%B8%EC%B9%98%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로 2644 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,328 · 블로그 리뷰 882</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 180m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1419339898?lng=127.0397527&lat=37.4850738&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="딤섬·중식" data-group="중식" style="--rank:#7c3aed">
-        <div class="top"><div class="rank">21</div><div><h2>팀호완 양재점</h2><p class="sub">딤섬·중식 · 체인/특색픽 · 약 350m</p></div></div>
-        <div class="tags"><span class="tag">딤섬·중식</span><span class="tag">체인/특색픽</span><span class="tag">약 350m</span></div>
-        <p class="note">딤섬으로 평소 한식과 다른 점심을 먹고 싶을 때 좋음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">21</div><div><h2>장금수부대찌개 양재점</h2><p class="sub">찌개,전골 · 약 196m · 방문자 360 / 블로그 52</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">찌개,전골</span><span class="tag">약 196m</span><span class="tag">Naver Place ID 1858218116</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>딤섬·가벼운 모임</span></div>
-          <div><b>주의</b><span>양 대비 가격이 높게 느껴질 수 있음.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + Naver 검색에서 방문자 리뷰 노출 확인</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%ED%8C%80%ED%98%B8%EC%99%84%20%EC%96%91%EC%9E%AC%EC%A0%90%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 강남대로30길 73-3</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 360 · 블로그 리뷰 52</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 196m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1858218116?lng=127.0410496&lat=37.4828656&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="베트남·아시안" data-group="아시안" style="--rank:#047857">
-        <div class="top"><div class="rank">22</div><div><h2>안남</h2><p class="sub">베트남·아시안 · 로컬/분위기픽 · 약 700m</p></div></div>
-        <div class="tags"><span class="tag">베트남·아시안</span><span class="tag">로컬/분위기픽</span><span class="tag">약 700m</span></div>
-        <p class="note">깔끔한 베트남 요리로 일반 쌀국수보다 분위기 있는 점심 가능.</p>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">22</div><div><h2>설마중</h2><p class="sub">육류,고기요리 · 약 203m · 방문자 1,546 / 블로그 3,691</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">육류,고기요리</span><span class="tag">약 203m</span><span class="tag">Naver Place ID 36122875</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>분위기 있는 아시안 점심</span></div>
-          <div><b>주의</b><span>직장인 데일리 점심으로는 가격대 확인.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%95%88%EB%82%A8%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로 2648</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,546 · 블로그 리뷰 3,691</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 203m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/36122875?lng=127.0403801&lat=37.4850352&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="중식" data-group="중식" style="--rank:#7c3aed">
-        <div class="top"><div class="rank">23</div><div><h2>리첸</h2><p class="sub">중식 · 로컬 · 약 600m</p></div></div>
-        <div class="tags"><span class="tag">중식</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
-        <p class="note">짬뽕·탕수육 등 무난한 중식 점심 후보.</p>
+      <article class="card" data-group="세계·양식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">23</div><div><h2>아야로시</h2><p class="sub">양식 · 약 222m · 방문자 127 / 블로그 30</p></div></div>
+        <div class="tags"><span class="tag">세계·양식</span><span class="tag">양식</span><span class="tag">약 222m</span><span class="tag">Naver Place ID 1188302490</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 분위기 바꾸는 점심/저녁 후보에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>중식 점심·여럿이 식사</span></div>
-          <div><b>주의</b><span>강한 맛집 목적지보다는 안정형.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A6%AC%EC%B2%B8%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 논현로 157-6 102호</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 127 · 블로그 리뷰 30</span></div>
+          <div><b>추천 상황</b><span>분위기 바꾸는 점심/저녁 후보</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 222m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1188302490?lng=127.0415275&lat=37.4836385&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="초밥·일식" data-group="일식" style="--rank:#be123c">
-        <div class="top"><div class="rank">24</div><div><h2>진스시</h2><p class="sub">초밥·일식 · 로컬 · 약 500m</p></div></div>
-        <div class="tags"><span class="tag">초밥·일식</span><span class="tag">로컬</span><span class="tag">약 500m</span></div>
-        <p class="note">초밥 세트형 점심으로 깔끔한 선택지.</p>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">24</div><div><h2>치킨영토 양재점</h2><p class="sub">치킨,닭강정 · 약 236m · 방문자 402 / 블로그 22</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">치킨,닭강정</span><span class="tag">약 236m</span><span class="tag">Naver Place ID 38248908</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>초밥 점심·조용한 식사</span></div>
-          <div><b>주의</b><span>매장 협소/대기 가능성 확인.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%A7%84%EC%8A%A4%EC%8B%9C%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 29-3</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 402 · 블로그 리뷰 22</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심보다는 저녁/포장 수요가 강할 수 있음.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 236m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/38248908?lng=127.0363357&lat=37.4835835&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="고기·한식" data-group="고기" style="--rank:#111827">
-        <div class="top"><div class="rank">25</div><div><h2>풍년집 큰아들네</h2><p class="sub">고기·한식 · 로컬 · 약 300m</p></div></div>
-        <div class="tags"><span class="tag">고기·한식</span><span class="tag">로컬</span><span class="tag">약 300m</span></div>
-        <p class="note">고기집 점심 메뉴가 필요할 때 가까운 후보.</p>
+      <article class="card" data-group="해산물" style="--rank:#0891b2">
+        <div class="top"><div class="rank">25</div><div><h2>강촌원조쭈꾸미본점</h2><p class="sub">주꾸미요리 · 약 250m · 방문자 1,263 / 블로그 385</p></div></div>
+        <div class="tags"><span class="tag">해산물</span><span class="tag">주꾸미요리</span><span class="tag">약 250m</span><span class="tag">Naver Place ID 32708325</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 해산물/매콤한 메뉴가 필요할 때에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>고기 점심·동료 식사</span></div>
-          <div><b>주의</b><span>고기 냄새/회식 분위기 가능.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%ED%92%8D%EB%85%84%EC%A7%91%20%ED%81%B0%EC%95%84%EB%93%A4%EB%84%A4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 36</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,263 · 블로그 리뷰 385</span></div>
+          <div><b>추천 상황</b><span>해산물/매콤한 메뉴가 필요할 때</span></div>
+          <div><b>주의</b><span>매운맛·향이 있는 메뉴라 호불호 확인.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 250m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/32708325?lng=127.0361883&lat=37.48337&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="오징어·제육볶음" data-group="한식" style="--rank:#111827">
-        <div class="top"><div class="rank">26</div><div><h2>양재오제섞어</h2><p class="sub">오징어·제육볶음 · 로컬 · 약 400m</p></div></div>
-        <div class="tags"><span class="tag">오징어·제육볶음</span><span class="tag">로컬</span><span class="tag">약 400m</span></div>
-        <p class="note">오징어+제육 계열 매콤한 밥 메뉴로 점심 만족감이 좋음.</p>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">26</div><div><h2>우리밀샤브샤브칼국수</h2><p class="sub">한식 · 약 251m · 방문자 204 / 블로그 65</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 251m</span><span class="tag">Naver Place ID 1470625179</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>매콤한 한식·밥집</span></div>
-          <div><b>주의</b><span>매운맛 주의.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%96%91%EC%9E%AC%EC%98%A4%EC%A0%9C%EC%84%9E%EC%96%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 19-6 2층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 204 · 블로그 리뷰 65</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 251m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1470625179?lng=127.0361952&lat=37.483894&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="소갈비살·고기" data-group="고기" style="--rank:#b45309">
-        <div class="top"><div class="rank">27</div><div><h2>산내골소갈비살</h2><p class="sub">소갈비살·고기 · 로컬 · 약 450m</p></div></div>
-        <div class="tags"><span class="tag">소갈비살·고기</span><span class="tag">로컬</span><span class="tag">약 450m</span></div>
-        <p class="note">고기류 점심/저녁 모두 가능한 로컬 고깃집 후보.</p>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">27</div><div><h2>오양지 양재본점</h2><p class="sub">육류,고기요리 · 약 255m · 방문자 892 / 블로그 602</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">육류,고기요리</span><span class="tag">약 255m</span><span class="tag">Naver Place ID 1159462777</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>고기 점심·저녁까지 연결</span></div>
-          <div><b>주의</b><span>피크에는 혼잡 가능.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%82%B0%EB%82%B4%EA%B3%A8%EC%86%8C%EA%B0%88%EB%B9%84%EC%82%B4%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 19-6 1층 오양지 양재본점</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 892 · 블로그 리뷰 602</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 255m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1159462777?lng=127.0361537&lat=37.4839252&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="고기·김치찌개" data-group="고기" style="--rank:#b45309">
-        <div class="top"><div class="rank">28</div><div><h2>다돈식당</h2><p class="sub">고기·김치찌개 · 로컬 · 약 600m</p></div></div>
-        <div class="tags"><span class="tag">고기·김치찌개</span><span class="tag">로컬</span><span class="tag">약 600m</span></div>
-        <p class="note">고기집 기반이라 김치찌개/식사류가 점심에 잘 맞음.</p>
+      <article class="card" data-group="면·샤브" style="--rank:#2563eb">
+        <div class="top"><div class="rank">28</div><div><h2>인덕원비빔국수 양재직영점</h2><p class="sub">국수 · 약 257m · 방문자 2,592 / 블로그 706</p></div></div>
+        <div class="tags"><span class="tag">면·샤브</span><span class="tag">국수</span><span class="tag">약 257m</span><span class="tag">Naver Place ID 1090964067</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 면/국물 메뉴가 당길 때에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>든든한 밥·고기집 점심</span></div>
-          <div><b>주의</b><span>회식 느낌이 강할 수 있음.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8F%88%EC%8B%9D%EB%8B%B9%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로 2656</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 2,592 · 블로그 리뷰 706</span></div>
+          <div><b>추천 상황</b><span>면/국물 메뉴가 당길 때</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 257m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1090964067?lng=127.0410552&lat=37.485222&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="파스타·피자" data-group="양식" style="--rank:#2563eb">
-        <div class="top"><div class="rank">29</div><div><h2>로드빌</h2><p class="sub">파스타·피자 · 로컬/양식 · 약 400m</p></div></div>
-        <div class="tags"><span class="tag">파스타·피자</span><span class="tag">로컬/양식</span><span class="tag">약 400m</span></div>
-        <p class="note">파스타·화덕피자 계열이라 점심 약속/가벼운 데이트에 좋음.</p>
+      <article class="card" data-group="해산물" style="--rank:#0891b2">
+        <div class="top"><div class="rank">29</div><div><h2>메기대감</h2><p class="sub">매운탕,해물탕 · 약 258m · 방문자 340 / 블로그 142</p></div></div>
+        <div class="tags"><span class="tag">해산물</span><span class="tag">매운탕,해물탕</span><span class="tag">약 258m</span><span class="tag">Naver Place ID 11728561</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 해산물/매콤한 메뉴가 필요할 때에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>양식 점심·데이트</span></div>
-          <div><b>주의</b><span>빠른 식사보다는 여유 있는 점심에 적합.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 스니펫</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EB%A1%9C%EB%93%9C%EB%B9%8C%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 30</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 340 · 블로그 리뷰 142</span></div>
+          <div><b>추천 상황</b><span>해산물/매콤한 메뉴가 필요할 때</span></div>
+          <div><b>주의</b><span>매운맛·향이 있는 메뉴라 호불호 확인.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 258m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/11728561?lng=127.036092&lat=37.4835&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
-      <article class="card" data-cat="즉석떡볶이" data-group="분식" style="--rank:#db2777">
-        <div class="top"><div class="rank">30</div><div><h2>작은공간</h2><p class="sub">즉석떡볶이 · 유명 로컬 · 약 350m</p></div></div>
-        <div class="tags"><span class="tag">즉석떡볶이</span><span class="tag">유명 로컬</span><span class="tag">약 350m</span></div>
-        <p class="note">즉석떡볶이 유명 후보로 캐주얼 점심에 재미 있음.</p>
+      <article class="card" data-group="해산물" style="--rank:#0891b2">
+        <div class="top"><div class="rank">30</div><div><h2>문어세상해천탕 양재점</h2><p class="sub">해물,생선요리 · 약 264m · 방문자 594 / 블로그 169</p></div></div>
+        <div class="tags"><span class="tag">해산물</span><span class="tag">해물,생선요리</span><span class="tag">약 264m</span><span class="tag">Naver Place ID 38251615</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 해산물/매콤한 메뉴가 필요할 때에 쓰기 좋습니다.</p>
         <div class="details">
-          <div><b>추천 상황</b><span>캐주얼·분식·친구 점심</span></div>
-          <div><b>주의</b><span>웨이팅이 길면 점심시간 초과 가능.</span></div>
-          <div><b>확인 근거</b><span>Gemini 검색 후보 + 공개 검색 반복 언급</span></div>
-          <div><b>지도</b><span><a href="https://map.naver.com/p/search/%EC%9E%91%EC%9D%80%EA%B3%B5%EA%B0%84%20%EC%96%91%EC%9E%AC" target="_blank" rel="noreferrer">네이버 지도에서 위치 확인</a></span></div>
+          <div><b>주소</b><span>서울 서초구 강남대로 188 화승빌딩</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 594 · 블로그 리뷰 169</span></div>
+          <div><b>추천 상황</b><span>해산물/매콤한 메뉴가 필요할 때</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 264m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/38251615?lng=127.0378506&lat=37.4813766&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="해산물" style="--rank:#0891b2">
+        <div class="top"><div class="rank">31</div><div><h2>통영항 수산민족 양재점</h2><p class="sub">해물,생선요리 · 약 265m · 방문자 397 / 블로그 97</p></div></div>
+        <div class="tags"><span class="tag">해산물</span><span class="tag">해물,생선요리</span><span class="tag">약 265m</span><span class="tag">Naver Place ID 1676455086</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 해산물/매콤한 메뉴가 필요할 때에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 19-5 1, 2층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 397 · 블로그 리뷰 97</span></div>
+          <div><b>추천 상황</b><span>해산물/매콤한 메뉴가 필요할 때</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 265m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1676455086?lng=127.0360711&lat=37.4840482&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">32</div><div><h2>마포네숯불돼지갈비</h2><p class="sub">돼지고기구이 · 약 269m · 방문자 488 / 블로그 191</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">돼지고기구이</span><span class="tag">약 269m</span><span class="tag">Naver Place ID 18250233</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 강남대로 184</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 488 · 블로그 리뷰 191</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 269m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/18250233?lng=127.0380945&lat=37.4812596&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">33</div><div><h2>얌얌 양재점</h2><p class="sub">김밥 · 약 270m · 방문자 2,952 / 블로그 88</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">김밥</span><span class="tag">약 270m</span><span class="tag">Naver Place ID 34098856</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로363길 9-4</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 2,952 · 블로그 리뷰 88</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 270m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/34098856?lng=127.0378619&lat=37.4858142&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="해산물" style="--rank:#0891b2">
+        <div class="top"><div class="rank">34</div><div><h2>명품생대구탕</h2><p class="sub">매운탕,해물탕 · 약 288m · 방문자 324 / 블로그 99</p></div></div>
+        <div class="tags"><span class="tag">해산물</span><span class="tag">매운탕,해물탕</span><span class="tag">약 288m</span><span class="tag">Naver Place ID 1618656208</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 해산물/매콤한 메뉴가 필요할 때에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 논현로 151 이스타빌</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 324 · 블로그 리뷰 99</span></div>
+          <div><b>추천 상황</b><span>해산물/매콤한 메뉴가 필요할 때</span></div>
+          <div><b>주의</b><span>매운맛·향이 있는 메뉴라 호불호 확인.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 288m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1618656208?lng=127.0421946&lat=37.4829898&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="해산물" style="--rank:#0891b2">
+        <div class="top"><div class="rank">35</div><div><h2>미가참치</h2><p class="sub">생선회 · 약 288m · 방문자 12 / 블로그 5</p></div></div>
+        <div class="tags"><span class="tag">해산물</span><span class="tag">생선회</span><span class="tag">약 288m</span><span class="tag">Naver Place ID 1099501986</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 해산물/매콤한 메뉴가 필요할 때에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 남부순환로350길 13 2층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 12 · 블로그 리뷰 5</span></div>
+          <div><b>추천 상황</b><span>해산물/매콤한 메뉴가 필요할 때</span></div>
+          <div><b>주의</b><span>리뷰 수가 상대적으로 적어 방문 전 최신 영업/메뉴 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 288m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1099501986?lng=127.0358252&lat=37.484119&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">36</div><div><h2>미당푸드</h2><p class="sub">한식 · 약 312m · 방문자 55 / 블로그 11</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 312m</span><span class="tag">Naver Place ID 1551549373</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 남부순환로356길 92 1층 105호</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 55 · 블로그 리뷰 11</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 312m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1551549373?lng=127.0389226&lat=37.4807667&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">37</div><div><h2>말죽거리옛날통닭 강남양재역점</h2><p class="sub">치킨,닭강정 · 약 321m · 방문자 291 / 블로그 52</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">치킨,닭강정</span><span class="tag">약 321m</span><span class="tag">Naver Place ID 1877799482</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로 2615 극동스타클래스</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 291 · 블로그 리뷰 52</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심보다는 저녁/포장 수요가 강할 수 있음.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 321m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1877799482?lng=127.0361058&lat=37.4853024&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">38</div><div><h2>산들해 양재점</h2><p class="sub">한정식 · 약 323m · 방문자 1,857 / 블로그 397</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한정식</span><span class="tag">약 323m</span><span class="tag">Naver Place ID 18246142</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 강남대로 213 엘타워 지하1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,857 · 블로그 리뷰 397</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>가격대가 있는 편일 수 있어 예약/가격 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 323m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/18246142?lng=127.0356634&lat=37.4823928&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="세계·양식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">39</div><div><h2>디오디아2.0</h2><p class="sub">뷔페 · 약 336m · 방문자 6,310 / 블로그 2,865</p></div></div>
+        <div class="tags"><span class="tag">세계·양식</span><span class="tag">뷔페</span><span class="tag">약 336m</span><span class="tag">Naver Place ID 12950069</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 분위기 바꾸는 점심/저녁 후보에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 강남대로 213 엘타워 4층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 6,310 · 블로그 리뷰 2,865</span></div>
+          <div><b>추천 상황</b><span>분위기 바꾸는 점심/저녁 후보</span></div>
+          <div><b>주의</b><span>가격대가 있는 편일 수 있어 예약/가격 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 336m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/12950069?lng=127.0355534&lat=37.4823092&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="면·샤브" style="--rank:#2563eb">
+        <div class="top"><div class="rank">40</div><div><h2>쿠니라멘</h2><p class="sub">일본식라면 · 약 338m · 방문자 586 / 블로그 273</p></div></div>
+        <div class="tags"><span class="tag">면·샤브</span><span class="tag">일본식라면</span><span class="tag">약 338m</span><span class="tag">Naver Place ID 1879800911</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 면/국물 메뉴가 당길 때에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 강남대로 224 양재한신휴플러스 지하105호 쿠니라멘</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 586 · 블로그 리뷰 273</span></div>
+          <div><b>추천 상황</b><span>면/국물 메뉴가 당길 때</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 338m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1879800911?lng=127.0352158&lat=37.4839437&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="세계·양식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">41</div><div><h2>히노카츠</h2><p class="sub">돈가스 · 약 338m · 방문자 331 / 블로그 179</p></div></div>
+        <div class="tags"><span class="tag">세계·양식</span><span class="tag">돈가스</span><span class="tag">약 338m</span><span class="tag">Naver Place ID 1793575614</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 분위기 바꾸는 점심/저녁 후보에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로359길 14 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 331 · 블로그 리뷰 179</span></div>
+          <div><b>추천 상황</b><span>분위기 바꾸는 점심/저녁 후보</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 338m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1793575614?lng=127.0366018&lat=37.4859341&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">42</div><div><h2>황제만두</h2><p class="sub">종합분식 · 약 345m · 방문자 140 / 블로그 9</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">종합분식</span><span class="tag">약 345m</span><span class="tag">Naver Place ID 20636669</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로365길 17</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 140 · 블로그 리뷰 9</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 345m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/20636669?lng=127.039119&lat=37.486672&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">43</div><div><h2>어거스트치킨 양재역점</h2><p class="sub">치킨,닭강정 · 약 363m · 방문자 432 / 블로그 169</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">치킨,닭강정</span><span class="tag">약 363m</span><span class="tag">Naver Place ID 1524573310</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 강남대로 224 한신휴플러스 101호</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 432 · 블로그 리뷰 169</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심보다는 저녁/포장 수요가 강할 수 있음.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 363m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1524573310?lng=127.0349514&lat=37.4840837&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="세계·양식" style="--rank:#7c3aed">
+        <div class="top"><div class="rank">44</div><div><h2>에베레스트 양재점</h2><p class="sub">인도음식 · 약 368m · 방문자 1,087 / 블로그 191</p></div></div>
+        <div class="tags"><span class="tag">세계·양식</span><span class="tag">인도음식</span><span class="tag">약 368m</span><span class="tag">Naver Place ID 1927679596</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 분위기 바꾸는 점심/저녁 후보에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 논현로31길 47 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,087 · 블로그 리뷰 191</span></div>
+          <div><b>추천 상황</b><span>분위기 바꾸는 점심/저녁 후보</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 368m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1927679596?lng=127.0410929&lat=37.4806973&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="면·샤브" style="--rank:#2563eb">
+        <div class="top"><div class="rank">45</div><div><h2>미면정 양재본점</h2><p class="sub">샤브샤브 · 약 370m · 방문자 6,939 / 블로그 1,992</p></div></div>
+        <div class="tags"><span class="tag">면·샤브</span><span class="tag">샤브샤브</span><span class="tag">약 370m</span><span class="tag">Naver Place ID 1017653627</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 면/국물 메뉴가 당길 때에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로365길 22 오이빌딩 2층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 6,939 · 블로그 리뷰 1,992</span></div>
+          <div><b>추천 상황</b><span>면/국물 메뉴가 당길 때</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 370m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1017653627?lng=127.039449&lat=37.4868819&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">46</div><div><h2>후토루 양재점</h2><p class="sub">종합분식 · 약 371m · 방문자 581 / 블로그 323</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">종합분식</span><span class="tag">약 371m</span><span class="tag">Naver Place ID 1347202430</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 서초구 강남대로 221 1층 후토루</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 581 · 블로그 리뷰 323</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 371m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1347202430?lng=127.0348194&lat=37.4833821&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">47</div><div><h2>국고집</h2><p class="sub">육류,고기요리 · 약 375m · 방문자 1,052 / 블로그 1,239</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">육류,고기요리</span><span class="tag">약 375m</span><span class="tag">Naver Place ID 1034622849</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로355길 14 1층 국고집</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,052 · 블로그 리뷰 1,239</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 375m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1034622849?lng=127.036009&lat=37.4859583&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="한식·분식" style="--rank:#111827">
+        <div class="top"><div class="rank">48</div><div><h2>오향절면</h2><p class="sub">한식 · 약 386m · 방문자 1,203 / 블로그 1,840</p></div></div>
+        <div class="tags"><span class="tag">한식·분식</span><span class="tag">한식</span><span class="tag">약 386m</span><span class="tag">Naver Place ID 38474259</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 점심 밥집·가벼운 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 남부순환로355길 13</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 1,203 · 블로그 리뷰 1,840</span></div>
+          <div><b>추천 상황</b><span>점심 밥집·가벼운 식사</span></div>
+          <div><b>주의</b><span>점심 피크 시간에는 대기 가능.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 386m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/38474259?lng=127.0357639&lat=37.4858898&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">49</div><div><h2>양재화로by설화한우</h2><p class="sub">소고기구이 · 약 410m · 방문자 157 / 블로그 86</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">소고기구이</span><span class="tag">약 410m</span><span class="tag">Naver Place ID 1156323818</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 강남대로42길 11 1층</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 157 · 블로그 리뷰 86</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>가격대가 있는 편일 수 있어 예약/가격 확인 권장.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 410m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/1156323818?lng=127.0349649&lat=37.4853757&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
+        </div>
+      </article>
+      <article class="card" data-group="고기·치킨" style="--rank:#dc2626">
+        <div class="top"><div class="rank">50</div><div><h2>굽네치킨 도곡스타점</h2><p class="sub">치킨,닭강정 · 약 424m · 방문자 111 / 블로그 3</p></div></div>
+        <div class="tags"><span class="tag">고기·치킨</span><span class="tag">치킨,닭강정</span><span class="tag">약 424m</span><span class="tag">Naver Place ID 13395003</span></div>
+        <p class="note">네이버 지도 Place 좌표·카테고리·리뷰 수가 확인된 500m 내 후보입니다. 든든한 고기·회식성 식사에 쓰기 좋습니다.</p>
+        <div class="details">
+          <div><b>주소</b><span>서울 강남구 논현로34길 20 1층 101호 굽네치킨 도곡스타점</span></div>
+          <div><b>리뷰</b><span>방문자 리뷰 111 · 블로그 리뷰 3</span></div>
+          <div><b>추천 상황</b><span>든든한 고기·회식성 식사</span></div>
+          <div><b>주의</b><span>점심보다는 저녁/포장 수요가 강할 수 있음.</span></div>
+          <div><b>검증</b><span>Naver Place summary: 이름/카테고리/좌표/리뷰 수 확인 · 기준지 직선거리 약 424m</span></div>
+          <div><b>지도</b><span><a href="https://map.naver.com/p/entry/place/13395003?lng=127.0436463&lat=37.4845799&placePath=%2Fhome&entry=plt&searchType=place" target="_blank" rel="noreferrer">네이버 지도 Place 열기</a></span></div>
         </div>
       </article>
     </section>
-    <section class="notice"><b>검증 메모</b> · Naver Map place API는 자동 조회 시 429/captcha가 발생해 전체 방문자·블로그 리뷰 수를 일괄 추출하지 못했습니다. 그래서 카드에는 숫자 리뷰를 임의로 넣지 않고, Gemini 검색 결과와 공개 검색/지도/OSM 후보를 교차해 점심 후보를 구성했습니다. 실제 방문 직전에는 각 카드의 네이버 지도 링크에서 영업시간·휴무·전화번호·최신 리뷰를 확인하세요.</section>
+    <section class="notice"><b>검증 메모</b><br>이 페이지의 지도 버튼은 raw 주소 검색이 아니라 Naver Place ID 기반 링크입니다. 거리 계산은 공개 페이지에 집 주소를 노출하지 않기 위해 내부 기준 좌표로만 수행했습니다. 실제 도보 거리는 골목/횡단보도에 따라 더 길 수 있습니다.</section>
   </main>
   <script>
-    const buttons=[...document.querySelectorAll('.filter')];
+    const filters=[...document.querySelectorAll('.filter')];
     const cards=[...document.querySelectorAll('.card')];
-    buttons.forEach(btn=>btn.addEventListener('click',()=>{
-      buttons.forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
+    filters.forEach(btn=>btn.addEventListener('click',()=>{
       const f=btn.dataset.filter;
-      cards.forEach(card=>{ card.classList.toggle('is-hidden', f !== 'all' && !(card.dataset.group.includes(f) || card.dataset.cat.includes(f))); });
+      filters.forEach(b=>b.classList.toggle('active',b===btn));
+      cards.forEach(card=>card.classList.toggle('is-hidden', !(f==='all' || card.dataset.group===f)));
     }));
   </script>
 </body>
