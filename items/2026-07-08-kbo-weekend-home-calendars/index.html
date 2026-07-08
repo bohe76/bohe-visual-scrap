@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KBO 금토일 홈경기 달력 — 롯데 사직 / KIA 광주</title>
+  <meta name="description" content="2026 KBO 홈페이지 일정 기준, 남은 금토일 경기 중 롯데 사직 경기와 KIA 광주 경기를 일요일 시작 달력으로 시각화" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #5f6368;
+      --subtle: #8a8f98;
+      --line: #e9e9e9;
+      --surface: #ffffff;
+      --surface-muted: #fafafa;
+      --lotto: #d0162f;
+      --lotto-soft: #fff1f3;
+      --lotto-line: #ffd5db;
+      --kia: #c7132f;
+      --kia-navy: #071d49;
+      --kia-soft: #f1f5ff;
+      --blue: #0072f5;
+      --green: #078a45;
+      --shadow: rgba(0,0,0,.08) 0 0 0 1px, rgba(0,0,0,.04) 0 2px 2px, rgba(0,0,0,.04) 0 12px 20px -16px, #fafafa 0 0 0 1px inset;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: 'Geist', Arial, Apple SD Gothic Neo, Apple Color Emoji, Segoe UI Emoji, sans-serif;
+      background:
+        radial-gradient(circle at 14% -12%, rgba(208, 22, 47, .08), transparent 28rem),
+        radial-gradient(circle at 86% 0%, rgba(7, 29, 73, .08), transparent 30rem),
+        linear-gradient(180deg, #fff 0%, #fff 58%, #fafafa 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    a { color: inherit; }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 64px; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 56px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .brand-mark { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: #111; color: white; font-family: 'Geist Mono', monospace; font-size: 11px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+    .pill { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 9999px; background: var(--surface); box-shadow: rgba(0,0,0,.08) 0 0 0 1px; color: var(--muted); font-size: 13px; font-weight: 500; }
+    .pill.dark { background: #111; color: #fff; box-shadow: none; }
+
+    .hero { max-width: 920px; margin-bottom: 36px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; height: 28px; padding: 0 10px; margin-bottom: 18px; border-radius: 9999px; background: #f5f5f5; color: #333; font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: .04em; }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(7,138,69,.12); }
+    h1 { margin: 0; max-width: 860px; font-size: clamp(42px, 7.2vw, 78px); line-height: .94; letter-spacing: -.066em; font-weight: 650; }
+    .lead { max-width: 760px; margin: 22px 0 0; color: var(--muted); font-size: clamp(16px, 2vw, 20px); line-height: 1.72; letter-spacing: -.015em; }
+    .source { margin-top: 18px; color: var(--subtle); font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 1.6; }
+
+    .summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; overflow: hidden; border-radius: 14px; background: var(--line); box-shadow: var(--shadow); margin: 36px 0 24px; }
+    .metric { background: rgba(255,255,255,.94); padding: 18px 20px; }
+    .metric-label { color: var(--subtle); font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .metric-value { margin-top: 8px; font-size: 24px; font-weight: 650; letter-spacing: -.045em; }
+
+    .legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 42px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 11px; border-radius: 9999px; background: #fff; box-shadow: rgba(0,0,0,.08) 0 0 0 1px; color: var(--muted); font-size: 13px; }
+    .swatch { width: 9px; height: 9px; border-radius: 9999px; }
+    .swatch.lotte { background: var(--lotto); }
+    .swatch.kia { background: var(--kia-navy); }
+
+    .team-section { margin-top: 56px; }
+    .team-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; margin-bottom: 18px; }
+    .team-title { margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.02; letter-spacing: -.055em; font-weight: 650; }
+    .team-title small { display: block; margin-bottom: 8px; color: var(--subtle); font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+    .team-note { max-width: 520px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; text-align: right; }
+
+    .calendar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .month-card { border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
+    .month-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 16px 12px; border-bottom: 1px solid var(--line); }
+    .month-name { margin: 0; font-size: 20px; font-weight: 650; letter-spacing: -.04em; }
+    .month-count { color: var(--subtle); font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; }
+    .weekdays, .days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .weekdays { padding: 10px 12px 0; color: var(--subtle); font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 600; text-align: center; }
+    .weekday { padding: 4px 0; }
+    .weekday.sun { color: #d22; }
+    .weekday.sat { color: #1967d2; }
+    .days { gap: 6px; padding: 10px 12px 14px; }
+    .day { position: relative; min-height: 58px; padding: 7px 7px 6px; border-radius: 10px; background: #fff; box-shadow: rgba(0,0,0,.07) 0 0 0 1px; color: var(--ink); }
+    .day.empty { background: transparent; box-shadow: none; }
+    .date-num { font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 600; }
+    .day .game { display: none; margin-top: 7px; color: #fff; font-size: 11px; line-height: 1.25; font-weight: 600; letter-spacing: -.01em; }
+    .day.has-game { color: #fff; box-shadow: none; }
+    .lotte-theme .day.has-game { background: linear-gradient(135deg, var(--lotto), #9d0f22); }
+    .kia-theme .day.has-game { background: linear-gradient(135deg, var(--kia-navy), var(--kia)); }
+    .day.has-game .game { display: block; }
+    .day.has-game::after { content: ''; position: absolute; right: 8px; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.85); }
+
+    .game-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .game-row { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px; border-radius: 12px; background: #fff; box-shadow: rgba(0,0,0,.08) 0 0 0 1px; }
+    .game-date { font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 600; color: var(--ink); }
+    .game-meta { color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .game-meta strong { color: var(--ink); font-weight: 650; }
+
+    .footer-note { margin-top: 44px; padding: 18px 20px; border-radius: 14px; background: #fff; box-shadow: var(--shadow); color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+    @media (max-width: 980px) {
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .calendar-grid, .game-list { grid-template-columns: 1fr; }
+      .team-head { grid-template-columns: 1fr; }
+      .team-note { text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 22px, 1180px); padding-top: 28px; }
+      .topbar { align-items: flex-start; margin-bottom: 42px; }
+      .pills { display: none; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .day { min-height: 52px; padding: 6px; }
+      .day .game { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar" aria-label="site">
+      <a class="brand" href="../../" aria-label="bohe visual scrap home"><span class="brand-mark">B</span><span>bohe visual scrap</span></a>
+      <div class="pills"><span class="pill">KBO official schedule</span><span class="pill dark">Sunday-start calendars</span></div>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> UPDATED 2026-07-08 KST</div>
+      <h1>롯데 사직 · KIA 광주 금토일 홈경기 달력</h1>
+      <p class="lead">KBO 홈페이지 정규시즌 일정에서 2026-07-08 이후 남은 경기만 골라, 롯데는 사직 경기, KIA는 광주 경기 중 금·토·일 날짜를 색으로 표시했습니다.</p>
+      <div class="source">DATA SOURCE: koreabaseball.com Schedule → regular season 2026 / months 07–09</div>
+    </header>
+
+    <section class="summary-grid" aria-label="summary">
+      <div class="metric"><div class="metric-label">LOTTE / SAJIK</div><div class="metric-value">15 games</div></div>
+      <div class="metric"><div class="metric-label">KIA / GWANGJU</div><div class="metric-value">12 games</div></div>
+      <div class="metric"><div class="metric-label">Window</div><div class="metric-value">Jul–Sep</div></div>
+      <div class="metric"><div class="metric-label">Week start</div><div class="metric-value">Sunday</div></div>
+    </section>
+
+    <div class="legend" aria-label="legend">
+      <span class="legend-item"><span class="swatch lotte"></span>롯데 사직 경기일</span>
+      <span class="legend-item"><span class="swatch kia"></span>KIA 광주 경기일</span>
+      <span class="legend-item">표시 없는 날짜 = 해당 조건 경기 없음</span>
+    </div>
+
+    <section class="team-section lotte-theme" aria-labelledby="lotte-title">
+      <div class="team-head">
+        <h2 class="team-title" id="lotte-title"><small>LOTTE GIANTS · SAJIK</small>롯데 사직 금토일 경기</h2>
+        <p class="team-note">7월 24일부터 9월 6일까지 총 15경기. 7/24–26, 7/31–8/2, 8/14–16, 8/28–30, 9/4–6에 집중되어 있습니다.</p>
+      </div>
+      <div class="calendar-grid" id="lotte-calendars"></div>
+      <div class="game-list" id="lotte-games"></div>
+    </section>
+
+    <section class="team-section kia-theme" aria-labelledby="kia-title">
+      <div class="team-head">
+        <h2 class="team-title" id="kia-title"><small>KIA TIGERS · GWANGJU</small>KIA 광주 금토일 경기</h2>
+        <p class="team-note">7월 24일부터 9월 6일까지 총 12경기. 7/24–26, 8/14–16, 8/28–30, 9/4–6에 홈 주말 시리즈가 있습니다.</p>
+      </div>
+      <div class="calendar-grid" id="kia-calendars"></div>
+      <div class="game-list" id="kia-games"></div>
+    </section>
+
+    <aside class="footer-note">
+      경기 일정은 KBO 홈페이지 조회 시점 기준입니다. 우천취소, 편성 변경, 더블헤더 등으로 바뀔 수 있으니 실제 방문 전 KBO/구단 공지를 한 번 더 확인하는 용도입니다.
+    </aside>
+  </main>
+
+  <script>
+    const lotteGames = [
+      ['2026-07-24','금','18:30','KT vs 롯데'], ['2026-07-25','토','18:00','KT vs 롯데'], ['2026-07-26','일','18:00','KT vs 롯데'],
+      ['2026-07-31','금','18:30','삼성 vs 롯데'], ['2026-08-01','토','18:00','삼성 vs 롯데'], ['2026-08-02','일','18:00','삼성 vs 롯데'],
+      ['2026-08-14','금','18:30','NC vs 롯데'], ['2026-08-15','토','18:00','NC vs 롯데'], ['2026-08-16','일','18:00','NC vs 롯데'],
+      ['2026-08-28','금','18:30','LG vs 롯데'], ['2026-08-29','토','18:00','LG vs 롯데'], ['2026-08-30','일','18:00','LG vs 롯데'],
+      ['2026-09-04','금','18:30','한화 vs 롯데'], ['2026-09-05','토','17:00','한화 vs 롯데'], ['2026-09-06','일','17:00','한화 vs 롯데']
+    ];
+    const kiaGames = [
+      ['2026-07-24','금','18:30','키움 vs KIA'], ['2026-07-25','토','18:00','키움 vs KIA'], ['2026-07-26','일','18:00','키움 vs KIA'],
+      ['2026-08-14','금','18:30','두산 vs KIA'], ['2026-08-15','토','18:00','두산 vs KIA'], ['2026-08-16','일','18:00','두산 vs KIA'],
+      ['2026-08-28','금','18:30','SSG vs KIA'], ['2026-08-29','토','18:00','SSG vs KIA'], ['2026-08-30','일','18:00','SSG vs KIA'],
+      ['2026-09-04','금','18:30','KT vs KIA'], ['2026-09-05','토','17:00','KT vs KIA'], ['2026-09-06','일','17:00','KT vs KIA']
+    ];
+    const months = [[2026,6,'2026년 7월'], [2026,7,'2026년 8월'], [2026,8,'2026년 9월']];
+    const weekdays = ['일','월','화','수','목','금','토'];
+
+    function gameMap(games) {
+      return Object.fromEntries(games.map(([date,dow,time,match]) => [date, {dow,time,match}]));
+    }
+    function dateKey(y, monthIndex, d) {
+      return `${y}-${String(monthIndex + 1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    }
+    function renderCalendars(rootId, games) {
+      const root = document.getElementById(rootId);
+      const map = gameMap(games);
+      root.innerHTML = months.map(([year, monthIndex, label]) => {
+        const first = new Date(year, monthIndex, 1).getDay();
+        const last = new Date(year, monthIndex + 1, 0).getDate();
+        const monthGameCount = games.filter(g => Number(g[0].slice(5,7)) === monthIndex + 1).length;
+        const cells = [];
+        for (let i = 0; i < first; i++) cells.push('<div class="day empty" aria-hidden="true"></div>');
+        for (let d = 1; d <= last; d++) {
+          const key = dateKey(year, monthIndex, d);
+          const g = map[key];
+          cells.push(`<div class="day ${g ? 'has-game' : ''}" ${g ? `title="${g.time} ${g.match}"` : ''}><div class="date-num">${d}</div>${g ? `<div class="game">${g.time}<br>${g.match}</div>` : ''}</div>`);
+        }
+        return `<article class="month-card"><div class="month-top"><h3 class="month-name">${label}</h3><span class="month-count">${monthGameCount} games</span></div><div class="weekdays">${weekdays.map((w,i)=>`<div class="weekday ${i===0?'sun':''} ${i===6?'sat':''}">${w}</div>`).join('')}</div><div class="days">${cells.join('')}</div></article>`;
+      }).join('');
+    }
+    function renderGameList(rootId, games, venue) {
+      const root = document.getElementById(rootId);
+      root.innerHTML = games.map(([date,dow,time,match]) => `<div class="game-row"><div class="game-date">${date.slice(5).replace('-','/')} (${dow})</div><div class="game-meta"><strong>${time}</strong> · ${match} · ${venue}</div></div>`).join('');
+    }
+    renderCalendars('lotte-calendars', lotteGames);
+    renderCalendars('kia-calendars', kiaGames);
+    renderGameList('lotte-games', lotteGames, '사직');
+    renderGameList('kia-games', kiaGames, '광주');
+  </script>
+</body>
+</html>
