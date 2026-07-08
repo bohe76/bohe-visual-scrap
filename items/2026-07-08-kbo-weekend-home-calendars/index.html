@@ -21,7 +21,6 @@
       --kia-red-dark: #a70f25;
       --lotte-navy: #071d49;
       --lotte-navy-2: #0b2d6d;
-      --both-blue: #0072f5;
       --green: #078a45;
       --shadow: rgba(0,0,0,.08) 0 0 0 1px, rgba(0,0,0,.04) 0 2px 2px, rgba(0,0,0,.04) 0 12px 20px -16px, #fafafa 0 0 0 1px inset;
     }
@@ -64,7 +63,7 @@
     .swatch { width: 10px; height: 10px; border-radius: 9999px; flex: 0 0 auto; }
     .swatch.kia { background: var(--kia-red); }
     .swatch.lotte { background: var(--lotte-navy); }
-    .swatch.both { background: var(--both-blue); box-shadow: 0 0 0 4px var(--kia-red); margin-left: 4px; margin-right: 4px; }
+    .swatch.both { background: linear-gradient(180deg, var(--kia-red) 0 50%, var(--lotte-navy) 50% 100%); border-radius: 3px; }
 
     .section-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; margin: 54px 0 18px; }
     .section-title { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.02; letter-spacing: -.055em; font-weight: 650; }
@@ -88,11 +87,14 @@
     .day.has-game { color: #fff; box-shadow: none; }
     .day.kia { background: linear-gradient(135deg, var(--kia-red), var(--kia-red-dark)); }
     .day.lotte { background: linear-gradient(135deg, var(--lotte-navy), var(--lotte-navy-2)); }
-    .day.both { background: linear-gradient(135deg, var(--kia-red), var(--kia-red-dark)); }
-    .day.both::after { content: ''; position: absolute; right: 8px; top: 8px; width: 11px; height: 11px; border-radius: 50%; background: var(--both-blue); box-shadow: 0 0 0 2px rgba(255,255,255,.86); }
+    .day.both { background: #fff; padding: 0; overflow: hidden; display: grid; grid-template-rows: 22px 1fr 1fr; gap: 0; box-shadow: rgba(0,0,0,.07) 0 0 0 1px; }
+    .day.both .date-num { color: var(--ink); padding: 6px 7px 3px; background: #fff; }
     .games { margin-top: 7px; display: grid; gap: 3px; }
+    .day.both .games { margin: 0; display: grid; grid-row: 2 / 4; grid-template-rows: 1fr 1fr; gap: 0; }
     .game { display: block; color: #fff; font-size: 10.5px; line-height: 1.18; font-weight: 650; letter-spacing: -.01em; }
-    .both .game.lotte-line { padding-left: 9px; border-left: 4px solid var(--both-blue); }
+    .day.both .game { display: grid; align-content: center; padding: 4px 7px; }
+    .day.both .game.kia-line { background: linear-gradient(135deg, var(--kia-red), var(--kia-red-dark)); }
+    .day.both .game.lotte-line { background: linear-gradient(135deg, var(--lotte-navy), var(--lotte-navy-2)); }
 
     .list-section { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
     .list-card { padding: 16px; border-radius: 14px; background: #fff; box-shadow: var(--shadow); }
@@ -118,7 +120,9 @@
       .pills { display: none; }
       .summary-grid { grid-template-columns: 1fr; }
       .day { min-height: 58px; padding: 6px; }
+      .day.both { padding: 0; grid-template-rows: 20px 1fr 1fr; }
       .game { font-size: 10px; }
+      .day.both .game { padding: 3px 6px; }
       .game-row { grid-template-columns: 70px minmax(0, 1fr); }
     }
   </style>
@@ -133,7 +137,7 @@
     <header class="hero">
       <div class="eyebrow"><span class="live-dot"></span> UPDATED 2026-07-08 KST</div>
       <h1>롯데 사직 · KIA 광주 금토일 통합 달력</h1>
-      <p class="lead">KBO 홈페이지 정규시즌 일정에서 2026-07-08 이후 남은 경기만 골라, 하나의 달력에 KIA 광주 경기는 빨간색, 롯데 사직 경기는 진한 남색으로 표시했습니다. 두 팀 조건이 같은 날짜에 모두 있으면 빨간 날짜 위에 파란 원으로 함께 표기했습니다.</p>
+      <p class="lead">KBO 홈페이지 정규시즌 일정에서 2026-07-08 이후 남은 경기만 골라, 하나의 달력에 KIA 광주 경기는 빨간색, 롯데 사직 경기는 진한 남색으로 표시했습니다. 두 팀 조건이 같은 날짜에 모두 있으면 날짜 칸을 상하로 나눠 각각의 팀 색상과 상대팀으로 표시했습니다.</p>
       <div class="source">DATA SOURCE: koreabaseball.com Schedule → regular season 2026 / months 07–09 · week starts Sunday</div>
     </header>
 
@@ -147,14 +151,14 @@
     <div class="legend" aria-label="legend">
       <span class="legend-item"><span class="swatch kia"></span>KIA 광주 경기일 = 빨간색</span>
       <span class="legend-item"><span class="swatch lotte"></span>롯데 사직 경기일 = 진한 남색</span>
-      <span class="legend-item"><span class="swatch both"></span>둘 다 있는 날 = 빨간색 + 파란 원</span>
+      <span class="legend-item"><span class="swatch both"></span>둘 다 있는 날 = 상하 분할 표시</span>
       <span class="legend-item">표시 없는 날짜 = 해당 조건 경기 없음</span>
     </div>
 
     <section aria-labelledby="calendar-title">
       <div class="section-head">
         <h2 class="section-title" id="calendar-title"><small>COMBINED CALENDAR</small>일요일 시작 통합 달력</h2>
-        <p class="section-note">7월부터 9월까지 월별로 배치했습니다. 겹치는 날짜는 KIA 기준 빨간 날짜에 파란 원과 파란 막대로 롯데 경기도 함께 보입니다.</p>
+        <p class="section-note">7월부터 9월까지 월별로 배치했습니다. 겹치는 날짜는 위/아래를 나눠 KIA는 빨간색, 롯데는 진한 남색으로 표시하고 각 영역에는 시작 시간과 상대팀만 적었습니다.</p>
       </div>
       <div class="calendar-grid" id="combined-calendars"></div>
     </section>
@@ -211,7 +215,9 @@
           const kg = kiaMap[key];
           const state = kg && lg ? 'both' : kg ? 'kia' : lg ? 'lotte' : '';
           const label = [kg ? `${kg.time} ${kg.match} · 광주` : '', lg ? `${lg.time} ${lg.match} · 사직` : ''].filter(Boolean).join(' / ');
-          cells.push(`<div class="day ${state ? `has-game ${state}` : ''}" ${label ? `title="${label}"` : ''}><div class="date-num">${d}</div>${state ? `<div class="games">${kg ? `<span class="game kia-line">${kg.time} KIA</span>` : ''}${lg ? `<span class="game lotte-line">${lg.time} 롯데</span>` : ''}</div>` : ''}</div>`);
+          const kiaOpponent = kg ? kg.match.replace(/\s*vs\s*KIA$/, '') : '';
+          const lotteOpponent = lg ? lg.match.replace(/\s*vs\s*롯데$/, '') : '';
+          cells.push(`<div class="day ${state ? `has-game ${state}` : ''}" ${label ? `title="${label}"` : ''}><div class="date-num">${d}</div>${state ? `<div class="games">${kg ? `<span class="game kia-line">${kg.time}<br>${kiaOpponent}</span>` : ''}${lg ? `<span class="game lotte-line">${lg.time}<br>${lotteOpponent}</span>` : ''}</div>` : ''}</div>`);
         }
         return `<article class="month-card"><div class="month-top"><h3 class="month-name">${label}</h3><span class="month-count">${monthGameDates.size} days</span></div><div class="weekdays">${weekdays.map((w,i)=>`<div class="weekday ${i===0?'sun':''} ${i===6?'sat':''}">${w}</div>`).join('')}</div><div class="days">${cells.join('')}</div></article>`;
       }).join('');
