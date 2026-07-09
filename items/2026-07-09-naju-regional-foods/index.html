@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>나주 지역음식 교차검증 지도</title>
+  <meta name="description" content="나주곰탕, 영산포 홍어, 구진포 장어, 나주식 불고기, 나주배 먹거리를 공식·언론·네이버 Place 신호로 교차 검증한 시각화." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#242424;--muted:#747474;--line:#e9e9e9;--soft:#f6f6f6;--card:#fff;--shadow:rgba(0,0,0,.08) 0 0 0 1px,rgba(0,0,0,.05) 0 2px 8px,rgba(0,0,0,.06) 0 18px 38px -26px;--soup:#8b6a36;--hong:#6e3146;--eel:#166041;--bul:#a3411d;--pear:#c88f11;--hist:#4a5a72}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff 0,#fff 55%,#fafafa 100%);color:var(--ink);font-family:Geist,Arial,Apple SD Gothic Neo,sans-serif;-webkit-font-smoothing:antialiased}.shell{width:min(1140px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:52px}.brand{display:inline-flex;gap:10px;align-items:center;text-decoration:none;font-weight:650;font-size:14px}.brand span:first-child{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;font:700 11px Geist Mono}.pill{height:32px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#666;font-size:13px;font-weight:600}.eyebrow{display:inline-flex;gap:8px;align-items:center;height:28px;padding:0 10px;border-radius:999px;background:#f5f5f5;font:600 12px Geist Mono;color:#444;letter-spacing:.04em}.dot{width:7px;height:7px;border-radius:50%;background:#078a45;box-shadow:0 0 0 3px rgba(7,138,69,.12)}h1{margin:18px 0 0;font-size:clamp(42px,7.6vw,86px);line-height:.94;letter-spacing:-.07em;font-weight:680}.lead{margin:22px 0 0;max-width:900px;color:#666;font-size:clamp(16px,2vw,20px);line-height:1.72;letter-spacing:-.02em}.meta{margin-top:16px;color:#999;font:500 12px/1.6 Geist Mono}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin:36px 0 20px}.metric{background:#fff;padding:18px 20px}.metric-label{font:650 11px Geist Mono;color:#999;text-transform:uppercase;letter-spacing:.06em}.metric-value{margin-top:8px;font-size:24px;font-weight:680;letter-spacing:-.05em}.legend{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 30px}.chip{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 11px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#666;font-size:13px;font-weight:650}.chip i{width:8px;height:8px;border-radius:50%;background:var(--c)}.tier-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}.tier-list,.evidence,.matrix,.note{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px}.tier{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:16px 0;border-bottom:1px solid var(--line)}.tier:first-child{padding-top:0}.tier:last-child{border-bottom:0;padding-bottom:0}.badge{width:42px;height:42px;border-radius:999px;display:grid;place-items:center;color:#fff;font:700 13px Geist Mono;background:var(--c)}.food h2{margin:0;font-size:24px;letter-spacing:-.05em}.food p{margin:8px 0 0;color:#666;line-height:1.6;font-size:15px}.score{font:700 12px Geist Mono;color:#111;background:#f3f3f3;border-radius:999px;padding:7px 10px;white-space:nowrap}.proof{display:grid;gap:10px}.proof-card{border-radius:13px;background:#fafafa;box-shadow:rgba(0,0,0,.06) 0 0 0 1px;padding:13px}.proof-card b{display:block;font-size:15px;margin-bottom:6px}.proof-card p{margin:0;color:#666;font-size:14px;line-height:1.58}.matrix{margin-top:14px}.matrix h2,.evidence h2{margin:0 0 14px;font-size:22px;letter-spacing:-.04em}.table{overflow:auto;border-radius:12px;box-shadow:rgba(0,0,0,.07) 0 0 0 1px}.row{display:grid;grid-template-columns:1fr repeat(4,.72fr);min-width:760px}.row>div{padding:12px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}.row.head>div{background:#f6f6f6;color:#666;font:650 12px Geist Mono;text-transform:uppercase}.row:last-child>div{border-bottom:0}.ok{color:#078a45;font-weight:700}.mid{color:#a86d00;font-weight:700}.low{color:#777;font-weight:700}.sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.source{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:15px}.source .k{font:650 11px Geist Mono;color:#999;text-transform:uppercase}.source b{display:block;margin-top:7px;font-size:16px}.source p{margin:7px 0 0;color:#666;font-size:14px;line-height:1.55}.note{margin-top:14px;color:#666;line-height:1.7;font-size:14px}.strong{color:#111;font-weight:700}@media(max-width:900px){.metrics{grid-template-columns:repeat(2,1fr)}.tier-grid{grid-template-columns:1fr}.sources{grid-template-columns:1fr}}@media(max-width:540px){.shell{width:min(100% - 22px,1140px);padding-top:28px}.top .pill{display:none}.metrics{grid-template-columns:1fr}h1{font-size:42px}.tier{grid-template-columns:auto 1fr}.score{grid-column:2}.food h2{font-size:21px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="top"><a class="brand" href="../../"><span>B</span><span>bohe visual scrap</span></a><span class="pill">Cross-verified local food map</span></nav>
+    <header>
+      <div class="eyebrow"><span class="dot"></span> NAJU FOOD IDENTITY · CROSS CHECKED</div>
+      <h1>나주는 곰탕 말고 뭐가 있나?</h1>
+      <p class="lead">부산의 돼지국밥·밀면처럼 “그 지역에 가면 먹어야 하는 음식” 기준으로 나주 음식을 다시 분류했습니다. 공식 관광 분류, 언론/설문, 네이버 Place 식당 클러스터가 겹치는지로 신뢰도를 나눴습니다.</p>
+      <div class="meta">검증일: 2026-07-09 KST · 기준: 나주시 공식 관광/남도음식명가 + 언론/소비자 인식 조사 + 네이버 Place 클러스터</div>
+    </header>
+
+    <section class="metrics">
+      <div class="metric"><div class="metric-label">Tier 1</div><div class="metric-value">3 foods</div></div>
+      <div class="metric"><div class="metric-label">Core axis</div><div class="metric-value">곰탕·홍어·장어</div></div>
+      <div class="metric"><div class="metric-label">Survey top</div><div class="metric-value">곰탕 78.1%</div></div>
+      <div class="metric"><div class="metric-label">Place clusters</div><div class="metric-value">verified</div></div>
+    </section>
+
+    <div class="legend"><span class="chip"><i style="--c:var(--soup)"></i>나주곰탕</span><span class="chip"><i style="--c:var(--hong)"></i>영산포 홍어</span><span class="chip"><i style="--c:var(--eel)"></i>구진포 장어</span><span class="chip"><i style="--c:var(--bul)"></i>나주식 고기</span><span class="chip"><i style="--c:var(--pear)"></i>나주배</span><span class="chip"><i style="--c:var(--hist)"></i>전통 기록</span></div>
+
+    <section class="tier-grid">
+      <div class="tier-list">
+        <article class="tier" style="--c:var(--soup)"><div class="badge">1</div><div class="food"><h2>나주곰탕</h2><p>가장 확실한 대표 음식. 나주곰탕거리, 공식 관광 분류, 소비자 인식 조사, 네이버 대형 식당 클러스터가 모두 겹칩니다.</p></div><div class="score">매우 높음</div></article>
+        <article class="tier" style="--c:var(--hong)"><div class="badge">2</div><div class="food"><h2>영산포 숙성홍어 / 홍어삼합</h2><p>영산포 홍어거리와 남도음식거리로 장소성이 강합니다. 호불호는 있지만 “나주 아니면 약해지는 음식”입니다.</p></div><div class="score">매우 높음</div></article>
+        <article class="tier" style="--c:var(--eel)"><div class="badge">3</div><div class="food"><h2>구진포 장어 / 장어구이</h2><p>나주시 공식 “구진포 장어거리”와 실제 장어집 밀집이 확인됩니다. 곰탕·홍어 다음의 확실한 지역 축입니다.</p></div><div class="score">높음</div></article>
+        <article class="tier" style="--c:var(--bul)"><div class="badge">4</div><div class="food"><h2>나주식 불고기 / 볶음돼지갈비</h2><p>대중 인지도는 낮지만 설문에 불고기가 등장하고, 남도음식명가에 “나주식 볶음돼지갈비”가 명시됩니다.</p></div><div class="score">중상</div></article>
+        <article class="tier" style="--c:var(--pear)"><div class="badge">5</div><div class="food"><h2>나주배 기반 먹거리</h2><p>나주배는 특산물로는 매우 강합니다. 다만 외식 장르보다는 닭강정·디저트·음료 같은 응용 메뉴로 보는 게 정확합니다.</p></div><div class="score">중상</div></article>
+        <article class="tier" style="--c:var(--hist)"><div class="badge">6</div><div class="food"><h2>나주비빔밥 · 애저 등 전통 기록 음식</h2><p>나주시지·향토음식 기록에는 보이지만 현재 관광 대표 음식/식당 클러스터 신호는 1티어보다 약합니다.</p></div><div class="score">보조</div></article>
+      </div>
+
+      <aside class="evidence">
+        <h2>세 줄 결론</h2>
+        <div class="proof">
+          <div class="proof-card"><b>1. 공식 명칭은 “나주 3대 맛거리”</b><p>나주시 관광 체계에서 나주곰탕거리, 영산포 홍어거리, 구진포 장어거리가 반복 노출됩니다.</p></div>
+          <div class="proof-card"><b>2. 인식 조사는 곰탕 압승</b><p>나주 대표 음식 응답은 곰탕 78.1%, 홍어 7.1%, 불고기 4.8%, 장어 4.5% 순으로 보도됐습니다.</p></div>
+          <div class="proof-card"><b>3. 네이버 실재 식당도 같은 축</b><p>곰탕·홍어·장어는 같은 지역 안에 여러 전문점이 확인됩니다. 불고기와 나주배 응용은 보조 축입니다.</p></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="matrix">
+      <h2>교차검증 매트릭스</h2>
+      <div class="table">
+        <div class="row head"><div>지역 음식</div><div>공식/관광</div><div>언론/설문</div><div>네이버 식당군</div><div>판정</div></div>
+        <div class="row"><div><strong>나주곰탕</strong></div><div class="ok">강함</div><div class="ok">매우 강함</div><div class="ok">강함</div><div class="ok">1티어</div></div>
+        <div class="row"><div><strong>영산포 홍어</strong></div><div class="ok">강함</div><div class="ok">강함</div><div class="ok">강함</div><div class="ok">1티어</div></div>
+        <div class="row"><div><strong>구진포 장어</strong></div><div class="ok">강함</div><div class="ok">강함</div><div class="ok">중상</div><div class="ok">1티어</div></div>
+        <div class="row"><div><strong>나주식 불고기/볶음돼지갈비</strong></div><div class="mid">중상</div><div class="mid">중상</div><div class="mid">중상</div><div class="mid">2티어</div></div>
+        <div class="row"><div><strong>나주배 응용 먹거리</strong></div><div class="ok">특산물 강함</div><div class="mid">중간</div><div class="mid">응용점 확인</div><div class="mid">2티어</div></div>
+        <div class="row"><div><strong>나주비빔밥·애저</strong></div><div class="mid">기록 있음</div><div class="low">약함</div><div class="low">현 클러스터 약함</div><div class="low">보조</div></div>
+      </div>
+    </section>
+
+    <section class="sources">
+      <article class="source"><div class="k">OFFICIAL</div><b>나주시 관광/남도음식명가</b><p>나주3대 맛거리로 곰탕거리·영산포 홍어거리·구진포 장어거리를 노출. 남도음식명가에는 나주식 볶음돼지갈비, 홍어정식, 나주곰탕 등이 보입니다.</p></article>
+      <article class="source"><div class="k">MEDIA / SURVEY</div><b>대표 음식 인식 조사</b><p>보도 기준 대표 음식 선호는 곰탕 78.1%, 홍어 7.1%, 불고기 4.8%, 장어 4.5%. 곰탕이 압도적이지만 2~4위도 지역 음식 축으로 확인됩니다.</p></article>
+      <article class="source"><div class="k">NAVER PLACE</div><b>실재 식당 클러스터</b><p>하얀집·노안집, 홍어1번지·영산포홍어, 구진포제일장어·신흥장어, 송현불고기·태광갈비, 대접나주배닭강정 등 실제 장소 신호를 확인했습니다.</p></article>
+    </section>
+
+    <aside class="note"><span class="strong">정리:</span> “나주 음식”을 외지인이 한 끼로 고른다면 1순위는 나주곰탕, 지역성이 가장 강한 도전 메뉴는 영산포 홍어, 가족/보양식 목적이면 구진포 장어가 맞습니다. 불고기/볶음돼지갈비와 나주배 응용 메뉴는 여행 동선이나 취향에 따라 붙이는 보조 축으로 보는 게 가장 정확합니다.</aside>
+  </main>
+</body>
+</html>
