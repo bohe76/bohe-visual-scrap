@@ -80,7 +80,7 @@ Use Geist for headings and body. Use Geist Mono only for dates, small labels, st
 
 ## Layout
 
-The home page is a centered archive with a compact header, a metrics/status strip, and a responsive card grid. Desktop cards may use two columns; mobile must collapse to one column. Keep the newest artifact first.
+The home page is a centered archive with a compact header, a metrics/status strip, and a responsive card grid. The hero block should use the full archive shell width on desktop: do not impose narrow `max-width` caps on the hero heading or lead copy, so the title and Korean description read as continuous lines when viewport space allows. Desktop cards may use two columns; mobile must collapse to one column. Keep the newest artifact first.
 
 ## Elevation & Depth
 
