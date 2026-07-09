@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>광주-KIA 챔피언스필드 먹거리 구매 지도</title>
+  <meta name="description" content="광주-KIA 챔피언스필드에서 야구 볼 때 무엇을 어디서 사야 하는지 1루/3루/층별로 정리한 먹거리 지도." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171717;--muted:#666;--soft:#8a8a8a;--line:#e8e8e8;--bg:#fff;--surface:#fff;--wash:#fafafa;--red:#c41230;--navy:#13294b;--green:#078a45;--amber:#b76e00;--blue:#175cd3;--violet:#6941c6;--shadow:rgba(0,0,0,.08) 0 0 0 1px,rgba(0,0,0,.04) 0 2px 2px,rgba(0,0,0,.04) 0 8px 8px -8px,#fafafa 0 0 0 1px inset}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff 0,#fff 55%,#fafafa 100%);font-family:Geist,Arial,Apple SD Gothic Neo,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}.shell{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:50px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:650;font-size:14px}.brand span:first-child{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;font:700 11px Geist Mono}.pill{height:32px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#666;font-size:13px;font-weight:600}.eyebrow{display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 10px;border-radius:999px;background:#fff3f3;color:#a10e25;font:650 12px Geist Mono;letter-spacing:.04em}.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(196,18,48,.12)}h1{margin:18px 0 0;font-size:clamp(42px,7vw,78px);line-height:.95;letter-spacing:-.065em;font-weight:680}.lead{margin:22px 0 0;max-width:1040px;color:#606060;font-size:clamp(16px,2vw,20px);line-height:1.72;letter-spacing:-.02em}.meta{margin-top:14px;color:#999;font:500 12px/1.6 Geist Mono}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin:36px 0 18px}.metric{background:#fff;padding:18px 20px}.metric small{display:block;font:650 11px Geist Mono;color:#999;text-transform:uppercase;letter-spacing:.06em}.metric b{display:block;margin-top:8px;font-size:22px;letter-spacing:-.04em}.notice{margin:0 0 22px;background:#fffdf7;border-radius:14px;box-shadow:rgba(183,110,0,.22) 0 0 0 1px,rgba(183,110,0,.08) 0 10px 30px -16px;padding:15px 16px;color:#6b4300;line-height:1.6;font-size:14px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;align-items:start}.panel{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px}.panel h2{margin:0 0 14px;font-size:23px;letter-spacing:-.045em}.stadium{position:relative;min-height:560px;border-radius:16px;background:radial-gradient(ellipse at center,#f6fff8 0 18%,#eef7ff 19% 32%,#f8f8f8 33% 100%);box-shadow:inset rgba(0,0,0,.08) 0 0 0 1px;padding:20px;overflow:hidden}.field{position:absolute;left:50%;top:50%;width:260px;height:260px;transform:translate(-50%,-42%) rotate(45deg);background:#e8f7e9;border:1px solid #bfe3c1;border-radius:26px}.field:after{content:'FIELD';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-45deg);font:700 12px Geist Mono;color:#78a87c;letter-spacing:.12em}.side-label{position:absolute;font:800 16px Geist Mono;letter-spacing:-.04em;color:#999}.first{right:34px;top:42px}.third{left:34px;top:42px}.home{left:50%;bottom:36px;transform:translateX(-50%)}.zone{position:absolute;width:220px;border-radius:14px;background:rgba(255,255,255,.94);box-shadow:var(--shadow);padding:12px}.zone h3{margin:0 0 7px;font-size:15px;letter-spacing:-.03em}.zone ul{margin:0;padding:0;list-style:none;display:grid;gap:5px}.zone li{font-size:13px;color:#555;line-height:1.35}.zone b{color:#111}.z13{right:22px;top:88px}.z14{right:22px;top:310px}.z33{left:22px;top:88px}.z34{left:22px;top:310px}.z5{left:50%;bottom:82px;transform:translateX(-50%);width:360px}.badge{display:inline-flex;align-items:center;height:22px;border-radius:999px;padding:0 7px;background:var(--c);color:white;font:700 11px Geist Mono;margin-right:5px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:15px;min-height:154px}.card .rank{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font:700 12px Geist Mono}.card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}.card h3{margin:0;font-size:17px;letter-spacing:-.04em}.card p{margin:0;color:#666;font-size:14px;line-height:1.55}.where{margin-top:11px;display:flex;gap:6px;flex-wrap:wrap}.chip{display:inline-flex;align-items:center;min-height:25px;border-radius:999px;background:#f5f5f5;padding:0 9px;font:650 12px Geist Mono;color:#555}.pick{margin-top:14px;border-radius:16px;background:#111;color:#fff;padding:18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;overflow:hidden}.pick div{padding:12px;background:rgba(255,255,255,.06)}.pick small{display:block;color:#bdbdbd;font:650 11px Geist Mono;text-transform:uppercase;letter-spacing:.06em}.pick b{display:block;margin-top:6px;font-size:16px;letter-spacing:-.03em}.table{margin-top:14px;overflow:auto;border-radius:14px;box-shadow:var(--shadow)}.row{display:grid;grid-template-columns:.75fr 1.35fr 1.2fr 1.3fr;min-width:780px}.row>div{border-bottom:1px solid var(--line);padding:12px;font-size:14px;line-height:1.45}.row.head>div{background:#f6f6f6;color:#666;font:700 12px Geist Mono;text-transform:uppercase}.row:last-child>div{border-bottom:0}.src{margin-top:14px;color:#777;font-size:13px;line-height:1.65}.good{color:#078a45;font-weight:800}.warn{color:#b76e00;font-weight:800}@media(max-width:1000px){.grid{grid-template-columns:1fr}.summary{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.stadium{min-height:760px}.z13,.z14,.z33,.z34,.z5{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;width:auto;margin:10px 0}.field,.side-label{display:none}.pick{grid-template-columns:1fr}}@media(max-width:560px){.shell{width:min(100% - 22px,1180px);padding-top:28px}.top .pill{display:none}h1{font-size:42px}.summary{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <nav class="top"><a class="brand" href="../../"><span>B</span><span>bohe visual scrap</span></a><span class="pill">Champions Field food map</span></nav>
+  <header>
+    <div class="eyebrow"><span class="dot"></span> GWANGJU-KIA CHAMPIONS FIELD · FOOD ROUTE</div>
+    <h1>챔필 먹거리, 어디서 살까?</h1>
+    <p class="lead">광주-KIA 챔피언스필드에서 야구 볼 때 많이 언급되는 먹거리와 실제 구매 위치를 1루·3루·층별로 정리했습니다. 핵심은 3층, 인기 메뉴는 스테이션 크림새우와 인크커피 야구공빵입니다.</p>
+    <div class="meta">조사 기준: 2026-07-09 네이버 검색/블로그 스니펫, 자리어때 검색 노출 경로, 네이버 Place 요약 API · 매장 구성/가격은 경기일 현장 변동 가능</div>
+  </header>
+
+  <section class="summary" aria-label="food summary">
+    <div class="metric"><small>Best first buy</small><b>스테이션 크림새우</b></div>
+    <div class="metric"><small>Photo snack</small><b>야구공빵</b></div>
+    <div class="metric"><small>Main floor</small><b>내야 3층</b></div>
+    <div class="metric"><small>Safe timing</small><b>경기 60분 전</b></div>
+  </section>
+
+  <p class="notice"><strong>구매 전략:</strong> 18:00 경기라면 16:50~17:10 사이 입장 → 3층 스테이션/분식/치킨 먼저 확보 → 좌석 착석 후 맥주·음료 보충이 가장 안정적입니다. 스테이션 크림새우와 야구공빵은 줄·품절 가능성을 우선 고려하세요.</p>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>층별 구매 지도</h2>
+      <div class="stadium" aria-label="stadium food map">
+        <div class="field"></div><div class="side-label third">3루</div><div class="side-label first">1루</div><div class="side-label home">홈/입장</div>
+        <div class="zone z13"><h3><span class="badge" style="--c:var(--red)">1루 3F</span>가장 다양한 라인</h3><ul><li><b>STATION</b> — 크림새우/새우류</li><li><b>BHC · 파파존스 · 프랭크버거</b></li><li><b>타코잇 · 감탄떡볶이 · 스트릿츄러스</b></li><li><b>CU</b> — 음료/스낵/캔맥주</li></ul></div>
+        <div class="zone z33"><h3><span class="badge" style="--c:var(--navy)">3루 3F</span>원정/3루 쪽 핵심</h3><ul><li><b>BHC · BHC PUB · CU</b></li><li><b>광주원샷</b> — 치킨/컵안주/맥주류</li><li><b>감탄떡볶이 · 스트릿츄러스</b></li><li><b>요아정 · 보영만두 · 카페아모제</b></li></ul></div>
+        <div class="zone z14"><h3><span class="badge" style="--c:var(--red)">1루 4F</span>가볍게 보충</h3><ul><li><b>광주원샷</b></li><li><b>자문밖</b> — 김치말이국수/한식류</li><li><b>XOXO핫도그</b></li><li><b>프랭크버거</b></li></ul></div>
+        <div class="zone z34"><h3><span class="badge" style="--c:var(--navy)">3루 4F</span>대칭형 매장</h3><ul><li><b>광주원샷</b></li><li><b>자문밖</b></li><li><b>프랭크버거</b></li><li>검색 신호상 4층은 1루·3루가 거의 대칭 구성</li></ul></div>
+        <div class="zone z5"><h3><span class="badge" style="--c:var(--amber)">5F / 외부</span>백업 구매</h3><ul><li><b>1루 5F</b> — BHC, 파파존스</li><li><b>3루 5F</b> — 마성/감탄떡볶이, CU 신호</li><li><b>외부 노점</b> — 닭강정, 치킨, 김밥 등</li></ul></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>먹을 것별 추천 구매처</h2>
+      <div class="cards">
+        <article class="card"><div class="card-head"><div class="rank" style="--c:var(--red)">1</div><h3>스테이션 크림새우</h3></div><p>챔필 대표 인기 메뉴. 검색 결과에서 “줄 길다”, “크림새우”, “15번 스테이션” 신호가 반복됩니다.</p><div class="where"><span class="chip">1루 3층 STATION</span><span class="chip">3루쪽 4번 게이트 옆 언급</span></div></article>
+        <article class="card"><div class="card-head"><div class="rank" style="--c:var(--green)">2</div><h3>인크커피 야구공빵</h3></div><p>실제 네이버 Place 확인. 방문자 리뷰 1,180 / 블로그 1,063. 사진용·간식용으로 강한 픽.</p><div class="where"><span class="chip">1층 인크커피</span><span class="chip">야구공빵/음료</span></div></article>
+        <article class="card"><div class="card-head"><div class="rank" style="--c:var(--navy)">3</div><h3>광주원샷</h3></div><p>치킨류·컵안주·맥주 조합으로 반복 언급. 3층과 4층 양쪽에서 접근성이 좋습니다.</p><div class="where"><span class="chip">3루 3층</span><span class="chip">1루/3루 4층</span></div></article>
+        <article class="card"><div class="card-head"><div class="rank" style="--c:var(--blue)">4</div><h3>자문밖 김치말이국수</h3></div><p>튀김/치킨이 부담스러울 때 시원한 한식 백업. 네이버 Place는 구장 내 주소로 확인됩니다.</p><div class="where"><span class="chip">1루 4층</span><span class="chip">3루 4층</span></div></article>
+        <article class="card"><div class="card-head"><div class="rank" style="--c:var(--violet)">5</div><h3>치킨·피자·버거</h3></div><p>실패 없는 야구장 기본 조합. 좌석과 가까운 쪽에서 BHC/파파존스/프랭크버거를 고르면 됩니다.</p><div class="where"><span class="chip">1루 3층</span><span class="chip">1루 5층</span><span class="chip">3루 3층</span></div></article>
+        <article class="card"><div class="card-head"><div class="rank" style="--c:var(--amber)">6</div><h3>분식·디저트</h3></div><p>감탄떡볶이, 스트릿츄러스, XOXO핫도그, 요아정 등이 검색 신호에 잡힙니다.</p><div class="where"><span class="chip">1루 3층</span><span class="chip">3루 3층</span><span class="chip">4층 핫도그</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pick" aria-label="recommended route">
+    <div><small>도착 직후</small><b>1루 3층 STATION → 크림새우</b></div>
+    <div><small>자리 가기 전</small><b>1층 인크커피 → 야구공빵/커피</b></div>
+    <div><small>경기 중 보충</small><b>가까운 CU/광주원샷 → 맥주·음료</b></div>
+  </section>
+
+  <section class="panel" style="margin-top:14px">
+    <h2>층별 매장표</h2>
+    <div class="table">
+      <div class="row head"><div>구역</div><div>확인된/반복 언급 매장</div><div>무엇을 사면 좋은가</div><div>판정</div></div>
+      <div class="row"><div>1층</div><div>CU, 인크커피 광주기아챔피언스필드점</div><div>야구공빵, 커피, 음료, 간식</div><div class="good">입장 직후/사진용 추천</div></div>
+      <div class="row"><div>2층 외야</div><div>CU 편의점 신호</div><div>음료·스낵·캔맥주</div><div>외야석이면 보조 구매</div></div>
+      <div class="row"><div>1루 3층</div><div>BHC, CU, STATION, 타코잇, 감탄떡볶이, 스트릿츄러스, 프랭크버거, 파파존스</div><div>크림새우, 치킨, 피자, 버거, 떡볶이, 츄러스</div><div class="good">가장 먼저 볼 구역</div></div>
+      <div class="row"><div>3루 3층</div><div>BHC, BHC PUB, CU, 광주원샷, 감탄떡볶이, 스트릿츄러스, 요아정, 보영만두, 카페아모제</div><div>치킨, 맥주, 분식, 디저트, 만두</div><div class="good">3루 좌석이면 핵심</div></div>
+      <div class="row"><div>1루 4층</div><div>광주원샷, 자문밖, XOXO핫도그, 프랭크버거</div><div>치킨/컵안주, 김치말이국수, 핫도그, 버거</div><div>자리 가까울 때 추천</div></div>
+      <div class="row"><div>3루 4층</div><div>광주원샷, 자문밖, 프랭크버거</div><div>치킨/컵안주, 국수/한식, 버거</div><div>4층 3루석 백업</div></div>
+      <div class="row"><div>5층</div><div>1루 BHC·파파존스 / 3루 떡볶이·CU 신호</div><div>치킨, 피자, 분식, 편의점류</div><div class="warn">상층 좌석일 때만</div></div>
+      <div class="row"><div>외부 노점</div><div>닭강정, 치킨, 김밥 등 후기 신호</div><div>줄 회피용 포장</div><div class="warn">반입 규정 당일 확인</div></div>
+    </div>
+    <p class="src">출처 메모: 네이버 검색 결과에서 자리어때의 층별 먹거리 페이지 URL/제목, 2025~2026 블로그 스니펫, 다이닝코드/네이버 Place 노출 신호를 교차 확인했습니다. Cloudflare로 원문 일부 직접 접근은 제한되어 검색 결과와 네이버 Place 요약을 우선했습니다. 구장 매장은 시즌·경기일에 따라 운영/가격/메뉴가 바뀔 수 있습니다.</p>
+  </section>
+</main>
+</body>
+</html>
