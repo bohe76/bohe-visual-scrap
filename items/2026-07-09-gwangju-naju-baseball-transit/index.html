@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8/28–8/30 나주·광주 야구 교통편</title>
+  <meta name="description" content="서울에서 나주, 나주에서 광주-KIA 챔피언스필드, 광주에서 서울로 돌아오는 교통편을 열차·택시·버스 관점으로 정리한 시각화." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#242424;--muted:#737373;--line:#e8e8e8;--soft:#f7f7f7;--card:#fff;--shadow:rgba(0,0,0,.08) 0 0 0 1px,rgba(0,0,0,.05) 0 2px 8px,rgba(0,0,0,.06) 0 18px 38px -26px;--blue:#175cd3;--green:#078a45;--red:#d92d20;--amber:#b76e00;--violet:#6941c6;--black:#111}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff 0,#fff 58%,#fafafa 100%);font-family:Geist,Arial,Apple SD Gothic Neo,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}.shell{width:min(1160px,calc(100% - 32px));margin:0 auto;padding:34px 0 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:52px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:650;font-size:14px}.brand span:first-child{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;font:700 11px Geist Mono}.pill{height:32px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#666;font-size:13px;font-weight:600}.eyebrow{display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 10px;border-radius:999px;background:#f5f5f5;font:650 12px Geist Mono;color:#444;letter-spacing:.04em}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(7,138,69,.12)}h1{margin:18px 0 0;font-size:clamp(42px,7.2vw,82px);line-height:.94;letter-spacing:-.067em;font-weight:680}.lead{margin:22px 0 0;max-width:940px;color:#666;font-size:clamp(16px,2vw,20px);line-height:1.72;letter-spacing:-.02em}.meta{margin-top:16px;color:#999;font:500 12px/1.6 Geist Mono}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin:36px 0 22px}.metric{background:#fff;padding:18px 20px}.metric-label{font:650 11px Geist Mono;color:#999;text-transform:uppercase;letter-spacing:.06em}.metric-value{margin-top:8px;font-size:24px;font-weight:680;letter-spacing:-.05em}.notice{margin:0 0 22px;background:#fffdf7;border-radius:14px;box-shadow:rgba(183,110,0,.22) 0 0 0 1px,rgba(183,110,0,.08) 0 10px 30px -16px;padding:15px 16px;color:#6b4300;line-height:1.6;font-size:14px}.layout{display:grid;grid-template-columns:1fr 360px;gap:14px;align-items:start}.panel,.side,.table-panel,.note{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px}.panel h2,.side h2,.table-panel h2{margin:0 0 14px;font-size:22px;letter-spacing:-.04em}.timeline{position:relative;display:grid;gap:14px}.step{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;padding:15px;border-radius:14px;background:#fafafa;box-shadow:rgba(0,0,0,.06) 0 0 0 1px}.time{font:700 19px Geist Mono;letter-spacing:-.04em;color:#111}.card-title{display:flex;align-items:center;gap:8px;margin:0;font-size:18px;font-weight:680;letter-spacing:-.04em}.mode{display:inline-flex;align-items:center;height:23px;padding:0 8px;border-radius:999px;background:var(--c);color:#fff;font:700 11px Geist Mono}.desc{margin:8px 0 0;color:#666;line-height:1.58;font-size:14px}.route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}.mini{border-radius:12px;background:#fff;box-shadow:rgba(0,0,0,.06) 0 0 0 1px;padding:11px}.mini .k{font:650 11px Geist Mono;color:#999;text-transform:uppercase}.mini .v{margin-top:5px;font-size:14px;line-height:1.45}.recommend{background:#111;color:#fff}.recommend .k{color:#bdbdbd}.side-list{display:grid;gap:10px}.option{border-radius:13px;background:#fafafa;box-shadow:rgba(0,0,0,.06) 0 0 0 1px;padding:13px}.option b{display:block;font-size:15px}.option p{margin:7px 0 0;color:#666;font-size:14px;line-height:1.55}.bar{height:8px;border-radius:999px;background:#eee;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:var(--w);background:var(--c)}.table-panel{margin-top:14px}.table{overflow:auto;border-radius:12px;box-shadow:rgba(0,0,0,.07) 0 0 0 1px}.row{display:grid;grid-template-columns:1.1fr .8fr .9fr .8fr 1.2fr;min-width:820px}.row>div{padding:12px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}.row.head>div{background:#f6f6f6;color:#666;font:650 12px Geist Mono;text-transform:uppercase}.row:last-child>div{border-bottom:0}.good{color:#078a45;font-weight:750}.warn{color:#b76e00;font-weight:750}.bad{color:#d92d20;font-weight:750}.note{margin-top:14px;color:#666;line-height:1.68;font-size:14px}.tagline{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.chip{display:inline-flex;align-items:center;gap:7px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#666;padding:8px 10px;font-size:13px;font-weight:650}.chip i{width:8px;height:8px;border-radius:50%;background:var(--c)}@media(max-width:980px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.route-grid{grid-template-columns:1fr}}@media(max-width:560px){.shell{width:min(100% - 22px,1160px);padding-top:28px}.top .pill{display:none}.metrics{grid-template-columns:1fr}h1{font-size:42px}.step{grid-template-columns:1fr}.time{font-size:16px}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <nav class="top"><a class="brand" href="../../"><span>B</span><span>bohe visual scrap</span></a><span class="pill">Transit plan · baseball weekend</span></nav>
+  <header>
+    <div class="eyebrow"><span class="dot"></span> 2026.08.28–08.30 · NAJU / GWANGJU</div>
+    <h1>기아 야구 원정 교통편</h1>
+    <p class="lead">서울에서 나주로 내려가고, 다음날 나주에서 광주-KIA 챔피언스필드로 이동한 뒤, 광주에서 서울로 올라오는 교통편을 실행 가능한 시간표 중심으로 시각화했습니다.</p>
+    <div class="meta">기준 데이터: 2026-07-08 공개 열차 시간표 + 네이버 Place/검색 신호 + 도로거리 추정 · 공식 예매는 7월 말 코레일톡/SRT에서 재확인 필요</div>
+  </header>
+
+  <section class="metrics" aria-label="summary">
+    <div class="metric"><div class="metric-label">Down trip</div><div class="metric-value">SRT 11:00</div></div>
+    <div class="metric"><div class="metric-label">Game transfer</div><div class="metric-value">16:24 train</div></div>
+    <div class="metric"><div class="metric-label">Return</div><div class="metric-value">SRT 12:55</div></div>
+    <div class="metric"><div class="metric-label">Target arrival</div><div class="metric-value">17:10</div></div>
+  </section>
+
+  <p class="notice"><strong>중요:</strong> 현재 코레일 공식 예매 화면에서는 8/28·8/30 날짜 선택이 아직 열리지 않았습니다. 아래는 공개 시간표 기준의 실행안이며, 좌석/임시열차/운행변경은 예매 오픈 후 반드시 재확인해야 합니다.</p>
+
+  <div class="tagline"><span class="chip"><i style="--c:var(--green)"></i>추천: SRT 직행</span><span class="chip"><i style="--c:var(--blue)"></i>백업: KTX 용산</span><span class="chip"><i style="--c:var(--red)"></i>경기장: 택시 권장</span><span class="chip"><i style="--c:var(--amber)"></i>버스는 백업</span></div>
+
+  <section class="layout">
+    <div class="panel">
+      <h2>추천 타임라인</h2>
+      <div class="timeline">
+        <article class="step"><div class="time">8/28<br>11:00</div><div><h3 class="card-title"><span class="mode" style="--c:var(--green)">SRT</span>수서 → 나주 직행</h3><p class="desc">수서 11:00 출발, 나주 12:54 도착. 보헤 형님 집/양재 기준으로 접근성이 좋고, 광주송정 환승 없이 바로 나주로 들어가는 가장 깔끔한 안입니다.</p><div class="route-grid"><div class="mini recommend"><div class="k">추천 편</div><div class="v">SRT 00657<br>11:00 → 12:54</div></div><div class="mini"><div class="k">소요/요금</div><div class="v">약 1시간 54분<br>42,300원</div></div><div class="mini"><div class="k">백업</div><div class="v">용산 10:40 → 나주 12:44 KTX</div></div></div></div></article>
+        <article class="step"><div class="time">8/29<br>16:24</div><div><h3 class="card-title"><span class="mode" style="--c:var(--blue)">ITX</span>나주 → 광주송정</h3><p class="desc">18:00 경기 기준으로 가장 예쁜 이동. 나주역 16:24 출발, 광주송정 16:34 도착 후 택시로 챔피언스필드 이동을 추천합니다.</p><div class="route-grid"><div class="mini recommend"><div class="k">추천 편</div><div class="v">ITX-마음 01406<br>16:24 → 16:34</div></div><div class="mini"><div class="k">택시 구간</div><div class="v">광주송정 → 챔필<br>평시 20~30분 / 경기일 30~45분</div></div><div class="mini"><div class="k">도착 목표</div><div class="v">17:10~17:20<br>입장 여유 확보</div></div></div></div></article>
+        <article class="step"><div class="time">8/30<br>12:55</div><div><h3 class="card-title"><span class="mode" style="--c:var(--green)">SRT</span>광주송정 → 수서</h3><p class="desc">광주에서 늦은 아침/가벼운 점심 후 올라오기 좋은 편. 수서 도착이라 서울 복귀 동선이 편합니다.</p><div class="route-grid"><div class="mini recommend"><div class="k">추천 편</div><div class="v">SRT 00612<br>12:55 → 14:37</div></div><div class="mini"><div class="k">느긋한 백업</div><div class="v">SRT 00660<br>14:38 → 16:37</div></div><div class="mini"><div class="k">KTX 백업</div><div class="v">광주송정 14:21 → 용산 16:26</div></div></div></div></article>
+      </div>
+    </div>
+
+    <aside class="side">
+      <h2>교통 선택 판정</h2>
+      <div class="side-list">
+        <div class="option"><b>8/28 내려갈 때</b><p><strong>SRT 수서→나주 직행</strong>이 1순위. 12시 전후 감각에 맞고 환승이 없습니다.</p><div class="bar"><i style="--w:92%;--c:var(--green)"></i></div></div>
+        <div class="option"><b>광주송정 환승안</b><p>나주 직행이 매진일 때만 백업. 광주송정→나주 열차는 9~10분이지만 대기/환승 변수가 생깁니다.</p><div class="bar"><i style="--w:58%;--c:var(--amber)"></i></div></div>
+        <div class="option"><b>경기장 이동</b><p>나주→광주송정은 열차, 광주송정→챔필은 택시가 가장 안정적입니다. 경기일 버스 환승은 변수 큼.</p><div class="bar"><i style="--w:88%;--c:var(--blue)"></i></div></div>
+        <div class="option"><b>30일 복귀</b><p>숙소가 광주라면 광주송정 출발이 맞습니다. 양재권 복귀는 수서행 SRT가 편합니다.</p><div class="bar"><i style="--w:90%;--c:var(--green)"></i></div></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="table-panel">
+    <h2>핵심 시간표 비교</h2>
+    <div class="table">
+      <div class="row head"><div>구간</div><div>추천</div><div>시간</div><div>요금</div><div>판정</div></div>
+      <div class="row"><div>8/28 수서 → 나주</div><div>SRT 00657</div><div>11:00 → 12:54</div><div>42,300원</div><div class="good">최우선 추천 · 직행</div></div>
+      <div class="row"><div>8/28 용산 → 나주</div><div>KTX 00413</div><div>10:40 → 12:44</div><div>48,200원</div><div class="good">KTX 기준 베스트</div></div>
+      <div class="row"><div>8/28 수서 → 광주송정</div><div>SRT 00609</div><div>12:20 → 14:03</div><div>40,900원</div><div class="warn">나주 직행 매진 시 백업</div></div>
+      <div class="row"><div>8/29 나주 → 광주송정</div><div>ITX-마음 01406</div><div>16:24 → 16:34</div><div>4,800원</div><div class="good">경기장 이동 추천</div></div>
+      <div class="row"><div>8/29 광주송정 → 챔필</div><div>택시</div><div>약 30~45분 잡기</div><div>현장요금</div><div class="good">경기일 안정성 최고</div></div>
+      <div class="row"><div>8/30 광주송정 → 수서</div><div>SRT 00612</div><div>12:55 → 14:37</div><div>40,900원</div><div class="good">복귀 1순위</div></div>
+      <div class="row"><div>8/30 광주송정 → 용산</div><div>KTX 00420</div><div>14:21 → 16:26</div><div>46,800원</div><div class="warn">KTX 선호 시 백업</div></div>
+    </div>
+  </section>
+
+  <section class="table-panel">
+    <h2>챔피언스필드 접근 백업</h2>
+    <div class="table">
+      <div class="row head"><div>출발</div><div>수단</div><div>하차/환승</div><div>도보</div><div>메모</div></div>
+      <div class="row"><div>광주송정역</div><div>택시</div><div>광주-KIA 챔피언스필드</div><div>거의 없음</div><div class="good">짐·경기일엔 가장 추천</div></div>
+      <div class="row"><div>유스퀘어/광천터미널</div><div>매월26·일곡38·송암47·상무64</div><div>제2광천교</div><div>약 6분</div><div class="warn">숙소가 유스퀘어권일 때 좋음</div></div>
+      <div class="row"><div>유스퀘어/광천터미널</div><div>매월16</div><div>광주기아챔피언스필드 정문</div><div>약 3분</div><div class="warn">버스 시간 맞으면 편함</div></div>
+      <div class="row"><div>나주</div><div>160·161번 계열 버스</div><div>광주송정/광주공항 방면</div><div>환승 필요</div><div class="bad">경기 18:00 일정엔 비추천</div></div>
+    </div>
+  </section>
+
+  <aside class="note"><strong>최종 추천:</strong> 8/28은 <strong>11:00 수서→12:54 나주 SRT</strong>, 8/29는 <strong>16:24 나주→16:34 광주송정 ITX + 택시</strong>, 8/30은 <strong>12:55 광주송정→14:37 수서 SRT</strong>. 예매 오픈 후 좌석과 임시열차 여부만 다시 확인하면 됩니다.</aside>
+</main>
+</body>
+</html>
