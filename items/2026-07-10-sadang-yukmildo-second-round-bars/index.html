@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>육밀도 사당 2차 술집 500m 지도</title>
+  <meta name="description" content="육밀도 사당직영점에서 500m 안에 있는 2차 술집 후보를 거리별, 음식별로 필터링하는 시각화." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#242424;--muted:#737373;--line:#e9e9e9;--bg:#fff;--card:#fff;--shadow:rgba(0,0,0,.09) 0 0 0 1px,rgba(0,0,0,.05) 0 2px 8px,rgba(0,0,0,.06) 0 18px 38px -30px;--izakaya:#8f2d56;--pocha:#b35c00;--beer:#175cd3;--fusion:#2e7d32;--sea:#087f8c;--wine:#6a3d9a}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff 0,#fff 62%,#fafafa 100%);color:var(--ink);font-family:Geist,Arial,Apple SD Gothic Neo,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}.shell{width:min(1160px,calc(100% - 32px));margin:0 auto;padding:34px 0 72px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:50px}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;font-weight:650}.brand span:first-child{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;font:700 11px Geist Mono}.pill{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#666;font-size:13px;font-weight:650}.eyebrow{display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 10px;border-radius:999px;background:#fff4ed;color:#9a3d00;font:650 12px Geist Mono;letter-spacing:.04em}.dot{width:7px;height:7px;border-radius:50%;background:#e26d18;box-shadow:0 0 0 3px rgba(226,109,24,.13)}h1{margin:18px 0 0;font-size:clamp(42px,7vw,78px);line-height:.94;letter-spacing:-.068em;font-weight:690}.lead{margin:22px 0 0;max-width:960px;color:#626262;font-size:clamp(16px,2vw,20px);line-height:1.72;letter-spacing:-.02em}.meta{margin-top:16px;color:#999;font:500 12px/1.6 Geist Mono}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin:36px 0 18px}.metric{background:#fff;padding:18px 20px}.metric-label{font:650 11px Geist Mono;color:#999;text-transform:uppercase;letter-spacing:.06em}.metric-value{margin-top:8px;font-size:24px;font-weight:680;letter-spacing:-.045em}.filters-wrap{display:grid;gap:8px;margin:0 0 18px}.filter-row{display:flex;gap:8px;overflow:auto;padding:4px 0}.filter-label{display:inline-flex;align-items:center;padding:0 4px;color:#999;font:650 11px Geist Mono;text-transform:uppercase;white-space:nowrap}.filter{border:0;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.1) 0 0 0 1px;padding:10px 13px;display:inline-flex;gap:8px;align-items:center;font-weight:650;color:#555;white-space:nowrap;cursor:pointer}.filter[aria-pressed="true"]{background:#111;color:#fff}.filter i{width:8px;height:8px;border-radius:50%;background:var(--c,#111)}.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px}.quick-card{border-radius:16px;background:#fff;box-shadow:var(--shadow);padding:17px}.quick-card b{display:block;font-size:16px;letter-spacing:-.035em}.quick-card p{margin:9px 0 0;color:#666;line-height:1.55;font-size:14px}.route{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px;margin-bottom:18px}.route-title{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:12px}.route-title h2{margin:0;font-size:22px;letter-spacing:-.05em}.route-title span{font:650 12px Geist Mono;color:#999}.bars-line{position:relative;display:grid;grid-template-columns:repeat(12,1fr);gap:6px;padding:18px 0 4px}.bars-line:before{content:"";position:absolute;left:0;right:0;top:26px;height:2px;background:#e5e5e5}.pin{position:relative;z-index:1;display:grid;gap:6px;justify-items:center}.pin i{width:18px;height:18px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px #fff,0 0 0 5px rgba(0,0,0,.08)}.pin small{font:650 10px Geist Mono;color:#777;text-align:center}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{display:grid;gap:14px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px}.card[hidden]{display:none!important}.card-head{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start}.rank{width:38px;height:38px;border-radius:999px;display:grid;place-items:center;background:var(--c);color:white;font:700 14px Geist Mono}.name{margin:0;font-size:22px;line-height:1.12;letter-spacing:-.05em}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.tag{display:inline-flex;align-items:center;min-height:22px;padding:0 8px;border-radius:999px;background:#f4f4f4;color:#555;font:650 11px Geist Mono}.one{margin:0;color:#5f5f5f;line-height:1.6;font-size:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.box{background:#fafafa;border-radius:12px;padding:11px;box-shadow:rgba(0,0,0,.06) 0 0 0 1px}.box-label{font:650 11px Geist Mono;color:#999;text-transform:uppercase}.box-value{margin-top:5px;font-size:14px;line-height:1.45}.menu{display:flex;flex-wrap:wrap;gap:7px}.menu span{display:inline-flex;border-radius:8px;background:#f2f2f2;padding:7px 9px;font-size:13px;font-weight:650;color:#444}.reason{border-left:3px solid var(--c);padding-left:12px;color:#555;line-height:1.58;font-size:14px}.links{display:flex;gap:8px;flex-wrap:wrap}.link{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:10px;text-decoration:none;background:#111;color:#fff;font-size:13px;font-weight:650}.link.secondary{background:#fff;color:#333;box-shadow:rgba(0,0,0,.1) 0 0 0 1px}.note{margin-top:32px;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:17px 18px;color:#666;font-size:14px;line-height:1.65}@media(max-width:960px){.metrics{grid-template-columns:repeat(2,1fr)}.quick,.cards{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.bars-line{grid-template-columns:repeat(4,1fr);row-gap:18px}.bars-line:before{display:none}}@media(max-width:560px){.shell{width:min(100% - 22px,1160px);padding-top:28px}.top .pill{display:none}.metrics{grid-template-columns:1fr}h1{font-size:42px}.card{padding:15px}.name{font-size:20px}.route-title{display:block}.route-title span{display:block;margin-top:6px}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <nav class="top"><a class="brand" href="../../"><span>B</span><span>bohe visual scrap</span></a><span class="pill">Sadang 2nd-round bars · 500m</span></nav>
+  <header>
+    <div class="eyebrow"><span class="dot"></span> YUKMILDO SADANG · 2차 후보</div>
+    <h1>육밀도 사당 2차 술집 지도</h1>
+    <p class="lead">기준점은 <strong>육밀도 사당직영점</strong>입니다. 저녁 식사 후 걸어서 움직이기 좋은 <strong>500m 안쪽 술집</strong>만 추려서, 거리별·음식별 필터로 바로 고를 수 있게 정리했습니다.</p>
+    <div class="meta">SOURCE: Naver Place summary + menu snippets · origin: 육밀도 사당직영점, 서울 서초구 방배천로2길 12 · radius gate: ≤ 500m straight-line</div>
+  </header>
+
+  <section class="metrics" aria-label="summary">
+    <div class="metric"><div class="metric-label">Candidates</div><div class="metric-value">12 bars</div></div>
+    <div class="metric"><div class="metric-label">Radius</div><div class="metric-value">≤ 500m</div></div>
+    <div class="metric"><div class="metric-label">Closest</div><div class="metric-value">49m</div></div>
+    <div class="metric"><div class="metric-label">Best for</div><div class="metric-value">2차</div></div>
+  </section>
+
+  <section class="filters-wrap" aria-label="filters">
+    <div class="filter-row" aria-label="distance filters">
+      <span class="filter-label">Distance</span>
+      <button class="filter" data-kind="distance" data-filter="all" aria-pressed="true"><i></i>전체</button>
+      <button class="filter" data-kind="distance" data-filter="near"><i></i>0~100m</button>
+      <button class="filter" data-kind="distance" data-filter="mid"><i></i>100~300m</button>
+      <button class="filter" data-kind="distance" data-filter="far"><i></i>300~500m</button>
+    </div>
+    <div class="filter-row" aria-label="food filters">
+      <span class="filter-label">Food</span>
+      <button class="filter" data-kind="food" data-filter="all" aria-pressed="true"><i></i>전체</button>
+      <button class="filter" data-kind="food" data-filter="이자카야"><i style="--c:var(--izakaya)"></i>이자카야/사시미</button>
+      <button class="filter" data-kind="food" data-filter="포차"><i style="--c:var(--pocha)"></i>포차/전골</button>
+      <button class="filter" data-kind="food" data-filter="맥주"><i style="--c:var(--beer)"></i>맥주/하이볼</button>
+      <button class="filter" data-kind="food" data-filter="퓨전"><i style="--c:var(--fusion)"></i>퓨전요리</button>
+      <button class="filter" data-kind="food" data-filter="해산물"><i style="--c:var(--sea)"></i>해산물</button>
+      <button class="filter" data-kind="food" data-filter="와인"><i style="--c:var(--wine)"></i>와인/무드</button>
+    </div>
+  </section>
+
+  <section class="quick" aria-label="quick picks">
+    <div class="quick-card"><b>가장 가까운 2차</b><p><strong>할맥레드</strong> 49m, <strong>시오리</strong> 55m. 이동 최소화가 목적이면 이 두 곳이 가장 편합니다.</p></div>
+    <div class="quick-card"><b>음식까지 제대로</b><p><strong>아마이까</strong>는 무늬오징어회·갈치튀김, <strong>시시비비</strong>는 전통주와 동양식 안주.</p></div>
+    <div class="quick-card"><b>사당 2차 분위기</b><p><strong>Hwi ya</strong>, <strong>꾸오</strong>, <strong>객간</strong>은 조금 더 걸어도 메뉴 구성이 2차용으로 좋습니다.</p></div>
+  </section>
+
+  <section class="route" aria-label="distance map">
+    <div class="route-title"><h2>육밀도에서 가까운 순서</h2><span>straight-line distance · tap cards for Naver Map</span></div>
+    <div class="bars-line">
+      <div class="pin" style="--c:var(--beer)"><i></i><small>49m<br>할맥</small></div>
+      <div class="pin" style="--c:var(--izakaya)"><i></i><small>55m<br>시오리</small></div>
+      <div class="pin" style="--c:var(--izakaya)"><i></i><small>188m<br>아마이까</small></div>
+      <div class="pin" style="--c:var(--pocha)"><i></i><small>236m<br>골뱅이</small></div>
+      <div class="pin" style="--c:var(--fusion)"><i></i><small>257m<br>시시비비</small></div>
+      <div class="pin" style="--c:var(--izakaya)"><i></i><small>334m<br>산수</small></div>
+      <div class="pin" style="--c:var(--fusion)"><i></i><small>348m<br>애프터웍</small></div>
+      <div class="pin" style="--c:var(--wine)"><i></i><small>417m<br>Hwi ya</small></div>
+      <div class="pin" style="--c:var(--sea)"><i></i><small>425m<br>꾸오</small></div>
+      <div class="pin" style="--c:var(--izakaya)"><i></i><small>434m<br>천잔</small></div>
+      <div class="pin" style="--c:var(--pocha)"><i></i><small>473m<br>객간</small></div>
+      <div class="pin" style="--c:var(--izakaya)"><i></i><small>489m<br>단쇼우</small></div>
+    </div>
+  </section>
+
+  <section class="cards" id="cards" aria-label="bars">
+    <article class="card" data-distance="near" data-food="맥주" style="--c:var(--beer)"><div class="card-head"><div class="rank">1</div><div><h2 class="name">할맥레드 사당역점</h2><div class="tags"><span class="tag">49m</span><span class="tag">요리주점</span><span class="tag">맥주·하이볼</span></div></div></div><p class="one">육밀도 바로 옆 수준. 가볍게 맥주/하이볼로 2차 시작하기 좋은 초근접 후보.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 498 · 블로그 109</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 서초구 방배천로2길 15 2층</div></div></div><div class="menu"><span>매콤 안주</span><span>시그니처 하이볼</span><span>맥주</span><span>튀김류</span></div><div class="reason">걷기 싫거나 비 오는 날의 1순위. 음식 퀄리티보다 접근성과 무난함이 장점.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/2083045923" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/할맥레드%20사당역점" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="near" data-food="이자카야" style="--c:var(--izakaya)"><div class="card-head"><div class="rank">2</div><div><h2 class="name">사당룸 이자카야 시오리</h2><div class="tags"><span class="tag">55m</span><span class="tag">이자카야</span><span class="tag">룸 가능</span></div></div></div><p class="one">룸/분리감 있는 이자카야. 식사 후 조용히 이야기하기 좋은 가까운 선택지.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 100 · 블로그 172</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 서초구 방배천로2길 21 5층</div></div></div><div class="menu"><span>모듬 사시미</span><span>숙성 사시미</span><span>나베</span><span>이자카야 안주</span></div><div class="reason">육밀도에서 사실상 한 골목. 8/3 모임 후 대화 많은 2차라면 우선 검토.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1505732937" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/사당룸%20이자카야%20시오리" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="mid" data-food="이자카야" style="--c:var(--izakaya)"><div class="card-head"><div class="rank">3</div><div><h2 class="name">아마이까 사당점</h2><div class="tags"><span class="tag">188m</span><span class="tag">이자카야</span><span class="tag">일식 다이닝</span></div></div></div><p class="one">특급 호텔 출신 셰프 신호가 있는 일식 다이닝형 술집. 음식 중심 2차용.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 203 · 블로그 86</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 서초구 방배천로2안길 31 2층</div></div></div><div class="menu"><span>무늬오징어회</span><span>갈치튀김</span><span>숙성회</span><span>제철 생선</span></div><div class="reason">배는 불러도 맛있는 안주를 놓치고 싶지 않을 때. 가까우면서 메뉴 완성도 쪽.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/2074375212" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/아마이까%20사당점" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="mid" data-food="포차" style="--c:var(--pocha)"><div class="card-head"><div class="rank">4</div><div><h2 class="name">을지로골뱅이 포차 사당역점</h2><div class="tags"><span class="tag">236m</span><span class="tag">요리주점</span><span class="tag">골뱅이</span></div></div></div><p class="one">노포 포차 감성으로 골뱅이와 생맥주를 먹기 좋은 후보.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 1,078 · 블로그 127</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 동작대로1길 7 1층</div></div></div><div class="menu"><span>백골뱅이탕</span><span>골뱅이무침</span><span>소면</span><span>생맥주</span></div><div class="reason">고기 먹고 난 뒤 시원한 탕/골뱅이류로 전환하기 좋은 2차 카드.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/2057343827" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/을지로골뱅이%20포차%20사당역점" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="mid" data-food="퓨전" style="--c:var(--fusion)"><div class="card-head"><div class="rank">5</div><div><h2 class="name">사당 시시비비</h2><div class="tags"><span class="tag">257m</span><span class="tag">요리주점</span><span class="tag">전통주</span></div></div></div><p class="one">동양식 요리와 전통주 신호가 강한 요리주점. 모임 2차 분위기용.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 1,125 · 블로그 359</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 사당로30길 163 2층</div></div></div><div class="menu"><span>보리된장 회무침</span><span>문어숙회</span><span>칠리 누룽지 가지튀김</span><span>전통주</span></div><div class="reason">대화와 안주 모두 챙기고 싶을 때. 너무 시끄러운 맥주집보다 모임 후속에 적합.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1246315922" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/사당%20시시비비" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="이자카야" style="--c:var(--izakaya)"><div class="card-head"><div class="rank">6</div><div><h2 class="name">산수 사당본점</h2><div class="tags"><span class="tag">334m</span><span class="tag">이자카야</span><span class="tag">숙성회</span></div></div></div><p class="one">숙성회와 다이닝 무드가 강한 이자카야. 조용한 분위기를 원할 때.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 2,522 · 블로그 347</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 동작대로3길 17 1층</div></div></div><div class="menu"><span>숙성회</span><span>김부각 육회</span><span>사시미</span><span>일식 안주</span></div><div class="reason">사람 많고 번잡한 사당역 중심부를 살짝 벗어나 분위기를 챙기는 선택.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1065483476" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/산수%20사당본점" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="퓨전" style="--c:var(--fusion)"><div class="card-head"><div class="rank">7</div><div><h2 class="name">애프터웍</h2><div class="tags"><span class="tag">348m</span><span class="tag">요리주점</span><span class="tag">퓨전중식</span></div></div></div><p class="one">중식/퓨전 안주 신호가 있는 작은 요리주점. 고기 뒤 다른 맛으로 전환하기 좋음.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 309 · 블로그 12</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 남부순환로271길 25</div></div></div><div class="menu"><span>마라전골</span><span>오렌지 치킨</span><span>퓨전중식</span><span>달달한 술</span></div><div class="reason">2차에서 고기맛을 리셋하고 싶다면 중식 베이스 안주가 실용적.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/2063562713" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/애프터웍%20사당" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="와인" style="--c:var(--wine)"><div class="card-head"><div class="rank">8</div><div><h2 class="name">Hwi ya</h2><div class="tags"><span class="tag">417m</span><span class="tag">요리주점</span><span class="tag">무드</span></div></div></div><p class="one">조명과 분위기 신호가 좋은 술집. 하이볼/소주/와인 무드 2차로 활용 가능.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 508 · 블로그 368</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 동작대로7길 36 2층</div></div></div><div class="menu"><span>전복파스타</span><span>오합</span><span>연어타워</span><span>조개술찜</span></div><div class="reason">거리 조금 감수하고 분위기 좋은 2차를 원하면 후보. 예약 고려 권장.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1977658488" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/Hwi%20ya%20사당" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="해산물" style="--c:var(--sea)"><div class="card-head"><div class="rank">9</div><div><h2 class="name">꾸오</h2><div class="tags"><span class="tag">425m</span><span class="tag">요리주점</span><span class="tag">해산물</span></div></div></div><p class="one">해산물을 활용한 요리주점. 회 말고 구이/볶음류 안주를 원할 때.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 142 · 블로그 216</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 동작대로7길 44 1층</div></div></div><div class="menu"><span>꽃게구이</span><span>해산물 볶음</span><span>해산물 요리</span><span>술안주</span></div><div class="reason">고기 뒤 해산물 안주로 방향 전환하기 좋은 카드. 메뉴 특색이 뚜렷함.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1839960994" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/꾸오%20사당" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="이자카야" style="--c:var(--izakaya)"><div class="card-head"><div class="rank">10</div><div><h2 class="name">천잔</h2><div class="tags"><span class="tag">434m</span><span class="tag">이자카야</span><span class="tag">육회·전골</span></div></div></div><p class="one">사당 이자카야/횟집 키워드가 함께 잡히는 2차 후보. 리뷰 신호가 강합니다.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 650 · 블로그 980</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 동작대로7길 66 1층</div></div></div><div class="menu"><span>육회</span><span>전골</span><span>회/사시미</span><span>이자카야 안주</span></div><div class="reason">도보 5~7분권. 사람 많아도 검증 신호가 강한 곳을 원할 때.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1068675723" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/천잔%20사당" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="포차" style="--c:var(--pocha)"><div class="card-head"><div class="rank">11</div><div><h2 class="name">객간</h2><div class="tags"><span class="tag">473m</span><span class="tag">요리주점</span><span class="tag">막회·전골</span></div></div></div><p class="one">메뉴 폭이 넓은 술집. 여러 명이 각자 먹고 싶은 안주가 다를 때 유리합니다.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 667 · 블로그 1,163</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 남부순환로269길 16 1층</div></div></div><div class="menu"><span>깻잎 막회</span><span>아롱사태전골</span><span>육회와김밥</span><span>고등어봉초밥</span></div><div class="reason">반경 끝자락이지만 메뉴 선택지가 넓어 단체 2차 실전성이 좋음.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1628026716" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/객간%20사당" target="_blank" rel="noopener">검색 링크</a></div></article>
+
+    <article class="card" data-distance="far" data-food="이자카야" style="--c:var(--izakaya)"><div class="card-head"><div class="rank">12</div><div><h2 class="name">단쇼우이자카야 사당본점</h2><div class="tags"><span class="tag">489m</span><span class="tag">이자카야</span><span class="tag">10번출구권</span></div></div></div><p class="one">사시미·육회·나베 구성이 확인되는 이자카야. 500m 경계선 안쪽 후보.</p><div class="grid"><div class="box"><div class="box-label">Naver signal</div><div class="box-value">방문자 리뷰 678 · 블로그 250</div></div><div class="box"><div class="box-label">Address</div><div class="box-value">서울 동작구 동작대로9길 4 1층 103호</div></div></div><div class="menu"><span>사시미</span><span>육회</span><span>가라아게</span><span>나베</span></div><div class="reason">조금 걸어도 전형적인 이자카야 안주 구성을 원하면 막판 후보로 적합.</div><div class="links"><a class="link" href="https://map.naver.com/p/entry/place/1136805552" target="_blank" rel="noopener">네이버 지도</a><a class="link secondary" href="https://map.naver.com/p/search/단쇼우이자카야%20사당본점" target="_blank" rel="noopener">검색 링크</a></div></article>
+  </section>
+
+  <aside class="note">거리값은 육밀도 사당직영점 좌표에서 네이버 Place 좌표까지의 직선거리 기준입니다. 실제 도보 동선은 횡단보도·골목에 따라 조금 늘어날 수 있습니다. 주메뉴는 네이버 Place 카테고리와 최근 공개 검색/리뷰/예약 플랫폼 snippets에서 확인되는 대표 메뉴 신호를 보수적으로 정리했습니다. 8월 3일 방문 전에는 네이버 지도에서 영업시간·휴무·좌석/예약 가능 여부를 다시 확인하세요.</aside>
+</main>
+<script>
+  const state={distance:'all',food:'all'};
+  const buttons=[...document.querySelectorAll('.filter')];
+  const cards=[...document.querySelectorAll('.card')];
+  function apply(){
+    cards.forEach(card=>{
+      const distanceOk = state.distance==='all' || card.dataset.distance===state.distance;
+      const foodOk = state.food==='all' || card.dataset.food===state.food;
+      card.hidden = !(distanceOk && foodOk);
+    });
+  }
+  buttons.forEach(btn=>btn.addEventListener('click',()=>{
+    const kind=btn.dataset.kind;
+    state[kind]=btn.dataset.filter;
+    buttons.filter(b=>b.dataset.kind===kind).forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+    apply();
+  }));
+</script>
+</body>
+</html>
