@@ -495,11 +495,36 @@ function makeModel(THREE, OrbitControls) {
     document.querySelector('#view-top').classList.toggle('is-active', !iso);
     document.querySelector('#view-top').setAttribute('aria-pressed', String(!iso));
   }
+  // Fit the entire model, including the south lobby, not just the room floor.
+  // World-space bounds are captured once; fitting runs on resize/preset only,
+  // so orbiting and intentional user zoom retain their normal behaviour.
+  scene.updateMatrixWorld(true);
+  const framingBounds = new THREE.Box3();
+  scene.traverse((object) => {
+    if (object.isMesh) framingBounds.union(new THREE.Box3().setFromObject(object));
+  });
+  framingBounds.expandByScalar(0.2); // Includes the small numbered sprites.
+  const framingCorners = [];
+  for (const x of [framingBounds.min.x, framingBounds.max.x]) {
+    for (const y of [framingBounds.min.y, framingBounds.max.y]) {
+      for (const z of [framingBounds.min.z, framingBounds.max.z]) {
+        framingCorners.push(new THREE.Vector3(x, y, z));
+      }
+    }
+  }
   function resize() {
     const rect = renderer.domElement.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
-    const frustumHeight = 7.7;
     const aspect = rect.width / rect.height;
+    const inverseRotation = camera.quaternion.clone().invert();
+    let halfWidth = 0;
+    let halfHeight = 0;
+    framingCorners.forEach((corner) => {
+      const offset = corner.clone().sub(controls.target).applyQuaternion(inverseRotation);
+      halfWidth = Math.max(halfWidth, Math.abs(offset.x));
+      halfHeight = Math.max(halfHeight, Math.abs(offset.y));
+    });
+    const frustumHeight = Math.max(7.7, halfHeight * 2.2, halfWidth * 2.2 / aspect);
     camera.left = (-frustumHeight * aspect) / 2;
     camera.right = (frustumHeight * aspect) / 2;
     camera.top = frustumHeight / 2;
@@ -544,6 +569,7 @@ function makeModel(THREE, OrbitControls) {
     controls.target.copy(target);
     camera.updateProjectionMatrix();
     controls.update();
+    resize();
     updateViewButtons(view);
   }
   function reset() {
@@ -556,6 +582,7 @@ function makeModel(THREE, OrbitControls) {
     camera.lookAt(target);
     controls.update();
     camera.updateProjectionMatrix();
+    resize();
     updateViewButtons('iso');
   }
   function zoom(factor) {
