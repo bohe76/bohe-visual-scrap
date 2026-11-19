@@ -22,31 +22,102 @@ const detailCopy = document.querySelector('#detail-copy');
 const canvas = document.querySelector('#model-canvas');
 const fallback = document.querySelector('#fallback-diagram');
 const selectedButtons = [...document.querySelectorAll('.legend-item')];
+const numberMarks = [...fallback.querySelectorAll('.number-mark[data-item]')];
 const routeButtons = [...document.querySelectorAll('[data-route-toggle]')];
 let activeItem = null;
 let sceneApi = null;
 
-function updateDetail(id) {
-  const item = items[id];
-  if (!item) return;
-  activeItem = String(id);
-  detailNumber.textContent = String(id).padStart(2, '0');
-  detailTitle.textContent = item.title;
-  detailCopy.textContent = item.copy;
+numberMarks.forEach((mark) => {
+  const id = mark.dataset.item;
+  mark.setAttribute('role', 'button');
+  mark.setAttribute('tabindex', '0');
+  mark.setAttribute('aria-label', `${String(id).padStart(2, '0')} ${items[id]?.title ?? '도면 항목'} 선택`);
+  mark.setAttribute('aria-pressed', 'false');
+});
+
+function setFallbackSelection(id) {
+  const selectedId = id === null ? null : String(id);
+  const space = fallback.querySelector('.fallback-space');
+  space?.classList.toggle('has-selection', selectedId !== null);
+  space?.querySelectorAll('.selection-outline-box').forEach((outline) => outline.remove());
+  fallback.querySelectorAll('[data-item]').forEach((element) => {
+    const selected = selectedId !== null && element.dataset.item === selectedId;
+    element.classList.toggle('is-selected', selected);
+    const parentItem = element.parentElement?.closest('[data-item]');
+    const isItemRoot = !parentItem || parentItem.dataset.item !== element.dataset.item;
+    element.classList.toggle('is-dimmed', selectedId !== null && isItemRoot && !selected);
+  });
+  if (space && selectedId !== null && selectedId !== '8') {
+    const roots = [...space.querySelectorAll(`[data-item="${selectedId}"]`)].filter((element) => {
+      if (element.closest('.number-mark')) return false;
+      const parentItem = element.parentElement?.closest('[data-item]');
+      return !parentItem || parentItem.dataset.item !== selectedId;
+    });
+    const bounds = roots.map((element) => element.getBBox()).filter((box) => box.width > 0 || box.height > 0);
+    if (bounds.length) {
+      const left = Math.min(...bounds.map((box) => box.x));
+      const top = Math.min(...bounds.map((box) => box.y));
+      const right = Math.max(...bounds.map((box) => box.x + box.width));
+      const bottom = Math.max(...bounds.map((box) => box.y + box.height));
+      const outline = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      outline.setAttribute('class', 'selection-outline-box');
+      outline.setAttribute('aria-hidden', 'true');
+      outline.setAttribute('pointer-events', 'none');
+      outline.setAttribute('x', String(left - 5));
+      outline.setAttribute('y', String(top - 5));
+      outline.setAttribute('width', String(right - left + 10));
+      outline.setAttribute('height', String(bottom - top + 10));
+      outline.setAttribute('rx', '5');
+      space.append(outline);
+    }
+  }
+  numberMarks.forEach((mark) => mark.setAttribute('aria-pressed', String(selectedId !== null && mark.dataset.item === selectedId)));
+}
+
+function clearSelection() {
+  activeItem = null;
+  detailNumber.textContent = '—';
+  detailTitle.textContent = '범례에서 항목 선택';
+  detailCopy.textContent = '목록을 누르면 해당 요소와 설명이 함께 강조됩니다.';
   selectedButtons.forEach((button) => {
-    const selected = button.dataset.item === String(id);
+    const selected = false;
     button.setAttribute('aria-pressed', String(selected));
   });
-  fallback.querySelectorAll('[data-item]').forEach((element) => {
-    element.classList.toggle('is-selected', element.dataset.item === String(id));
-  });
-  sceneApi?.select(String(id));
+  setFallbackSelection(null);
+  sceneApi?.select(null);
+}
+
+function updateDetail(id) {
+  const key = String(id);
+  const item = items[key];
+  if (!item) return;
+  if (activeItem === key) { clearSelection(); return; }
+  activeItem = key;
+  detailNumber.textContent = key.padStart(2, '0');
+  detailTitle.textContent = item.title;
+  detailCopy.textContent = item.copy;
+  selectedButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.item === key)));
+  setFallbackSelection(key);
+  sceneApi?.select(key);
 }
 
 selectedButtons.forEach((button) => button.addEventListener('click', () => updateDetail(button.dataset.item)));
 fallback.addEventListener('click', (event) => {
   const target = event.target.closest('[data-item]');
   if (target && items[target.dataset.item]) updateDetail(target.dataset.item);
+});
+fallback.addEventListener('keydown', (event) => {
+  if (!['Enter', ' '].includes(event.key)) return;
+  const target = event.target.closest('.number-mark[data-item]');
+  if (!target) return;
+  event.preventDefault();
+  updateDetail(target.dataset.item);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && activeItem !== null) {
+    event.preventDefault();
+    clearSelection();
+  }
 });
 
 routeButtons.forEach((button) => button.addEventListener('click', () => {
@@ -112,8 +183,11 @@ function makeModel(THREE, OrbitControls) {
 
   const modelGroups = new Map();
   const routeGroups = new Map();
+  const tagEntries = new Map();
   const selectableObjects = [];
-  const highlightRestore = [];
+  const temporaryMaterials = [];
+  const selectionShells = [];
+  const selectionOutlineGroups = [];
   const upperWestWalls = [];
   const upperNorthWalls = [];
   const palette = {
@@ -133,6 +207,8 @@ function makeModel(THREE, OrbitControls) {
   mats.routeGreen = new THREE.MeshStandardMaterial({ color: '#65846b', roughness: 0.8 });
   mats.routeBlue = new THREE.MeshStandardMaterial({ color: '#5086c2', roughness: 0.78 });
   mats.unknown = new THREE.MeshStandardMaterial({ color: '#dadbd6', roughness: 0.88 });
+  const selectionShellMaterial = new THREE.MeshBasicMaterial({ color: '#0072f5', side: THREE.BackSide, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
+  const selectionStrokeMaterial = new THREE.MeshBasicMaterial({ color: '#0072f5', side: THREE.DoubleSide, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
 
   function getGroup(id) {
     const key = String(id);
@@ -169,23 +245,33 @@ function makeModel(THREE, OrbitControls) {
     group.add(mesh);
     return mesh;
   }
+  function paintTag(tag, selected) {
+    const { context, texture } = tag;
+    context.clearRect(0, 0, 128, 128);
+    context.beginPath();
+    context.arc(64, 64, 54, 0, Math.PI * 2);
+    context.fillStyle = selected ? '#0072f5' : '#29324c';
+    context.fill();
+    if (selected) {
+      context.lineWidth = 15;
+      context.strokeStyle = '#17324a';
+      context.stroke();
+    }
+    context.lineWidth = selected ? 8 : 8;
+    context.strokeStyle = '#ffffff';
+    context.stroke();
+    context.fillStyle = '#ffffff';
+    context.font = '700 50px ui-monospace, monospace';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(String(tag.id).padStart(2, '0'), 64, 67);
+    texture.needsUpdate = true;
+  }
   function addTag(id, position, size = 0.32, surface = false) {
     const tagCanvas = document.createElement('canvas');
     tagCanvas.width = 128;
     tagCanvas.height = 128;
     const ctx = tagCanvas.getContext('2d');
-    ctx.beginPath();
-    ctx.arc(64, 64, 54, 0, Math.PI * 2);
-    ctx.fillStyle = '#29324c';
-    ctx.fill();
-    ctx.lineWidth = 8;
-    ctx.strokeStyle = '#ffffff';
-    ctx.stroke();
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '600 50px ui-monospace, monospace';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(String(id).padStart(2, '0'), 64, 67);
     const texture = new THREE.CanvasTexture(tagCanvas);
     texture.colorSpace = THREE.SRGBColorSpace;
     const tagObject = surface
@@ -198,9 +284,13 @@ function makeModel(THREE, OrbitControls) {
     tagObject.position.set(...position);
     tagObject.scale.set(size, size, 1);
     tagObject.userData.itemId = String(id);
+    tagObject.userData.isNumberTag = true;
     tagObject.renderOrder = 5;
     getGroup(id).add(tagObject);
     selectableObjects.push(tagObject);
+    const tag = { id: String(id), context: ctx, texture, object: tagObject };
+    tagEntries.set(String(id), tag);
+    paintTag(tag, false);
   }
   function shapeFromUv(uvPoints) {
     const shape = new THREE.Shape();
@@ -477,32 +567,120 @@ function makeModel(THREE, OrbitControls) {
   const pointer = new THREE.Vector2();
   let down = null;
 
-  function clearHighlight() {
-    highlightRestore.forEach(({ object, material }) => {
-      (Array.isArray(object.material) ? object.material : [object.material]).forEach((clone) => clone.dispose());
-      object.material = material;
+  function restoreSelectionMaterials() {
+    temporaryMaterials.forEach(({ object, original, clones }) => {
+      object.material = original;
+      clones.forEach((material) => material.dispose());
     });
-    highlightRestore.length = 0;
+    temporaryMaterials.length = 0;
+  }
+  function dimObject(object, opacity) {
+    const original = object.material;
+    const source = Array.isArray(original) ? original : [original];
+    const clones = source.map((material) => {
+      const clone = material.clone();
+      clone.transparent = true;
+      clone.opacity = Math.min(material.opacity ?? 1, opacity);
+      clone.depthWrite = false;
+      return clone;
+    });
+    temporaryMaterials.push({ object, original, clones });
+    object.material = Array.isArray(original) ? clones : clones[0];
+  }
+  function clearSelectionOutlines() {
+    selectionShells.forEach(({ object, shell }) => object.remove(shell));
+    selectionShells.length = 0;
+    selectionOutlineGroups.forEach((group) => {
+      scene.remove(group);
+      group.traverse((object) => { if (object.isMesh) object.geometry.dispose(); });
+    });
+    selectionOutlineGroups.length = 0;
+  }
+  function outlinePolygon(id, uvPoints, y = 0.04, thickness = 0.055) {
+    const group = new THREE.Group();
+    group.name = `selection-outline-${id}`;
+    scene.add(group);
+    selectionOutlineGroups.push(group);
+    const points = uvPoints.map(uvToWorld);
+    points.forEach((from, index) => {
+      const to = points[(index + 1) % points.length];
+      const dx = to.x - from.x, dz = to.z - from.z;
+      const length = Math.hypot(dx, dz);
+      const bar = new THREE.Mesh(new THREE.BoxGeometry(length + thickness, 0.025, thickness), selectionStrokeMaterial);
+      bar.position.set((from.x + to.x) / 2, y, (from.z + to.z) / 2);
+      bar.rotation.y = Math.atan2(-dz, dx);
+      bar.renderOrder = 8;
+      group.add(bar);
+    });
+  }
+  function outlineSegment(id, fromUv, toUv, y = 0.20, thickness = 0.055) {
+    const from = uvToWorld(fromUv), to = uvToWorld(toUv);
+    const dx = to.x - from.x, dz = to.z - from.z;
+    const group = new THREE.Group();
+    group.name = `selection-outline-${id}`;
+    scene.add(group);
+    selectionOutlineGroups.push(group);
+    const bar = new THREE.Mesh(new THREE.BoxGeometry(Math.hypot(dx, dz) + thickness, 0.025, thickness), selectionStrokeMaterial);
+    bar.position.set((from.x + to.x) / 2, y, (from.z + to.z) / 2);
+    bar.rotation.y = Math.atan2(-dz, dx);
+    bar.renderOrder = 8;
+    group.add(bar);
+  }
+  function outlineSelectedGroup(id) {
+    const key = String(id);
+    if (key === '8') {
+      outlinePolygon(key, layoutData.mainFloorUV, 0.045, 0.075);
+      return;
+    }
+    if (key === '5') {
+      const { left, right, top, bottom } = layoutData.lowerRooms.xZone;
+      outlinePolygon(key, [[left, top], [right, top], [right, bottom], [left, bottom]], 0.045, 0.055);
+      return;
+    }
+    if (key === '11') {
+      const { left, right, top, bottom } = layoutData.extensionUV;
+      outlinePolygon(key, [[left, top], [right, top], [right, bottom], [left, bottom]], 0.045, 0.055);
+    } else if (key === '9') {
+      outlineSegment(key, layoutData.openingCandidateUV.from, layoutData.openingCandidateUV.to, 0.20, 0.055);
+    }
+    const group = modelGroups.get(key);
+    if (!group || key === '5' || key === '9') return;
+    const targets = [];
+    group.traverse((object) => {
+      if (object.isMesh && !object.userData.isNumberTag) targets.push(object);
+    });
+    targets.forEach((object) => {
+      const shell = new THREE.Mesh(object.geometry, selectionShellMaterial);
+      shell.name = `selection-outline-shell-${key}`;
+      shell.scale.setScalar(1.055);
+      shell.renderOrder = 7;
+      object.add(shell);
+      selectionShells.push({ object, shell });
+    });
   }
   function select(id) {
-    clearHighlight();
-    const group = modelGroups.get(String(id));
-    if (!group) return;
-    group.traverse((object) => {
-      if (!object.isMesh) return;
-      const original = object.material;
-      const cloned = Array.isArray(original) ? original.map((material) => material.clone()) : original.clone();
-      highlightRestore.push({ object, material: original });
-      object.material = cloned;
-      (Array.isArray(cloned) ? cloned : [cloned]).forEach((material) => {
-        if (material.emissive) {
-          material.emissive.set('#3d84b4');
-          material.emissiveIntensity = 0.34;
-        } else if (material.color) {
-          material.color.lerp(new THREE.Color('#75a8d4'), 0.22);
+    const key = id === null || id === undefined ? null : String(id);
+    clearSelectionOutlines();
+    restoreSelectionMaterials();
+    tagEntries.forEach((tag, tagId) => {
+      paintTag(tag, tagId === key);
+      tag.object.material.opacity = key === null || tagId === key ? 1 : 0.32;
+    });
+    if (key === null) return;
+    modelGroups.forEach((group, groupId) => {
+      if (groupId === key || groupId === '8') return;
+      group.traverse((object) => {
+        if (object.isSprite || object.userData.isNumberTag) return;
+        if (object.isMesh || object.isLine || object.isLineSegments) {
+          const contextOpacity = object.name === 'lower context plane · finish unspecified' ? 0.52 : 0.22;
+          dimObject(object, contextOpacity);
         }
       });
     });
+    routeGroups.forEach((group) => group.traverse((object) => {
+      if (object.isMesh || object.isLine || object.isLineSegments) dimObject(object, 0.12);
+    }));
+    outlineSelectedGroup(key);
   }
   function onPointerDown(event) {
     if (event.button !== undefined && event.button !== 0) return;

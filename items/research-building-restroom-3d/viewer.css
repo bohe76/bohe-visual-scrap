@@ -110,11 +110,25 @@ h1 { margin: 11px 0 0; font-size: clamp(34px, 4.2vw, 50px); font-weight: 600; li
 .route-stall path { stroke: var(--green); }
 .route-wash path { stroke: var(--route-blue); stroke-dasharray: 13 12; }
 .routes.is-hidden { opacity: 0; }
-.number-mark { cursor: pointer; }
+.number-mark { cursor: pointer; transition: opacity .15s ease, filter .15s ease; }
 .number-mark circle { fill: #29324c; stroke: white; stroke-width: 3; }
 .number-mark text { fill: white; font: 600 10px/1 ui-monospace, monospace; text-anchor: middle; }
-.number-mark.is-selected circle { fill: #0072f5; stroke: #dcecff; stroke-width: 5; }
-[data-item].is-selected:not(.number-mark) { filter: drop-shadow(0 0 6px rgba(0,114,245,.75)); }
+.number-mark.is-selected circle { fill: #0072f5; stroke: white; stroke-width: 4; paint-order: stroke fill; vector-effect: non-scaling-stroke; }
+.number-mark.is-selected { filter: drop-shadow(0 0 2px rgba(0,72,150,.8)); }
+.number-mark:focus-visible circle { stroke: #17324a; stroke-width: 4.5; vector-effect: non-scaling-stroke; }
+.fallback-space [data-item] { transition: opacity .15s ease, filter .15s ease; }
+.fallback-space.has-selection [data-item].is-dimmed { opacity: .24; }
+.fallback-space.has-selection .room-floor.is-dimmed { opacity: .66; }
+.fallback-space.has-selection .extension-floor.is-dimmed { opacity: .58; }
+.fallback-space.has-selection .routes:not(.is-hidden) { opacity: .12; }
+.fallback-space [data-item].is-selected:not(.number-mark) { filter: drop-shadow(0 0 3px rgba(0,114,245,.8)); }
+.fallback-space .selection-outline-box { fill: none; stroke: #0072f5; stroke-width: 5; stroke-linejoin: round; vector-effect: non-scaling-stroke; pointer-events: none; }
+.fallback-space .room-floor.is-selected { stroke: #0072f5; stroke-width: 5; paint-order: stroke fill; vector-effect: non-scaling-stroke; }
+.fallback-space .lower-zone.is-selected { stroke: #0072f5; stroke-width: 4; paint-order: stroke fill; vector-effect: non-scaling-stroke; }
+.fallback-space .fixture.is-selected .fixture-ceramic,
+.fallback-space .fixture.is-selected .fixture-bowl,
+.fallback-space .fixture.is-selected .partition,
+.fallback-space .fixture.is-selected .door-leaf { stroke: #0072f5; stroke-width: 4; vector-effect: non-scaling-stroke; }
 
 .legend-card { padding: 18px 16px 16px; }
 .legend-head { margin-bottom: 14px; }
@@ -126,7 +140,7 @@ h1 { margin: 11px 0 0; font-size: clamp(34px, 4.2vw, 50px); font-weight: 600; li
 .legend-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
 .legend-item { display: grid; width: 100%; min-height: 48px; grid-template-columns: 28px minmax(0,1fr) 14px; gap: 8px; align-items: center; padding: 6px 8px; border: 0; border-radius: 7px; background: transparent; text-align: left; cursor: pointer; transition: background .15s ease, box-shadow .15s ease; }
 .legend-item:hover { background: #f8f9fa; }
-.legend-item[aria-pressed="true"] { background: var(--blue-soft); box-shadow: inset 0 0 0 1px rgba(0,114,245,.13); }
+.legend-item[aria-pressed="true"] { background: var(--blue-soft); box-shadow: inset 0 0 0 2px rgba(0,114,245,.55); }
 .legend-number { color: #777; font: 500 10px/1 ui-monospace, monospace; }
 .legend-item[aria-pressed="true"] .legend-number { color: var(--blue-text); }
 .legend-copy { display: block; min-width: 0; }
