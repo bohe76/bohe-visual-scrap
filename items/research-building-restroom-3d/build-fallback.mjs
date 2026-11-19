@@ -25,7 +25,7 @@ const tag = (id, uv, dx = 0, dy = 0) => {
 };
 
 function generatedSvg() {
-  const { crop, mainFloorUV, mainWalls, entry, extensionUV, lowerContextWalls, lowerRoomWalls, lowerRooms, openingCandidateUV, fixtures, routes } = layoutData;
+  const { crop, mainFloorUV, mainWalls, entry, extensionUV, lowerContextWalls, lowerRoomWalls, lowerRooms, openingCandidateUV, fixtures, cubiclePartitions, routes } = layoutData;
   const extension = rectFor({ left: extensionUV.left, right: extensionUV.right, top: extensionUV.top, bottom: extensionUV.bottom });
   const xBox = rectFor(lowerRooms.xZone);
   const smallBox = rectFor(lowerRooms.smallRoom);
@@ -55,12 +55,9 @@ function generatedSvg() {
     const [x, y] = pt(mid);
     return `<path class="partition" d="M ${x} ${y} h 30"/>`;
   }).join('');
-  const cubicleDividers = fixture[3].points.slice(0, 2).map((uv, i) => {
-    const next = fixture[3].points[i + 1];
-    const mid = [(uv[0] + next[0]) / 2, (uv[1] + next[1]) / 2];
-    const [x, y] = pt(mid);
-    return `<path class="partition" d="M ${fmt(x - 34)} ${y} h 34"/>`;
-  }).join('');
+  const cubiclePartitionPaths = cubiclePartitions.map(({ id, from, to }) =>
+    `<path class="partition cubicle-boundary" data-boundary="${id}" d="${pathFor([from, to])}"/>`
+  ).join('');
   const wallPaths = mainWalls.map((wall) => `<path class="room-wall" d="${pathFor([wall.from, wall.to])}"/>`).join('');
   const lowerContextWallPaths = lowerContextWalls.map((wall) => `<path class="lower-wall context-boundary" d="${pathFor([wall.from, wall.to])}"/>`).join('');
   const lowerRoomWallPaths = lowerRoomWalls.map((wall) => `<path class="lower-wall" d="${pathFor([wall.from, wall.to])}"/>`).join('');
@@ -93,7 +90,7 @@ function generatedSvg() {
     <path class="door-leaf" data-item="7" d="M ${entryStart[0]} ${doorY} L ${fmt(doorCenterX - 4)} ${fmt(doorY + 37)} M ${entryEnd[0]} ${doorY} L ${fmt(doorCenterX + 4)} ${fmt(doorY + 37)}"/>
     <g data-item="9" class="fixture opening-candidate"><path d="M ${openA[0]} ${fmt(openA[1] - 9)} H ${openB[0]} V ${fmt(openB[1] + 9)} H ${openA[0]} Z"/></g>
     <g data-item="1" class="fixture urinals">${urinals}${urinalDividers}</g>
-    <g data-item="3" class="fixture toilets">${toilets}${cubicleDividers}</g>
+    <g data-item="3" class="fixture toilets">${toilets}${cubiclePartitionPaths}</g>
     <g data-item="4" class="fixture wash-area"><rect class="counter" x="${fmt(pt([0.393, 0.708])[0])}" y="${fmt(pt([0.393, 0.708])[1])}" width="${fmt(pt([0.518, 0.708])[0] - pt([0.393, 0.708])[0])}" height="${fmt(pt([0.518, 0.744])[1] - pt([0.518, 0.708])[1])}" rx="3"/>${basins}</g>
     <g data-item="5" class="fixture x-zone-symbol"><text x="${fmt(x + w / 2)}" y="${fmt(y + h / 2 + 4)}" text-anchor="middle">X</text></g>
     <g data-item="6" class="fixture unknown-fixture"><rect class="generic-fixture" x="${fmt(qX - 14)}" y="${fmt(qY - 9)}" width="28" height="18" rx="2"/><ellipse class="fixture-bowl" cx="${qX}" cy="${qY}" rx="6" ry="4"/></g>

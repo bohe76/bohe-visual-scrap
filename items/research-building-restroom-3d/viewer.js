@@ -372,13 +372,12 @@ function makeModel(THREE, OrbitControls) {
   const cubicleGroup = getGroup(3);
   const toiletAnchors = layoutData.fixtures.find((item) => item.id === 3).points.map(uvToWorld);
   const mainRightWallX = uvToWorld([0.695, 0.5]).x;
-  const innerWallX = mainRightWallX + 0.10;
-  const partitionX = mainRightWallX + 0.78;
-  for (let i = 0; i < toiletAnchors.length - 1; i++) {
-    const boundaryZ = (toiletAnchors[i].z + toiletAnchors[i + 1].z) / 2;
-    box(cubicleGroup, [(innerWallX + partitionX) / 2, 0.40, boundaryZ], [partitionX - innerWallX, 0.80, 0.065], mats.concrete, { name: 'cubicle divider · illustrative height' });
-    box(cubicleGroup, [(innerWallX + partitionX) / 2, 0.815, boundaryZ], [partitionX - innerWallX, 0.03, 0.085], mats.slateLight, { castShadow: false });
-  }
+  layoutData.cubiclePartitions.forEach(({ id, from, to }) => {
+    wallBox(cubicleGroup, from, to, 0.80, 0.065, mats.concrete, id);
+    const cap = wallBox(cubicleGroup, from, to, 0.03, 0.085, mats.slateLight, `${id}-cap`);
+    cap.position.y = 0.815;
+    cap.castShadow = false;
+  });
   toiletAnchors.forEach(({ x, z }, index) => {
     const panX = mainRightWallX + 0.34;
     box(cubicleGroup, [mainRightWallX + 0.12, 0.42, z], [0.20, 0.84, 0.72], mats.concrete, { name: 'side cutaway' });

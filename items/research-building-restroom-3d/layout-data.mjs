@@ -55,6 +55,11 @@ export const layoutData = {
     { id: 9, type: 'opening-candidate', segment: [[0.397, 0.249], [0.520, 0.249]] },
     { id: 11, type: 'lower-context', point: [0.645, 0.862] }
   ],
+  cubiclePartitions: [
+    { id: 'cubicle-divider-1', kind: 'divider', from: [0.6152631579, 0.335], to: [0.695, 0.335] },
+    { id: 'cubicle-divider-2', kind: 'divider', from: [0.6152631579, 0.4275], to: [0.695, 0.4275] },
+    { id: 'cubicle-end-cap', kind: 'end-boundary', from: [0.6152631579, 0.503], to: [0.695, 0.503] }
+  ],
   routes: {
     urinal: [[0.644, 0.778], [0.570, 0.680], [0.480, 0.535], [0.401, 0.428], [0.401, 0.340]],
     stall: [[0.644, 0.778], [0.630, 0.650], [0.650, 0.500], [0.660, 0.381]],
