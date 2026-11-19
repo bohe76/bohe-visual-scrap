@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="익명화된 참고 도면을 바탕으로 한 4층 남자 화장실의 3D 개념 모형입니다. 시공용 도면이 아닙니다.">
+  <link rel="icon" href="data:,">
+  <title>4층 남자 화장실 · 3D 개념 모형</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./viewer.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar" aria-label="페이지 이동">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">B</span><span>visual scrap</span></a>
+      <a class="back-link" href="../../">아카이브로 돌아가기 <span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <header class="page-head">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ANONYMOUS CONCEPT MODEL</div>
+      <h1>4층 남자 화장실</h1>
+      <p class="lead">참고 도면의 배치와 명시 치수를 읽기 위한 3D 개념 모형입니다.</p>
+      <div class="head-meta" aria-label="모형 안내">
+        <span class="meta-chip">외곽 표기 4.0 × 5.6 m</span>
+        <span class="meta-chip">정사영 · 상호작용 3D</span>
+        <span class="warning-chip">시공용 아님</span>
+      </div>
+    </header>
+
+    <section class="viewer-grid" aria-label="화장실 3D 개념 모형과 범례">
+      <section class="model-card" aria-labelledby="model-title">
+        <div class="model-card-head">
+          <div>
+            <p class="section-kicker">LAYOUT / 3D</p>
+            <h2 id="model-title">공간 배치 모형</h2>
+          </div>
+          <span class="view-status" id="render-status" role="status" aria-live="polite">3D 뷰 초기화 중</span>
+        </div>
+
+        <div class="toolbar" aria-label="카메라 조작">
+          <div class="toolbar-group" role="group" aria-label="시점 선택">
+            <button class="tool-button is-active" id="view-iso" type="button" aria-pressed="true">아이소메트릭</button>
+            <button class="tool-button" id="view-top" type="button" aria-pressed="false">위에서 보기</button>
+          </div>
+          <div class="toolbar-group zoom-group" role="group" aria-label="확대 및 초기화">
+            <button class="icon-button" id="zoom-out" type="button" aria-label="축소" title="축소">−</button>
+            <button class="icon-button" id="zoom-in" type="button" aria-label="확대" title="확대">+</button>
+            <button class="tool-button reset-button" id="view-reset" type="button">초기화</button>
+          </div>
+        </div>
+
+        <div class="stage" id="stage" data-renderer="fallback">
+          <canvas tabindex="0" id="model-canvas" aria-label="회전 가능한 화장실 3D 개념 모형. 방향키로 회전하고 플러스와 마이너스로 확대할 수 있습니다."></canvas>
+          <svg id="fallback-diagram" viewBox="0 0 760 900" role="img" aria-labelledby="fallback-title fallback-desc">
+            <title id="fallback-title">화장실 배치 2D 대체 도식</title>
+            <desc id="fallback-desc">남쪽 출입구에서 안쪽을 바라본 평면 도식. 왼쪽에 소변기 세 대와 남서 PS, 오른쪽에 변기 부스 세 칸, 남쪽에 세면대 두 개, 북쪽에 창이 있습니다.</desc>
+            <defs>
+              <pattern id="tiles" width="75" height="75" patternUnits="userSpaceOnUse">
+                <rect width="75" height="75" fill="#e8e5dc"/>
+                <path d="M75 0H0V75" fill="none" stroke="#c7c3b9" stroke-width="2"/>
+                <path d="M38 0V75" stroke="#f2efe8" stroke-width="1"/>
+              </pattern>
+              <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#c76d3c"/></marker>
+              <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#65846b"/></marker>
+              <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#5086c2"/></marker>
+            </defs>
+            <g class="fallback-space" transform="translate(90 72)">
+              <rect class="fallback-corridor" x="0" y="720" width="500" height="105" rx="4" data-item="11"/>
+              <path d="M0 720H500M0 772H500M62 720V825M125 720V825M188 720V825M250 720V825M312 720V825M375 720V825M438 720V825" class="corridor-grid"/>
+              <rect x="0" y="0" width="500" height="700" class="room-floor" data-item="8"/>
+              <path class="floor-grid" d="M75 0V700M150 0V700M225 0V700M300 0V700M375 0V700M450 0V700M0 75H500M0 150H500M0 225H500M0 300H500M0 375H500M0 450H500M0 525H500M0 600H500M0 675H500"/>
+              <path class="room-outline" d="M0 700V0H500V700"/>
+              <rect x="208" y="-15" width="110" height="18" rx="3" class="window-frame" data-item="9"/>
+              <rect x="216" y="-11" width="94" height="9" class="window-glass"/>
+              <path d="M263 -9V-2M216 -6H310" class="window-mullion"/>
+              <text x="263" y="-26" class="tiny-label" text-anchor="middle">북측 창</text>
+              <g data-item="1" class="fixture urinals">
+                <rect x="20" y="250" width="35" height="66" rx="15" class="ceramic"/><ellipse cx="38" cy="284" rx="9" ry="17" class="bowl"/>
+                <rect x="20" y="369" width="35" height="66" rx="15" class="ceramic"/><ellipse cx="38" cy="403" rx="9" ry="17" class="bowl"/>
+                <rect x="20" y="488" width="35" height="66" rx="15" class="ceramic"/><ellipse cx="38" cy="522" rx="9" ry="17" class="bowl"/>
+                <path d="M58 257H103M58 376H103M58 495H103" class="partition"/>
+              </g>
+              <path d="M8 236V599" class="capstone" data-item="2"/>
+              <g data-item="3" class="fixture stalls">
+                <rect x="340" y="193" width="145" height="125" class="stall"/><rect x="340" y="318" width="145" height="125" class="stall"/><rect x="340" y="443" width="145" height="125" class="stall"/>
+                <path d="M340 193V318M340 318V443M340 443V568" class="stall-door"/>
+                <path d="M402 247h27v18h-27zM402 372h27v18h-27zM402 497h27v18h-27z" class="toilet"/>
+                <circle cx="335" cy="255" r="4" class="brass"/><circle cx="335" cy="380" r="4" class="brass"/><circle cx="335" cy="505" r="4" class="brass"/>
+              </g>
+              <g data-item="5" class="fixture service-shaft">
+                <rect x="82" y="505" width="124" height="180" rx="3" class="shaft"/>
+                <path d="M92 515H196V675H92Z" class="shaft-inset"/>
+                <text x="144" y="602" class="plan-label" text-anchor="middle">PS</text>
+              </g>
+              <g data-item="6" class="fixture utility-sink">
+                <rect x="215" y="526" width="82" height="49" rx="5" class="counter"/><ellipse cx="256" cy="549" rx="22" ry="11" class="basin"/><path d="M256 532v-10q0-8 10-8" class="tap"/>
+              </g>
+              <g data-item="4" class="fixture wash-area">
+                <rect x="129" y="665" width="163" height="17" rx="3" class="counter"/>
+                <ellipse cx="179" cy="661" rx="21" ry="12" class="basin"/><ellipse cx="242" cy="661" rx="21" ry="12" class="basin"/>
+                <path d="M179 650v-9q0-8 9-8M242 650v-9q0-8 9-8" class="tap"/>
+                <rect x="132" y="614" width="157" height="40" rx="3" class="mirror-frame"/><rect x="138" y="620" width="145" height="28" class="mirror"/>
+              </g>
+              <g data-item="7" class="fixture entrance">
+                <path d="M349 700V687M462 700V687" class="jamb"/><path d="M349 692H462" class="threshold"/>
+                <path d="M349 700H462" class="door-gap"/>
+                <text x="406" y="680" class="tiny-label" text-anchor="middle">0.9 m 출입구</text>
+              </g>
+              <g data-item="11" class="corridor-label"><text x="252" y="777" class="plan-label" text-anchor="middle">남측 로비 · 복도 (개념 표현)</text></g>
+              <g class="routes route-urinal" data-route="urinal"><path d="M406 760C350 695 248 640 175 574S68 457 42 386" marker-end="url(#arrow-orange)"/></g>
+              <g class="routes route-stall" data-route="stall"><path d="M406 760C415 670 373 602 373 530" marker-end="url(#arrow-green)"/></g>
+              <g class="routes route-wash" data-route="wash"><path d="M225 665C276 690 344 731 406 800" marker-end="url(#arrow-blue)"/></g>
+              <g class="number-mark" data-item="1"><circle cx="91" cy="333" r="16"/><text x="91" y="339">1</text></g>
+              <g class="number-mark" data-item="2"><circle cx="28" cy="608" r="16"/><text x="28" y="614">2</text></g>
+              <g class="number-mark" data-item="3"><circle cx="467" cy="184" r="16"/><text x="467" y="190">3</text></g>
+              <g class="number-mark" data-item="4"><circle cx="306" cy="640" r="16"/><text x="306" y="646">4</text></g>
+              <g class="number-mark" data-item="5"><circle cx="102" cy="528" r="16"/><text x="102" y="534">5</text></g>
+              <g class="number-mark" data-item="6"><circle cx="302" cy="531" r="16"/><text x="302" y="537">6</text></g>
+              <g class="number-mark" data-item="7"><circle cx="471" cy="670" r="16"/><text x="471" y="676">7</text></g>
+              <g class="number-mark" data-item="8"><circle cx="315" cy="300" r="16"/><text x="315" y="306">8</text></g>
+              <g class="number-mark" data-item="9"><circle cx="320" cy="35" r="16"/><text x="320" y="41">9</text></g>
+              <g class="number-mark" data-item="11"><circle cx="477" cy="797" r="16"/><text x="477" y="803">11</text></g>
+              <path d="M0 852H500" class="north-line"/><text x="250" y="876" class="tiny-label" text-anchor="middle">남측 / 출입구 쪽</text>
+            </g>
+          </svg>
+          <div class="stage-badge" aria-hidden="true">개념도 · 비례 표현</div>
+          <div class="compass" aria-hidden="true"><span>N</span><i></i><span>S</span></div>
+        </div>
+
+        <div class="route-controls" aria-label="동선 표시">
+          <span class="route-title">동선 · 설명용 오버레이</span>
+          <button class="route-button" type="button" data-route-toggle="urinal" aria-pressed="true"><i class="route-swatch orange"></i>소변기</button>
+          <button class="route-button" type="button" data-route-toggle="stall" aria-pressed="true"><i class="route-swatch green"></i>부스</button>
+          <button class="route-button" type="button" data-route-toggle="wash" aria-pressed="true"><i class="route-swatch blue"></i>세면·퇴장</button>
+        </div>
+        <p class="control-hint">마우스 드래그·터치로 회전 · 휠·핀치로 확대 · 캔버스 포커스 후 방향키 / +/- / Home</p>
+      </section>
+
+      <aside class="legend-card" aria-labelledby="legend-title">
+        <div class="legend-head">
+          <div>
+            <p class="section-kicker">REFERENCE / 01—11</p>
+            <h2 id="legend-title">도면 표기 범례</h2>
+          </div>
+          <span class="legend-count">11 항목</span>
+        </div>
+        <div class="selected-detail" id="selected-detail" aria-live="polite" aria-atomic="true">
+          <span class="detail-number" id="detail-number">—</span>
+          <div><strong id="detail-title">범례에서 항목 선택</strong><p id="detail-copy">목록을 누르면 해당 요소와 설명이 함께 강조됩니다.</p></div>
+        </div>
+        <ol class="legend-list" id="legend-list">
+          <li><button class="legend-item" type="button" data-item="1" aria-pressed="false"><span class="legend-number">01</span><span class="legend-copy"><strong>벽걸이 소변기 3대</strong><small>칸막이 450 × 1,250 mm · 간격 0.95 m</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="2" aria-pressed="false"><span class="legend-number">02</span><span class="legend-copy"><strong>화강석 두겁돌</strong><small>두께 20 mm · 서측 구간 길이 2,900 mm</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="3" aria-pressed="false"><span class="legend-number">03</span><span class="legend-copy"><strong>대변기 부스 3칸</strong><small>동측 · 칸당 약 1.0 × 1.4 m</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="4" aria-pressed="false"><span class="legend-number">04</span><span class="legend-copy"><strong>세면대 2 · 방습거울</strong><small>거울 표기 1,800 × 1,000 mm · 남측</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="5" aria-pressed="false"><span class="legend-number">05</span><span class="legend-copy"><strong>PS · 배관 샤프트</strong><small>남서쪽 · 약 1.3 × 1.9 m</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="6" aria-pressed="false"><span class="legend-number">06</span><span class="legend-copy"><strong>청소 공간 수채기</strong><small>신설 표기 · 위치는 개념 배치</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="7" aria-pressed="false"><span class="legend-number">07</span><span class="legend-copy"><strong>남측 출입구</strong><small>폭 0.9 m · 재료분리대 두께 30 mm</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="8" aria-pressed="false"><span class="legend-number">08</span><span class="legend-copy"><strong>포세린 타일</strong><small>표기 규격 600 × 600 mm</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="9" aria-pressed="false"><span class="legend-number">09</span><span class="legend-copy"><strong>북측 창 (CAW)</strong><small>인조대리석 창대석 표기</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="10" aria-pressed="false"><span class="legend-number">10</span><span class="legend-copy"><strong>바닥 배수구 · F.D.</strong><small>Ø75 mm · 정확한 위치 미확정</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+          <li><button class="legend-item" type="button" data-item="11" aria-pressed="false"><span class="legend-number">11</span><span class="legend-copy"><strong>남측 로비 · 복도</strong><small>모형 밖의 맥락을 위한 무치수 표현</small></span><span class="legend-arrow" aria-hidden="true">↗</span></button></li>
+        </ol>
+        <div class="material-key" aria-label="참고 이미지의 재료 색상표">
+          <p>재료 색상표 <span>색상만 참고 · 부위 매핑 미확정</span></p>
+          <ul>
+            <li><i style="--swatch:#64717a"></i>슬레이트</li><li><i style="--swatch:#d5d5d1"></i>콘크리트</li><li><i style="--swatch:#75533d"></i>월넛</li><li><i style="--swatch:#273749"></i>네이비</li><li><i style="--swatch:#79866b"></i>올리브</li><li><i style="--swatch:#a85f45"></i>테라코타</li><li><i style="--swatch:#b08c55"></i>브라스</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="notes-grid" aria-label="모형 기준과 유의사항">
+      <article class="note-card">
+        <span class="note-index">01 / 기준</span>
+        <h2>표기 치수만 기준으로 사용</h2>
+        <p>4.0 × 5.6 m는 원본의 외곽 표기이며, 내측 유효 치수나 실측값으로 해석하지 않았습니다. 명시된 칸막이·부스·거울·PS·출입구·타일 치수만 범례에 옮겼습니다.</p>
+      </article>
+      <article class="note-card caution-card">
+        <span class="note-index">02 / 한계</span>
+        <h2>시공용 도면이 아닙니다</h2>
+        <p>미표기 높이·기구 상세·문 개폐 방향은 가독성을 위한 시각 표현입니다. 부스 칸막이와 문은 내부 기구가 보이도록 낮춘 절개 표현이며, 실제 높이를 뜻하지 않습니다. 배수구 위치와 별도 1.9 m 서비스 공간 경계는 확인되지 않아 확정 형상으로 표시하지 않았습니다.</p>
+      </article>
+    </section>
+    <footer class="page-footer"><span>익명화된 참고 도면 기반 · 원본 이미지 미포함</span><span>정적 페이지 · Three.js r180</span></footer>
+  </main>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>
