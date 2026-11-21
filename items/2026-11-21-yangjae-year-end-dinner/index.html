@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="양재역 송년회 식사 후보 10곳을 인원대·룸/단체석 근거·메뉴 가격으로 비교합니다. 2026년 12월 날짜별 예약은 확인하지 않았습니다.">
+  <meta name="theme-color" content="#ffffff">
+  <title>양재역 송년회 회식 후보 10곳 · bohe visual scrap</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#242424;--muted:#666;--soft:#898989;--line:#e8e8e8;--surface:#fff;--surface-muted:#f7f7f7;--shadow:rgba(0,0,0,.08) 0 0 0 1px,rgba(0,0,0,.04) 0 2px 8px;--focus:#0068d6;--green:#416b54}
+    *{box-sizing:border-box}
+    html{background:#fff;scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:Geist,Arial,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    a{color:inherit}
+    .skip-link{position:absolute;left:12px;top:-60px;padding:12px 16px;border-radius:8px;background:#242424;color:#fff;z-index:9}.skip-link:focus{top:12px}
+    .shell{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:26px 0 56px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:48px}
+    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;font-weight:600;min-height:44px}
+    .brand-mark{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#242424;color:#fff;font:500 12px 'Geist Mono',monospace}
+    .archive-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:999px;background:#fff;box-shadow:var(--shadow);text-decoration:none;color:#555;font-size:13px}
+    .hero{text-align:center;max-width:840px;margin:0 auto 26px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;margin-bottom:16px;border-radius:999px;background:#f7f7f7;color:#666;font:500 12px 'Geist Mono',monospace;letter-spacing:.02em}
+    .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:#65785d}
+    h1{margin:0;font-size:clamp(36px,7vw,64px);line-height:1.05;letter-spacing:-.055em;font-weight:600;word-break:keep-all}
+    .lead{max-width:740px;margin:16px auto 0;color:#555;font-size:clamp(15px,2vw,18px);line-height:1.75;word-break:keep-all}
+    .metadata-line{margin:14px 0 0;color:#777;font:12px 'Geist Mono',monospace;letter-spacing:.01em}
+    .summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;overflow:hidden;margin:28px 0 22px;border-radius:14px;background:var(--line);box-shadow:var(--shadow)}
+    .metric{min-width:0;padding:17px 14px;background:#fff;text-align:center}
+    .metric-label{display:block;margin-bottom:8px;color:#777;font:500 11px 'Geist Mono',monospace;letter-spacing:.045em}
+    .metric-value{display:block;font-size:22px;font-weight:600;letter-spacing:-.04em}
+    .section-title{text-align:center;margin:34px 0 6px;font-size:20px;letter-spacing:-.035em}
+    .section-intro{margin:0 auto 16px;max-width:760px;text-align:center;color:#777;font-size:13px;line-height:1.6;word-break:keep-all}
+    .filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:16px 0 14px}
+    .filter-button{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:84px;padding:10px;border:0;border-radius:12px;background:#f7f7f7;color:#444;box-shadow:rgba(0,0,0,.07) 0 0 0 1px;font:500 14px Geist,Arial,sans-serif;text-align:center;cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease}
+    .filter-button:hover{background:#efefef;transform:translateY(-1px)}
+    .filter-button.is-active{background:#242424;color:#fff;box-shadow:none}
+    .filter-sub{font-size:11px;line-height:1.35;opacity:.78}
+    .filter-button:focus-visible,.action-link:focus-visible,.archive-link:focus-visible,.brand:focus-visible,.phone:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .toolbar-meta{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 16px;margin:10px 0 18px;color:#777;font-size:12px}
+    .visible-count{font:12px 'Geist Mono',monospace;color:#555}
+    .download{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:8px;background:#242424;color:#fff;text-decoration:none;font-size:13px;font-weight:600}
+    .download:hover{background:#444}
+    .card-list{display:grid;grid-template-columns:1fr;gap:14px;align-items:stretch;margin-top:16px}
+    .place-card{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;padding:19px;border-radius:14px;background:#fff;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
+    .place-card:hover{transform:translateY(-1px);box-shadow:rgba(0,0,0,.10) 0 0 0 1px,rgba(0,0,0,.05) 0 5px 14px}
+    .place-card[hidden]{display:none!important}
+    .rank{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--group-color);color:#fff;font:500 11px 'Geist Mono',monospace}
+    .card-body{min-width:0}
+    .place-head{text-align:center;margin-bottom:15px}
+    .category-line{display:flex;justify-content:center;align-items:center;gap:7px;margin:0 0 7px;color:#666;font-size:12px;line-height:1.45}
+    .category-dot{width:7px;height:7px;border-radius:50%;background:var(--group-color);flex:0 0 auto}
+    h2{margin:0;font-size:clamp(20px,2.5vw,24px);line-height:1.3;letter-spacing:-.04em;font-weight:600;overflow-wrap:anywhere}
+    .place-id{margin:6px 0 0;color:#888;font:11px 'Geist Mono',monospace}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
+    .fact{min-width:0;padding:11px 12px;border-radius:10px;background:#f8f8f8}
+    .fact dt,.menu-block h3{margin:0 0 6px;color:#777;font:500 11px 'Geist Mono',monospace;letter-spacing:.035em}
+    .fact dd{margin:0;color:#444;font-size:13px;line-height:1.55;overflow-wrap:anywhere;word-break:keep-all}
+    .fact dd small{display:block;margin-top:4px;color:#888;font-size:11px;line-height:1.5;word-break:keep-all}
+    .fact-wide{grid-column:1/-1;text-align:center}
+    .phone{text-decoration:underline;text-decoration-color:#bbb;text-underline-offset:3px;overflow-wrap:anywhere}
+    .menu-block{margin-top:9px;padding:13px 12px;border-radius:10px;background:#f8f8f8;text-align:center}
+    .menu-block h3{margin-bottom:9px}
+    .menu-list{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;list-style:none;margin:0;padding:0}
+    .menu-list li{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:6px 10px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.07) 0 0 0 1px;color:#444;font-size:12px;line-height:1.45;overflow-wrap:anywhere;word-break:keep-all}
+    .menu-source{margin:9px 0 0;color:#888;font-size:11px;line-height:1.45}
+    .fit-note{margin:10px 0 0;padding:11px 12px;border-radius:10px;background:#fff;box-shadow:rgba(0,0,0,.06) 0 0 0 1px;color:#555;font-size:12px;line-height:1.62;overflow-wrap:anywhere;word-break:keep-all}
+    .fit-note strong{display:block;margin-bottom:3px;color:#666;font:500 11px 'Geist Mono',monospace}
+    .source-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:12px}
+    .action-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:7px 11px;border-radius:8px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#454545;text-decoration:none;font-size:12px;line-height:1.35;text-align:center;overflow-wrap:anywhere;word-break:keep-all}
+    .action-link:hover{background:#f7f7f7}
+    .primary-link{background:#242424;color:#fff;box-shadow:none}
+    .primary-link:hover{background:#444}
+    .page-note{margin-top:22px;padding:18px 20px;border-radius:12px;background:#f8f8f8;color:#555;font-size:13px;line-height:1.72;overflow-wrap:anywhere;word-break:keep-all}
+    .page-note h2{margin:0 0 8px;font-size:15px;letter-spacing:-.02em}
+    .page-note p{margin:6px 0}
+    .footer{margin-top:24px;text-align:center;color:#888;font-size:12px;line-height:1.7}
+    .footer a{color:#555;text-underline-offset:3px}
+    @media(min-width:980px){.card-list{grid-template-columns:repeat(2,minmax(0,1fr))}.place-card{padding:16px;gap:12px}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.shell{width:min(100% - 24px,1080px);padding-top:20px}.topbar{margin-bottom:34px}.summary{grid-template-columns:1fr}.metric{padding:13px}.metric-value{font-size:19px}.filters{grid-template-columns:1fr;gap:7px}.filter-button{width:100%;min-height:54px;flex-direction:row;justify-content:space-between;padding:10px 14px;text-align:left}.filter-sub{max-width:60%;text-align:right}.toolbar-meta{flex-direction:column;gap:8px}.place-card{grid-template-columns:1fr;padding:15px;gap:9px}.rank{width:32px;height:32px}.facts{grid-template-columns:1fr}.fact-wide{grid-column:auto;text-align:left}.section-title{margin-top:28px}.page-note{padding:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#places">본문으로 건너뛰기</a>
+  <main class="shell">
+    <nav class="topbar" aria-label="사이트 메뉴">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">B</span><span>bohe visual scrap</span></a>
+      <a class="archive-link" href="../../">← 아카이브</a>
+    </nav>
+    <header class="hero">
+      <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> YANGJAE · YEAR-END DINNER</div>
+      <h1>송년회 장소,<br>인원부터 고르기</h1>
+      <p class="lead">양재역 출구 기준 네이버 표시거리 26~572m의 저녁 모임 후보 10곳. 독립룸과 단체석 근거를 나누고, 메뉴와 공개 가격을 한눈에 비교합니다.</p>
+      <p class="metadata-line">공개정보 확인 2026-11-21 · 양재시민의숲역 일대 제외 · 예약 미실행</p>
+    </header>
+    <section class="summary" aria-label="목록 요약">
+      <div class="metric"><span class="metric-label">PLACE 확인 후보</span><span class="metric-value">10곳</span></div>
+      <div class="metric"><span class="metric-label">20명 이상 단체석 근거</span><span class="metric-value">2곳</span></div>
+      <div class="metric"><span class="metric-label">음식 유형</span><span class="metric-value">5가지</span></div>
+    </section>
+    <section aria-labelledby="headcount-heading">
+      <h2 class="section-title" id="headcount-heading">인원대별 빠른 비교</h2>
+      <p class="section-intro">버튼은 공개된 룸·단체석 또는 이용 근거가 있는 후보만 보여줍니다. 정원 보장이나 특정 날짜 예약 가능 표시가 아닙니다.</p>
+      <div class="filters" role="group" aria-label="인원대별 식당 필터">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true"><span>전체 후보</span><span class="filter-sub">10곳 · 정원 미공개 후보 포함</span></button>
+        <button class="filter-button" type="button" data-filter="6-10" aria-pressed="false"><span>6–10명</span><span class="filter-sub">룸·이용 근거 후보 3곳</span></button>
+        <button class="filter-button" type="button" data-filter="10-20" aria-pressed="false"><span>10–20명</span><span class="filter-sub">공개 근거 후보 3곳</span></button>
+        <button class="filter-button" type="button" data-filter="20-plus" aria-pressed="false"><span>20명 이상</span><span class="filter-sub">단체석 공개 안내 2곳</span></button>
+      </div>
+      <div class="toolbar-meta"><span class="visible-count" id="visible-count" aria-live="polite">10곳 표시</span><a class="download" href="./yangjae-year-end-dinner-wkt.csv" download>Place 좌표 WKT CSV 받기 ↓</a><span>네이버 Place 좌표 10개 · EPSG:4326 경위도 순서</span></div>
+    </section>
+    <section class="card-list" id="places" aria-label="송년회 후보 카드 목록">
+      <article class="place-card" data-party="6-10 10-20 20-plus" data-place-id="1672141709" style="--group-color:#805744">
+  <div class="rank" aria-hidden="true">01</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>산청 흑돼지·K-BBQ</p>
+      <h2>육즙관리소 양재역점</h2>
+      <p class="place-id">NAVER PLACE · 1672141709</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 강남구 강남대로44길 7 1층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 3번 출구 · Place 표시거리 124m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>프라이빗룸: 공식 메인 안내 4~16인(상세 페이지 간 표기 충돌). 단체석: 20~40인. 20~40인을 독립룸으로 표기하지 않음.<small>날짜별 룸 배정 보장 여부 미확인.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1335-6363">0507-1335-6363</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 3,677 · 블로그 365<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 12:00 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>지리산 산청 흑돼지 목살 · ₩19,000 / 160g</li><li>지리산 흑돼지 모듬 · ₩57,000 / 네이버 메뉴 표기; 중량은 카드에서 미표기</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>프라이빗룸을 원하면 우선 4~16인으로 검토하되 홈페이지 간 표기가 달라 룸 크기를 사전 확인해야 함. 20~40인은 단체석 후보이며 독립공간을 전제하지 말 것.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/1672141709" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 1672141709 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/1672141709/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a><a class="action-link" href="https://www.yukjeup.com/yangjae-hoesik" target="_blank" rel="noopener noreferrer">공식 룸·회식 안내 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="6-10 10-20 20-plus" data-place-id="37233088" style="--group-color:#805744">
+  <div class="rank" aria-hidden="true">02</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>한우·숯불갈비</p>
+      <h2>갈비사랑 양재본점</h2>
+      <p class="place-id">NAVER PLACE · 37233088</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 강남대로 204 갈비사랑</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 · Place 표시거리 80m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>프라이빗룸: 공식 안내 4·8·10·14·18·32인. 단체석 20~120인(층 대관 포함). 400인은 매장 전체 대관 기준.<small>룸 존재와 명목 정원은 공식 안내에 있지만 날짜별 배정 보장·보증금·최소주문은 미확인.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:02-3463-6800">02-3463-6800</a> · <a class="phone" href="tel:02-3463-9800">02-3463-9800</a> · <a class="phone" href="tel:0507-1483-6800">0507-1483-6800</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 2,522 · 블로그 469<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 11:30 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 음식 최소주문은 확인되지 않음. 공식 안내상 소규모 행사 상차림 세팅비 100,000원; 20인 이상 행사 상차림 서비스 언급이 있으나 상세 조건은 확인 필요.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>양념갈비 · ₩58,000 / 네이버 메뉴 표기; 중량 미표기</li><li>생갈비 · ₩68,000 / 네이버 메뉴 표기; 중량 미표기</li><li>사랑정식(점심특선) · ₩42,000 / 저녁 회식 메뉴 가격으로 오인하지 않도록 별도 표시</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>공개 룸 정원이 명확해 6~18명 독립룸 우선 후보. 20명 이상은 단체석·대연회장·층 대관 중 어떤 공간인지 확인하고, 400인은 전체 대관이지 방 하나가 아님. 한우·갈비 메뉴 가격대가 높은 편이므로 예산 확인이 우선.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/37233088" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 37233088 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/37233088/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a><a class="action-link" href="https://www.galbi-sarang.com/%EB%A3%B8-%EB%8B%A8%EC%B2%B4-%EC%95%88%EB%82%B4" target="_blank" rel="noopener noreferrer">공식 룸·단체 안내 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="6-10" data-place-id="18771333" style="--group-color:#69766b">
+  <div class="rank" aria-hidden="true">03</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>일식·사시미 코스</p>
+      <h2>진스시</h2>
+      <p class="place-id">NAVER PLACE · 18771333</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 강남대로43길 22-2 1층, 2층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 2번 출구 · Place 표시거리 439m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>개별룸 관련 다이닝코드 정보와 2023년 10인 이용 후기가 있음. 현재 숫자별 정원·룸 배정은 미확인.<small>10인 룸 이용 근거는 과거 이용자 리뷰라 현시점·12월 특정일 룸 배정 보장은 아님.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1448-3492">0507-1448-3492</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,238 · 블로그 1,768<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 11:30 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>저녁 A 코스 · ₩42,000 / 다이닝코드 메뉴표기; 1인 코스 가격</li><li>저녁 B 코스 · ₩48,000 / 다이닝코드 메뉴표기; 1인 코스 가격</li><li>저녁 C 코스 · ₩65,000 / 다이닝코드 메뉴표기; 모둠사시미·해산물·튀김·우동 등 구성</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>일식 코스형 선택지. 6~10인 특히 10인 회식에 맞는 과거 룸 이용 근거가 있으나, 현재 예약 시 룸 가능 여부와 코스 최소 인원은 확인되지 않음.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/18771333" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 18771333 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/18771333/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a><a class="action-link" href="https://www.diningcode.com/profile.php?rid=T24QTthtBD1m" target="_blank" rel="noopener noreferrer">다이닝코드 근거 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="10-20" data-place-id="1583880509" style="--group-color:#94725a">
+  <div class="rank" aria-hidden="true">04</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>중식·중화요리</p>
+      <h2>명정루 양재</h2>
+      <p class="place-id">NAVER PLACE · 1583880509</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 남부순환로347길 23 1층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 1번 출구 · Place 표시거리 223m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>룸식당 분류 자료는 있으나 정원 미공개. 13인 연결 테이블 이용 후기는 룸이 아니었다고 기록.<small>룸 여부와 13인 연결 좌석 후기 간에 차이가 있어 확정 불가. 룸 필수이면 후보 우선순위를 낮추고 사전 확인.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:02-598-8600">02-598-8600</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 909 · 블로그 253<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 11:00 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>생등심 탕수육 · ₩29,000 / 메뉴 단품</li><li>어향동고 · ₩42,000 / 메뉴 단품</li><li>전가복 · ₩78,000 / 메뉴 단품</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>중식 메뉴 다양성 보강용. 대형 모임은 단체 예약 문의 후보지만 숫자별 룸 정원이나 룸 보장은 확인되지 않아 큰 팀의 확정 후보로 세지 않음.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/1583880509" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 1583880509 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/1583880509/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a><a class="action-link" href="https://www.diningcode.com/profile.php?rid=q6ED0IbiLOWk" target="_blank" rel="noopener noreferrer">다이닝코드 근거 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="unknown" data-place-id="18246142" style="--group-color:#65785d">
+  <div class="rank" aria-hidden="true">05</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>한정식·한식</p>
+      <h2>산들해 양재점</h2>
+      <p class="place-id">NAVER PLACE · 18246142</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 강남대로 213 엘타워 지하1층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 9번 출구 · Place 표시거리 26m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>독립룸: 공개 근거 확인 안 됨. 네이버 Place에 단체 이용 가능 표시가 있으나 정원 숫자 미공개.<small>룸 보유·배정 보장 확인되지 않음.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1365-3457">0507-1365-3457</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,873 · 블로그 425<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 11:10 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>한정식 · ₩24,000 / 네이버 메뉴 표기</li><li>한우 소불고기 · ₩29,000 / 네이버 메뉴 표기</li><li>한돈 돼지불고기 · ₩22,000 / 네이버 메뉴 표기</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>구이 외 한식 옵션. 역 출구 표시거리는 매우 가깝지만, 단체 이용 가능 외에 정원과 룸 정보는 공개 확인되지 않음.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/18246142" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 18246142 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/18246142/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="unknown" data-place-id="1788599337" style="--group-color:#77705f">
+  <div class="rank" aria-hidden="true">06</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>이자카야·사시미·나베</p>
+      <h2>식감이야기 룸이자카야</h2>
+      <p class="place-id">NAVER PLACE · 1788599337</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 남부순환로350길 19-26 도담빌딩 2층 식감이야기 양재점</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 5번 출구 · Place 표시거리 215m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>다이닝코드에 개별룸 태그가 있고 리뷰는 커튼으로 구분된 룸 형태 좌석이라고 설명함. 완전 방음형 독립룸으로 단정하지 않음. 네이버 Place는 단체 이용 가능 표시이나 정원 미공개.<small>커튼형 분리석일 수 있고, 다이닝코드 후기에는 매장이 작고 좌석 간격이 좁다는 지적도 있음. 룸 종류·인원별 배정 보장 미확인.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1383-6147">0507-1383-6147</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,265 · 블로그 485<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 종료, 17:30 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>사시미 모리아와세(25P) · ₩56,000 / 25피스</li><li>아롱사태스지나베 · ₩33,000 / 메뉴 단품</li><li>간사이오뎅탕 · ₩26,000 / 메뉴 단품; 다이닝코드 메뉴 표기는 27,000원으로 차이가 있어 최신 Place 메뉴 기준값을 사용</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>사시미·나베와 술을 곁들이는 소규모 모임 후보. 룸이 커튼형이고 점포가 작다는 후기가 있어 10명 이상 또는 완전 독립룸 필수일 때는 우선순위 낮춤.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/1788599337" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 1788599337 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/1788599337/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a><a class="action-link" href="https://www.diningcode.com/profile.php?rid=1nRLGwR0VBRK" target="_blank" rel="noopener noreferrer">다이닝코드 근거 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="unknown" data-place-id="1835295363" style="--group-color:#805744">
+  <div class="rank" aria-hidden="true">07</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>숙성 삼겹살·목살</p>
+      <h2>정고기 양재본점</h2>
+      <p class="place-id">NAVER PLACE · 1835295363</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 강남대로34길 43 2층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 · Place 표시거리 245m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>독립룸: 공개 근거 확인 안 됨. 단체 이용 가능·예약 가능으로 표시하나 숫자별 정원은 미공개.<small>공개 확인되지 않음.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1357-4274">0507-1357-4274</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,631 · 블로그 240<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 12:00 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>숙성삼겹 · ₩16,000 / 네이버 메뉴 표기; 중량 미표기</li><li>숙성목살 · ₩16,000 / 네이버 메뉴 표기; 중량 미표기</li><li>옛날 삼겹살 · ₩15,000 / 네이버 메뉴 표기; 중량 미표기</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>고기 위주 캐주얼 회식에서 공개 메뉴 가격 진입점이 비교적 낮은 편. 다만 룸·좌석 수가 공개되지 않아 큰 인원은 예약 화면만으로 수용 가능하다고 간주하지 않음.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/1835295363" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 1835295363 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/1835295363/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="unknown" data-place-id="1044461398" style="--group-color:#805744">
+  <div class="rank" aria-hidden="true">08</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>숯불 소갈비·한우</p>
+      <h2>우대포 양재점</h2>
+      <p class="place-id">NAVER PLACE · 1044461398</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 강남대로47길 20 1층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 2번 출구 · Place 표시거리 572m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>독립룸: 공개 근거 확인 안 됨. 네이버 Place에 단체 이용 가능 표시; 숫자별 정원 미공개.<small>공개 확인되지 않음. 테이블링·네이버 예약 채널이 보인다는 사실은 룸 배정 보장이 아님.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1416-0498">0507-1416-0498</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,947 · 블로그 945<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 11:30 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>왕갈비(생) · ₩33,000 / 네이버 메뉴 표기; 카드에는 중량 미표기</li><li>왕갈비(양념) · ₩32,000 / 네이버 메뉴 표기; 카드에는 중량 미표기</li><li>깍뚝꽃살(한정판매) · ₩29,000 / 네이버 메뉴 표기</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>소갈비 메뉴 중심의 보완 후보. 역 출구 표시거리는 10곳 중 가장 길지만 572m이며, 15분 이내 범위 판단은 실제 경로에 따라 달라질 수 있음. 인원 정원·룸 정보는 미확인.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/1044461398" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 1044461398 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/1044461398/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="unknown" data-place-id="2019821679" style="--group-color:#805744">
+  <div class="rank" aria-hidden="true">09</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>갈매기살·돼지고기 특수부위</p>
+      <h2>탄천갈매기 양재점</h2>
+      <p class="place-id">NAVER PLACE · 2019821679</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 남부순환로356길 39 1층</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 · Place 표시거리 277m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>독립룸: 공개 근거 확인 안 됨. 네이버 Place에 단체 이용 가능 표시; 숫자별 정원 미공개.<small>공개 확인되지 않음.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><a class="phone" href="tel:0507-1386-8620">0507-1386-8620</a></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 162 · 블로그 68<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 15:00 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>대파통갈매기 · ₩16,000 / 180g 메뉴표기</li><li>탄천갈매기 · ₩15,000 / 180g 메뉴표기</li><li>고추장갈매기 · ₩16,000 / 네이버 메뉴 표기</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>비교적 낮은 메뉴 단가의 캐주얼 고기 회식 후보. 최근 Place 방문자·블로그 리뷰 수는 상위 후보보다 적지만 실제 Place와 메뉴는 확인됨. 정원·룸은 미공개.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/2019821679" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 2019821679 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/2019821679/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a></div>
+  </div>
+</article>
+<article class="place-card" data-party="unknown" data-place-id="1275748606" style="--group-color:#805744">
+  <div class="rank" aria-hidden="true">10</div>
+  <div class="card-body">
+    <header class="place-head">
+      <p class="category-line"><span class="category-dot" aria-hidden="true"></span>한우·뭉티기·정육식당</p>
+      <h2>토종한우 뭉티기 정육식당</h2>
+      <p class="place-id">NAVER PLACE · 1275748606</p>
+    </header>
+    <dl class="facts">
+      <div class="fact"><dt>주소</dt><dd>서울 서초구 강남대로39길 16 1층 토종한우 뭉티기 정육식당</dd></div>
+      <div class="fact"><dt>양재역 접근</dt><dd>양재역 2번 출구 · Place 표시거리 223m<small>네이버 Place 출구 거리 표기입니다. 도보 시간·경로 실측이 아닙니다.</small></dd></div>
+      <div class="fact fact-wide"><dt>룸 / 단체석 근거</dt><dd>독립룸: 공개 근거 확인 안 됨. 네이버 Place에 단체 이용 가능 표시; 검증 가능한 숫자별 정원 미공개.<small>공개 확인되지 않음.</small></dd></div>
+      <div class="fact"><dt>문의 전화</dt><dd><span>전화번호 공개 확인 안 됨</span></dd></div>
+      <div class="fact"><dt>예약·날짜 확인</dt><dd>미확인 — 날짜·시간·인원 미정; 예약 실행 안 함.<small>공개 예약 진입점이 있어도 날짜별 가능 여부·룸 배정 보장은 아닙니다.</small></dd></div>
+      <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 431 · 블로그 870<small>Place 요약 JSON에서 방문자·블로그 리뷰 분리 확인</small></dd></div>
+      <div class="fact"><dt>확인 당시 영업표시</dt><dd>Place 카드에서 영업 전, 11:30 영업 시작으로 표시됨.</dd></div>
+      <div class="fact"><dt>최소 주문</dt><dd>공개 근거에서 확인되지 않음.</dd></div>
+    </dl>
+    <section class="menu-block" aria-label="메뉴 및 공개 가격">
+      <h3>확인된 메뉴 · 표기 가격</h3>
+      <ul class="menu-list"><li>100% 한우 뭉티기 중 · ₩33,000 / 150g</li><li>100% 한우 뭉티기 대 · ₩55,000 / 250g</li><li>명품한우 모듬구이 1++ · ₩48,000 / 1인분 150g</li></ul>
+      <p class="menu-source">메뉴·가격은 공개 자료 스냅샷 · 방문 전 최신 정보 재확인</p>
+    </section>
+    <p class="fit-note"><strong>선택 메모</strong>한우 뭉티기·정육식당이라는 메뉴 차별점. 단체 이용 표시는 있지만 룸·좌석 수가 확인되지 않아 20인 이상용으로 추천하지 않음. 네이버 예약 페이지에서 날짜·인원 선택 가능 여부를 확인해야 함.</p>
+    <div class="source-actions" aria-label="장소 및 출처 링크"><a class="action-link primary-link" href="https://map.naver.com/p/entry/place/1275748606" target="_blank" rel="noopener noreferrer">네이버 지도 · Place ID 1275748606 ↗</a><a class="action-link" href="https://m.place.naver.com/restaurant/1275748606/booking?entry=plt" target="_blank" rel="noopener noreferrer">네이버 예약 화면 ↗</a></div>
+  </div>
+</article>
+    </section>
+    <aside class="page-note" aria-labelledby="caveat-heading">
+      <h2 id="caveat-heading">예약 전 확인할 점</h2>
+      <p><strong>특정 날짜의 가능 여부:</strong> 2026년 12월 날짜·시간·인원이 정해지지 않아 예약 가능 여부를 확인하지 않았고, 전화·예약도 하지 않았습니다. 네이버 예약 표시가 있어도 날짜별 좌석이나 룸 배정 보장은 아닙니다.</p>
+      <p><strong>독립룸과 단체석:</strong> 갈비사랑은 개별룸과 20~120인 단체석·층 대관을 구분했습니다. 육즙관리소는 공식 페이지별 룸 정원 표기가 달라 4~16인 룸 안내는 충돌 주의, 20~40인은 단체석으로만 표기했습니다. 다른 후보의 ‘단체 이용 가능’은 숫자 정원이나 룸 보장을 의미하지 않습니다.</p>
+      <p><strong>거리와 가격:</strong> 역 접근은 네이버 Place 카드에 표시된 출구-장소 거리이며 걸음 시간이나 실제 보행 경로가 아닙니다. 메뉴 가격은 공개된 메뉴의 표기값으로, 회식 총액·주류·최소 주문 비용을 뜻하지 않습니다. 방문 직전 메뉴·영업·휴무를 다시 확인해 주세요.</p>
+      <p><strong>좌표 파일:</strong> CSV의 WKT는 Place 요약자료의 좌표를 `POINT(경도 위도)` 순서로 기록했습니다. 길찾기용 도로 경로 또는 현장 측량값이 아닙니다.</p>
+      <p>출처: 네이버 Place 카드 및 Place 요약자료(장소·좌표·메뉴·리뷰·예약 표시), 갈비사랑·육즙관리소 공식 안내, 다이닝코드 보조 자료. 리뷰·메뉴 등은 2026-11-21 공개정보 확인 시점의 스냅샷입니다.</p>
+    </aside>
+    <footer class="footer">양재역 송년회 후보 · <time datetime="2026-11-21">2026-11-21</time> 공개정보 확인<br><a href="../../">bohe visual scrap 아카이브</a></footer>
+    <noscript><p class="page-note">JavaScript가 꺼져 있어 인원 필터는 작동하지 않지만, 후보 10곳 전체는 아래에 표시됩니다.</p></noscript>
+  </main>
+  <script>
+    (() => {
+      const buttons = [...document.querySelectorAll('.filter-button[data-filter]')];
+      const cards = [...document.querySelectorAll('.place-card[data-party]')];
+      const count = document.querySelector('#visible-count');
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          buttons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-pressed', String(active));
+          });
+          let visible = 0;
+          cards.forEach((card) => {
+            const show = filter === 'all' || card.dataset.party.split(' ').includes(filter);
+            card.hidden = !show;
+            if (show) visible += 1;
+          });
+          count.textContent = `${visible}곳 표시`;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
