@@ -43,7 +43,6 @@
     .filter-count{font-family:inherit;font-size:11px;font-weight:400;opacity:.72}
     .toolbar-meta{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 16px;width:100%;color:#777;font-size:12px}
     .visible-count{font-family:inherit;font-size:12px;font-weight:400;color:#555}
-    .download-note{color:#777;font-size:12px}
     .card-list{display:grid;grid-template-columns:1fr;gap:14px;align-items:stretch;margin-top:18px}
     .place-card{display:grid;grid-template-columns:42px minmax(0,1fr);gap:16px;padding:20px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
     .place-card:hover{transform:translateY(-1px);box-shadow:rgba(0,0,0,.10) 0 0 0 1px,rgba(0,0,0,.05) 0 5px 14px}
@@ -69,7 +68,6 @@
     .menu-block h3{margin-bottom:9px}
     .menu-list{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;list-style:none;margin:0;padding:0}
     .menu-list li{display:inline-flex;align-items:center;min-height:32px;padding:5px 10px;border-radius:999px;background:#fff;box-shadow:rgba(0,0,0,.07) 0 0 0 1px;color:#444;font-size:12px;line-height:1.45;overflow-wrap:anywhere}
-    .menu-source{margin:9px 0 0;color:#888;font-size:11px}
     .classification-note,.place-note{margin:10px 0 0;padding:11px 12px;border-radius:10px;background:#fff;color:#555;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
     .classification-note{box-shadow:rgba(0,0,0,.06) 0 0 0 1px}
     .classification-note strong,.place-note strong{display:block;margin-bottom:3px;color:#666;font-family:inherit;font-size:11px;font-weight:500}
@@ -94,7 +92,6 @@
     .filter-button{font-size:14px;color:#333}
     .filter-count{font-size:12px}
     .visible-count{font-size:13px}
-    .download-note{font-size:13px;color:#5e5e5e}
     .place-card{align-items:stretch}
     .card-main{display:flex;flex-direction:column;min-width:0;height:100%}
     .place-head{margin-bottom:8px}
@@ -112,7 +109,6 @@
     .menu-block{padding:14px;background:#f7f7f7}
     .menu-list{gap:8px}
     .menu-list li{min-height:36px;padding:7px 12px;font-size:15px;color:#333}
-    .menu-source{font-size:13px;color:#5d5d5d;word-break:keep-all}
     .classification-note,.place-note{font-size:14px;line-height:1.65;color:#4b4b4b}
     .classification-note strong,.place-note strong{font-size:12px;color:#606060}
     .page-note{font-size:14px;color:#444;line-height:1.7}
@@ -121,18 +117,9 @@
     .primary-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
     .primary-cta{display:flex;align-items:center;justify-content:center;min-width:0;min-height:48px;padding:10px 12px;border-radius:8px;background:#242424;color:#fff;text-align:center;text-decoration:none;font-size:15px;line-height:1.35;font-weight:600;overflow-wrap:anywhere;transition:background .15s ease}
     .primary-cta:hover{background:#444}
-    .primary-cta:focus-visible,.source-details summary:focus-visible,.source-detail-link:focus-visible{outline:3px solid #0068d6;outline-offset:3px}
-    .source-details{margin-top:8px;padding-top:3px;border-top:1px solid #e8e8e8}
-    .source-details summary{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;cursor:pointer;list-style:none;color:#4f4f4f;font-size:14px;line-height:1.4}
-    .source-details summary::-webkit-details-marker{display:none}
-    .source-details summary::after{content:"＋";flex:0 0 auto;color:#555;font-size:16px}
-    .source-details[open] summary::after{content:"−"}
-    .source-details summary code{color:#555;font-family:inherit;font-size:12px;font-weight:400}
-    .source-links{display:flex;flex-wrap:wrap;align-items:center;gap:2px 14px;padding:2px 0 6px}
-    .source-detail-link{display:inline-flex;align-items:center;min-height:44px;color:#4a4a4a;font-size:14px;line-height:1.4;text-decoration:underline;text-decoration-color:#aaa;text-underline-offset:3px;overflow-wrap:anywhere}
+    .primary-cta:focus-visible{outline:3px solid #0068d6;outline-offset:3px}
     .address-fact dd{word-break:keep-all;overflow-wrap:normal}
     .menu-list li{font-size:14px}
-    .source-detail-link:hover{color:#111}
     @media(min-width:920px){.place-card{height:100%}}
     @media(max-width:760px){.address-fact{grid-column:auto}.primary-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.filter-button{font-size:14px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
@@ -148,7 +135,7 @@
     <header class="hero">
       <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> YANGJAE · RESTAURANT GUIDE</div>
       <h1>양재역 새 맛집 10곳</h1>
-      <p class="lead">최근 개업 신호가 교차 확인된 3곳과 기존 양재 가이드에서 새로 발굴한 7곳을 나눠 정리했습니다. 새 발굴은 최근 개업을 뜻하지 않습니다.</p>
+      <p class="lead">양재역 근처 식당 10곳. 네이버에 ‘새로 오픈’으로 표시된 3곳과 기존 가이드에 없던 7곳입니다.</p>
       <p class="metadata-line">확인일 2026-11-21 · 식사 중심 · 양재역 기준</p>
     </header>
     <section class="summary" aria-label="목록 요약">
@@ -169,7 +156,6 @@
       </div>
       <div class="toolbar-meta">
         <span class="visible-count" id="visible-count" aria-live="polite">10곳 표시</span>
-        <span class="download-note">네이버 Place 좌표 10개 · 경도·위도 및 WKT 포함</span>
       </div>
     </div>
     <section class="card-list" id="places" aria-label="식당 카드 목록">
@@ -186,16 +172,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>한우 양지 온반</li><li>가리비 들깨 크림 옹심이</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 남부순환로350길 19-7 1층 코라테이블</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 7번 출구 기준 · 네이버 도보 경로 157m · 약 2분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 50 · 블로그 12<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 7번 출구 기준 · 네이버 도보 경로 157m · 약 2분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 50 · 블로그 12</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1387-1240">0507-1387-1240</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>네이버 Place 새로오픈 표시와 2026-09-20 방문 후기를 교차 확인했습니다. 정확한 개업일은 확인되지 않았습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>노키즈존 표시가 있으며 룸 이용 조건은 예약 전 확인.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -203,14 +187,6 @@
               <a class="primary-cta" href="tel:0507-1387-1240">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>2071522112</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2071522112/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2071522112/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/seonyoung516/224417823238" target="_blank" rel="noopener noreferrer">새로오픈 교차 확인 · 방문 후기 2026-09-20<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -227,16 +203,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>서울 소불고기 쌀국수</li><li>팟타이</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 강남대로30길 63 1층 101호</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 497m · 약 7분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 27 · 블로그 12<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 497m · 약 7분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 27 · 블로그 12</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:070-7543-4859">070-7543-4859</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>네이버 Place 새로오픈 표시와 2026-10-25 방문 후기를 교차 확인했습니다. 정확한 개업일은 확인되지 않았습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>분짜·반쎄오는 메뉴상 17시 이후 주문 가능.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -244,14 +218,6 @@
               <a class="primary-cta" href="tel:070-7543-4859">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>2043520003</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2043520003/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2043520003/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/ttonne/224453120787" target="_blank" rel="noopener noreferrer">새로오픈 교차 확인 · 방문 후기 2026-10-25<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -268,16 +234,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>마르게리따</li><li>포르치니 파스타</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 양재천로29길 7 1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 808m · 약 12분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 272 · 블로그 9<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 808m · 약 12분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 272 · 블로그 9</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1370-2702">0507-1370-2702</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>네이버 Place 새로오픈 표시와 2026-11-18 방문 후기를 교차 확인했습니다. 정확한 개업일은 확인되지 않았습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>양재천 방향 도보 12분권.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -285,14 +249,6 @@
               <a class="primary-cta" href="tel:0507-1370-2702">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>2098561743</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2098561743/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2098561743/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/sophia1018/224482206582" target="_blank" rel="noopener noreferrer">새로오픈 교차 확인 · 방문 후기 2026-11-18<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -309,16 +265,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>돼지온반 정식</li><li>수육 정식</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 강남대로30길 28 은경빌딩 B1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 320m · 약 5분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 77 · 블로그 27<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 320m · 약 5분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 77 · 블로그 27</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1364-2191">0507-1364-2191</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 2026-10-26 방문 후기 등 개업 신호는 참고했지만 최근 개업으로 확인된 것은 아닙니다.</p>
           <p class="place-note"><strong>방문 메모</strong>업주 설명상 평일 점심 안주류는 사전 주문 필요; 정식은 평일 18시까지.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -326,14 +280,6 @@
               <a class="primary-cta" href="tel:0507-1364-2191">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>2060510830</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2060510830/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2060510830/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/cksdud1990/224453980412" target="_blank" rel="noopener noreferrer">참고 방문 후기 · 개업일 미확정 2026-10-26<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -350,16 +296,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>통돼지 김치찌개 (소)</li><li>제육 두루치기 (소)</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 강남구 강남대로 240 지상 1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 3번 출구 기준 · 네이버 도보 경로 15m · 약 1분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 523 · 블로그 98<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 3번 출구 기준 · 네이버 도보 경로 15m · 약 1분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 523 · 블로그 98</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1317-0292">0507-1317-0292</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 최근 개업을 뜻하지 않습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>확인 시점 네이버 24시간·연중무휴 표시.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -367,14 +311,6 @@
               <a class="primary-cta" href="tel:0507-1317-0292">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>2096530100</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2096530100/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2096530100/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/wlsk87/224482655493" target="_blank" rel="noopener noreferrer">보조 공개 근거<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -391,16 +327,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>서울식 맑은곰탕</li><li>메밀100%평양식물냉면</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 바우뫼로 220 1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 799m · 약 12분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,678 · 블로그 639<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 799m · 약 12분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,678 · 블로그 639</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1338-3010">0507-1338-3010</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 최근 개업을 뜻하지 않습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>최근 신상 후기는 있으나 인허가 집계와 시점 혼선이 있어 신규 개업으로 단정하지 않음.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -408,14 +342,6 @@
               <a class="primary-cta" href="tel:0507-1338-3010">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>1008560025</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1008560025/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1008560025/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/gmldk668/224325551440" target="_blank" rel="noopener noreferrer">보조 공개 근거<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -432,16 +358,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>[육비시그니처]한우 육회 시래기비빔밥</li><li>부안 한우 시래기 해장국</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 남부순환로347길 101 1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 2번 출구 기준 · 네이버 도보 경로 664m · 약 9분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,401 · 블로그 1,009<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 2번 출구 기준 · 네이버 도보 경로 664m · 약 9분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 1,401 · 블로그 1,009</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1333-5972">0507-1333-5972</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 최근 개업을 뜻하지 않습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>네이버 정식 상호는 부안육비. 서초점은 검색 씨앗 표현이며 별도 지점을 추가하지 않음.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -449,14 +373,6 @@
               <a class="primary-cta" href="tel:0507-1333-5972">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>1550997885</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1550997885/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1550997885/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://blog.naver.com/buanaes" target="_blank" rel="noopener noreferrer">보조 공개 근거<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -473,16 +389,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>구운 두부 포케</li><li>수비드 닭가슴살 카레</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 강남구 남부순환로361길 6 1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 4번 출구 기준 · 네이버 도보 경로 305m · 약 4분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 536 · 블로그 88<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 4번 출구 기준 · 네이버 도보 경로 305m · 약 4분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 536 · 블로그 88</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:02-576-0077">02-576-0077</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 최근 개업을 뜻하지 않습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>확인일인 토요일은 정기휴무 표시.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -490,14 +404,6 @@
               <a class="primary-cta" href="tel:02-576-0077">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>1420287978</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1420287978/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1420287978/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.blog.naver.com/shasha211/224473868238" target="_blank" rel="noopener noreferrer">보조 공개 근거<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -514,16 +420,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>트래키버거</li><li>아보카도버거</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 강남구 강남대로42길 23 101호</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 4번 출구 기준 · 네이버 도보 경로 231m · 약 3분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 423 · 블로그 56<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 4번 출구 기준 · 네이버 도보 경로 231m · 약 3분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 423 · 블로그 56</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1414-4000">0507-1414-4000</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 최근 개업을 뜻하지 않습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>신상 언급은 있으나 업주의 정확한 개업 시점 확인 전 새 발굴로 분류.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -531,14 +435,6 @@
               <a class="primary-cta" href="tel:0507-1414-4000">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>2025808609</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2025808609/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/2025808609/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://www.diningcode.com/profile.php?rid=Vdgv5HSfSxkV" target="_blank" rel="noopener noreferrer">DiningCode · 네이버 검색 노출 (본문 직접 확인 제한)<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
@@ -555,16 +451,14 @@
           <section class="menu-block menu-priority" aria-label="주메뉴">
             <h3>확인된 주메뉴</h3>
             <ul class="menu-list"><li>히레카츠</li><li>특상로스카츠</li></ul>
-            <p class="menu-source">네이버 Place 메뉴 확인 · 2026-11-21</p>
           </section>
           <dl class="facts facts-supporting">
             <div class="fact address-fact"><dt>주소</dt><dd>서울 서초구 논현로31길 56 1층</dd></div>
-            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 650m · 약 9분<small>네이버 Place 제공 도보 경로이며 직선거리·자체 실측이 아닙니다.</small></dd></div>
-            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 3,896 · 블로그 578<small>네이버 Place 홈 자료 기준</small></dd></div>
+            <div class="fact"><dt>양재역 접근</dt><dd>양재역 8번 출구 기준 · 네이버 도보 경로 650m · 약 9분</dd></div>
+            <div class="fact"><dt>네이버 리뷰 · 2026-11-21</dt><dd>방문자 3,896 · 블로그 578</dd></div>
             <div class="fact"><dt>전화</dt><dd><a class="phone" href="tel:0507-1379-0468">0507-1379-0468</a></dd></div>
           </dl>
 
-          <p class="classification-note"><strong>분류 근거</strong>기존 양재 가이드 미수록으로 새 발굴 분류했습니다. 최근 개업을 뜻하지 않습니다.</p>
           <p class="place-note"><strong>방문 메모</strong>특상로스카츠는 일일 한정수량. 업주 소개에 새로 오픈 표현은 있으나 날짜 불명.</p>
           <div class="card-footer">
             <div class="primary-actions" aria-label="주요 행동">
@@ -572,23 +466,13 @@
               <a class="primary-cta" href="tel:0507-1379-0468">전화 문의</a>
             </div>
 
-          <details class="source-details">
-            <summary>출처 · Place ID <code>1361599856</code></summary>
-        <div class="source-links">
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1361599856/home" target="_blank" rel="noopener noreferrer">네이버 Place 홈<span aria-hidden="true"> ↗</span></a>
-<a class="source-detail-link" href="https://m.place.naver.com/restaurant/1361599856/menu/list" target="_blank" rel="noopener noreferrer">확인 메뉴<span aria-hidden="true"> ↗</span></a>
-        </div>
-          </details>
           </div>
         </div>
 </article>
     </section>
     <aside class="page-note" aria-labelledby="verification-note">
-      <h2 id="verification-note">분류·출처 안내</h2>
-      <p><strong>최근 신규 3곳</strong>은 네이버 Place의 새로오픈 표시와 날짜가 있는 2026년 방문 후기를 교차 확인했습니다. 정확한 개업일은 업주·인허가 원문으로 확인되지 않아 날짜를 추정하지 않았습니다.</p>
-      <p><strong>새 발굴 7곳</strong>은 기존 양재 가이드에서 찾지 못한 식당이라는 뜻이며, 최근 개업을 확인했다는 의미가 아닙니다.</p>
-      <p>장소·메뉴·리뷰 수·도보 경로는 2026-11-21 기준 네이버 Place 자료의 스냅샷입니다. 추천 상황은 확인된 메뉴와 업주 편의정보를 바탕으로 한 편집상 안내이며 직접 시식 평가는 아닙니다. 방문 전 영업·휴무·가격·메뉴를 네이버 Place에서 다시 확인해 주세요.</p>
-      <p>WKT CSV 좌표는 네이버 Place의 장소 좌표를 옮긴 것이며, 길찾기 경로나 현장 측량 좌표가 아닙니다.</p>
+      <h2 id="verification-note">방문 전 확인</h2>
+      <p>방문 전 영업시간·휴무·가격을 확인해 주세요.</p>
     </aside>
     <footer class="footer">양재역 식사 가이드 · <time datetime="2026-11-21">2026-11-21</time> 확인<br><a href="../../">bohe visual scrap 아카이브</a></footer>
     <noscript><p class="page-note">JavaScript가 꺼져 있어 음식 분류 필터는 작동하지 않지만, 식당 10곳 전체는 아래에 표시됩니다.</p></noscript>
