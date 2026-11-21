@@ -42,8 +42,6 @@
     .filter-button:focus-visible,.action-link:focus-visible,.archive-link:focus-visible,.brand:focus-visible,.phone:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
     .toolbar-meta{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 16px;margin:10px 0 18px;color:#777;font-size:12px}
     .visible-count{font-family:inherit;font-size:12px;font-weight:400;color:#555}
-    .download{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:8px;background:#242424;color:#fff;text-decoration:none;font-size:13px;font-weight:600}
-    .download:hover{background:#444}
     .card-list{display:grid;grid-template-columns:1fr;gap:14px;align-items:stretch;margin-top:16px}
     .place-card{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;padding:19px;border-radius:14px;background:#fff;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
     .place-card:hover{transform:translateY(-1px);box-shadow:rgba(0,0,0,.10) 0 0 0 1px,rgba(0,0,0,.05) 0 5px 14px}
@@ -90,7 +88,6 @@
     .filter-button{font-size:15px}
     .filter-sub{font-size:12px}
     .visible-count{font-size:13px}
-    .download{min-height:48px;font-size:14px}
     .card-list{align-items:stretch}
     .place-card{align-items:stretch}
     .card-body{display:flex;flex-direction:column;min-width:0;height:100%}
@@ -162,7 +159,7 @@
         <button class="filter-button" type="button" data-filter="10-20" aria-pressed="false"><span>10–20명</span><span class="filter-sub">공개 근거 후보 3곳</span></button>
         <button class="filter-button" type="button" data-filter="20-plus" aria-pressed="false"><span>20명 이상</span><span class="filter-sub">단체석 공개 안내 2곳</span></button>
       </div>
-      <div class="toolbar-meta"><span class="visible-count" id="visible-count" aria-live="polite">10곳 표시</span><a class="download" href="./yangjae-year-end-dinner-wkt.csv" download>Place 좌표 WKT CSV 받기 ↓</a><span>네이버 Place 좌표 10개 · EPSG:4326 경위도 순서</span></div>
+      <div class="toolbar-meta"><span class="visible-count" id="visible-count" aria-live="polite">10곳 표시</span><span>네이버 Place 좌표 10개 · EPSG:4326 경위도 순서</span></div>
     </section>
     <section class="card-list" id="places" aria-label="송년회 후보 카드 목록">
       <article class="place-card" data-party="6-10 10-20 20-plus" data-place-id="1672141709" style="--group-color:#805744">
