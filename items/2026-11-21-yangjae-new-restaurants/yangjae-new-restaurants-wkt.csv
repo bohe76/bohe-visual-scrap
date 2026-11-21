@@ -1,0 +1,11 @@
+place_id,name,category,longitude,latitude,wkt,coordinate_source,checked_date,naver_place_url
+2071522112,코라테이블,모던 한식,127.0362344,37.4840925,POINT (127.0362344 37.4840925),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/2071522112/home
+2043520003,서울하노이 양재직영점,베트남·퓨전,127.040597,37.4827551,POINT (127.040597 37.4827551),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/2043520003/home
+2098561743,피제리아 델 루셀로,이탈리안,127.0420974,37.4793405,POINT (127.0420974 37.4793405),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/2098561743/home
+2060510830,느티나무식당,한식,127.0386815,37.4819355,POINT (127.0386815 37.4819355),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/2060510830/home
+2096530100,찌개집1979 양재역점,한식,127.0344241,37.4851767,POINT (127.0344241 37.4851767),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/2096530100/home
+1008560025,도하정 서초양재도곡점,한식,127.0425594,37.4812217,POINT (127.0425594 37.4812217),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/1008560025/home
+1550997885,부안육비,한식,127.0299065,37.4888252,POINT (127.0299065 37.4888252),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/1550997885/home
+1420287978,영영샐러드 도곡점,샐러드·카레,127.0376064,37.4855649,POINT (127.0376064 37.4855649),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/1420287978/home
+2025808609,트래키,버거,127.0359896,37.4855544,POINT (127.0359896 37.4855544),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/2025808609/home
+1361599856,양재카츠,일식,127.0405138,37.4803595,POINT (127.0405138 37.4803595),Naver Place __APOLLO_STATE__.PlaceDetailBase.coordinate,2026-11-21,https://m.place.naver.com/restaurant/1361599856/home
