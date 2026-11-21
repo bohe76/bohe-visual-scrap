@@ -7,42 +7,42 @@
   <meta name="theme-color" content="#ffffff">
   <title>양재역 새 맛집 10곳 · bohe visual scrap</title>
   <link rel="icon" href="data:,">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
   <style>
     :root{--ink:#242424;--muted:#666;--soft:#898989;--surface:#fff;--surface-muted:#f7f7f7;--line:#e8e8e8;--shadow:rgba(0,0,0,.08) 0 0 0 1px,rgba(0,0,0,.04) 0 2px 8px;--focus:#0068d6}
     *{box-sizing:border-box}
     html{background:#fff;scroll-behavior:smooth}
-    body{margin:0;background:#fff;color:var(--ink);font-family:Geist,Arial,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{margin:0;background:#fff;color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    button,input,select,textarea,code,kbd,samp{font-family:inherit}
     a{color:inherit}
     .skip-link{position:absolute;left:12px;top:-60px;padding:12px 16px;border-radius:8px;background:#242424;color:#fff;z-index:9}.skip-link:focus{top:12px}
     .shell{width:min(1040px,calc(100% - 32px));margin:0 auto;padding:28px 0 56px}
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:52px}
     .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;font-weight:600;min-height:44px}
-    .brand-mark{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#242424;color:#fff;font:500 12px 'Geist Mono',monospace}
+    .brand-mark{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#242424;color:#fff;font-family:inherit;font-size:12px;font-weight:500}
     .archive-link{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;background:#fff;box-shadow:var(--shadow);text-decoration:none;color:#555;font-size:13px}
     .hero{text-align:center;max-width:800px;margin:0 auto 28px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;margin-bottom:18px;border-radius:999px;background:#f7f7f7;color:#666;font:500 12px 'Geist Mono',monospace;letter-spacing:.02em}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;margin-bottom:18px;border-radius:999px;background:#f7f7f7;color:#666;font-family:inherit;font-size:12px;font-weight:500;letter-spacing:.02em}
     .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:#35695a}
     h1{margin:0;font-size:clamp(36px,7vw,64px);line-height:1.04;letter-spacing:-.055em;font-weight:600}
     .lead{max-width:720px;margin:18px auto 0;color:#555;font-size:clamp(15px,2vw,18px);line-height:1.75;word-break:keep-all}
-    .metadata-line{margin:14px 0 0;color:#777;font:12px 'Geist Mono',monospace;letter-spacing:.01em}
+    .metadata-line{margin:14px 0 0;color:#777;font-family:inherit;font-size:12px;font-weight:400;letter-spacing:.01em}
     .summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;overflow:hidden;margin:28px 0 12px;border-radius:14px;background:var(--line);box-shadow:var(--shadow)}
     .metric{min-width:0;padding:17px 14px;background:#fff;text-align:center}
-    .metric-label{display:block;margin-bottom:8px;color:#777;font:500 11px 'Geist Mono',monospace;letter-spacing:.045em}
+    .metric-label{display:block;margin-bottom:8px;color:#777;font-family:inherit;font-size:11px;font-weight:500;letter-spacing:.045em}
     .metric-value{display:block;font-size:22px;font-weight:600;letter-spacing:-.04em}
     .scope-line{text-align:center;color:#666;font-size:13px;line-height:1.65;margin:0 auto 18px;max-width:900px}.nowrap{white-space:nowrap}
     .toolbar{display:flex;flex-direction:column;align-items:center;gap:12px;margin:20px 0 18px}
     .filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;width:100%}
-    .filter-button{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:9px 13px;border:0;border-radius:10px;background:#f7f7f7;color:#444;box-shadow:rgba(0,0,0,.07) 0 0 0 1px;font:500 13px Geist,Arial,sans-serif;cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease}
+    .filter-button{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:9px 13px;border:0;border-radius:10px;background:#f7f7f7;color:#444;box-shadow:rgba(0,0,0,.07) 0 0 0 1px;font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:background .15s ease,color .15s ease,box-shadow .15s ease}
     .filter-button:hover{background:#efefef}
     .filter-button.is-active{background:#242424;color:#fff;box-shadow:none}
     .filter-button:focus-visible,.source-link:focus-visible,.download:focus-visible,.archive-link:focus-visible,.brand:focus-visible,.phone:focus-visible{outline:3px solid #0068d6;outline-offset:3px}
     .filter-dot{width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:var(--group-color,#242424)}
-    .filter-count{font:11px 'Geist Mono',monospace;opacity:.72}
+    .filter-count{font-family:inherit;font-size:11px;font-weight:400;opacity:.72}
     .toolbar-meta{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 16px;width:100%;color:#777;font-size:12px}
-    .visible-count{font:12px 'Geist Mono',monospace;color:#555}
+    .visible-count{font-family:inherit;font-size:12px;font-weight:400;color:#555}
     .download{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 15px;border-radius:8px;background:#242424;color:#fff;text-decoration:none;font-size:13px;font-weight:600}
     .download:hover{background:#444}
     .download-note{color:#777;font-size:12px}
@@ -50,20 +50,20 @@
     .place-card{display:grid;grid-template-columns:42px minmax(0,1fr);gap:16px;padding:20px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
     .place-card:hover{transform:translateY(-1px);box-shadow:rgba(0,0,0,.10) 0 0 0 1px,rgba(0,0,0,.05) 0 5px 14px}
     .place-card[hidden]{display:none!important}
-    .rank{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--group-color);color:#fff;font:500 12px 'Geist Mono',monospace}
+    .rank{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--group-color);color:#fff;font-family:inherit;font-size:12px;font-weight:500}
     .card-main{min-width:0}
     .place-head{text-align:center}
     .category-line{display:flex;justify-content:center;align-items:center;gap:7px;margin:0 0 8px;color:#666;font-size:12px}
     .category-dot{width:7px;height:7px;border-radius:50%;background:var(--group-color);flex:0 0 auto}
     h2{margin:0;font-size:clamp(20px,3vw,25px);line-height:1.28;letter-spacing:-.04em;font-weight:600;overflow-wrap:anywhere}
-    .place-id{margin:7px 0 10px;color:#888;font:11px 'Geist Mono',monospace}
+    .place-id{margin:7px 0 10px;color:#888;font-family:inherit;font-size:11px;font-weight:400}
     .opening-badge{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-height:28px;padding:5px 10px;border-radius:999px;background:#f3f3f3;color:#555;font-size:12px;line-height:1.4;text-align:center;overflow-wrap:anywhere}
     .opening-badge.recent{background:#f0f6f2;color:#315d4f}
     .opening-badge.discovery{background:#f5f5f5;color:#555}
     .recommendation{margin:14px 0 14px;text-align:center;color:#555;font-size:14px;line-height:1.6;word-break:keep-all}
     .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
     .fact{min-width:0;padding:12px;border-radius:10px;background:#f8f8f8}
-    .fact dt,.menu-block h3{margin:0 0 6px;color:#777;font:500 11px 'Geist Mono',monospace;letter-spacing:.035em}
+    .fact dt,.menu-block h3{margin:0 0 6px;color:#777;font-family:inherit;font-size:11px;font-weight:500;letter-spacing:.035em}
     .fact dd{margin:0;color:#444;font-size:13px;line-height:1.55;overflow-wrap:anywhere}
     .fact dd small{display:block;margin-top:4px;color:#888;font-size:11px;line-height:1.45}
     .phone{text-decoration:underline;text-decoration-color:#bbb;text-underline-offset:3px}
@@ -74,7 +74,7 @@
     .menu-source{margin:9px 0 0;color:#888;font-size:11px}
     .classification-note,.place-note{margin:10px 0 0;padding:11px 12px;border-radius:10px;background:#fff;color:#555;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
     .classification-note{box-shadow:rgba(0,0,0,.06) 0 0 0 1px}
-    .classification-note strong,.place-note strong{display:block;margin-bottom:3px;color:#666;font:500 11px 'Geist Mono',monospace}
+    .classification-note strong,.place-note strong{display:block;margin-bottom:3px;color:#666;font-family:inherit;font-size:11px;font-weight:500}
     .source-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:12px}
     .source-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:7px 11px;border-radius:8px;background:#fff;box-shadow:rgba(0,0,0,.08) 0 0 0 1px;color:#454545;text-decoration:none;font-size:12px;line-height:1.35;text-align:center;overflow-wrap:anywhere}
     .source-link:hover{background:#f7f7f7}
@@ -130,7 +130,7 @@
     .source-details summary::-webkit-details-marker{display:none}
     .source-details summary::after{content:"＋";flex:0 0 auto;color:#555;font-size:16px}
     .source-details[open] summary::after{content:"−"}
-    .source-details summary code{color:#555;font:12px 'Geist Mono',monospace}
+    .source-details summary code{color:#555;font-family:inherit;font-size:12px;font-weight:400}
     .source-links{display:flex;flex-wrap:wrap;align-items:center;gap:2px 14px;padding:2px 0 6px}
     .source-detail-link{display:inline-flex;align-items:center;min-height:44px;color:#4a4a4a;font-size:14px;line-height:1.4;text-decoration:underline;text-decoration-color:#aaa;text-underline-offset:3px;overflow-wrap:anywhere}
     .address-fact dd{word-break:keep-all;overflow-wrap:normal}
